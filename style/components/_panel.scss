@@ -1,0 +1,15 @@
+.panel {
+    background: var(--panel-bg);
+    padding: 0;
+    margin: 0;
+
+    .panel-body {
+        padding: 1rem;
+    }
+}
+.sub-panel {
+    margin: 1rem 1rem 2rem;
+    background: var(--sub-panel-bg);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}

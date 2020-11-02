@@ -1,0 +1,48 @@
+@import "node_modules/normalize.css/normalize";
+@import "style/utility/variables";
+@import "style/utility/flex";
+
+@import "style/elements/a";
+@import "style/elements/button";
+@import "style/elements/heading";
+@import "style/elements/hr";
+@import "style/elements/input";
+@import "style/elements/label";
+@import "style/elements/nav";
+@import "style/elements/progress";
+
+@import "style/components/panel";
+
+html {
+    min-height: 100%;
+    display: flex;
+}
+
+body, #app-root {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: var(--en-fonts);
+    background-color: var(--bg);
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 1;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    display: flex;
+    flex: 1;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

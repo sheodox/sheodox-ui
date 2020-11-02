@@ -1,0 +1,10 @@
+nav a[href] {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 0.2rem solid transparent;
+
+    &:hover {
+        border-bottom-color: var(--accent-purple);
+    }
+}
