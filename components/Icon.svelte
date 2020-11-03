@@ -11,8 +11,10 @@
         font-size: 12px;
     }
 </style>
-<i class="material-icons md-light" class:no-padding={noPadding}>{icon}</i>
+<i class="{variantClass} md-light" class:no-padding={noPadding}>{icon}</i>
 <script>
 	export let icon;
 	export let noPadding = false;
+	export let variant = '';
+	const variantClass = 'material-icons' + (variant ? `-${variant}` : '');
 </script>
