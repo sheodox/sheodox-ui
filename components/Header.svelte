@@ -33,6 +33,7 @@
     }
     .toolbar {
         margin: 0 1rem;
+		height: 100%;
     }
     @media (max-width: 960px) {
         header {
