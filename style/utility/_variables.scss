@@ -14,6 +14,7 @@
     --gradient-end-light: #{lighten($pink, 5%)};
     --accent-gradient: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
     --accent-gradient-light: linear-gradient(to right, var(--gradient-start-light), var(--gradient-end-light));
+    --muted: #5b5c6f;
 
     //to preserve the blueish tint, some of these are auto-generated, some are manually adjusted, otherwise the saturation is all over the place.
     $base: #08080b;
