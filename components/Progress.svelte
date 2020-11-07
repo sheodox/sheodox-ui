@@ -1,8 +1,4 @@
 <style>
-    label {
-        white-space: nowrap;
-        margin-right: 0.2rem;
-    }
     .progress-border {
         background: var(--accent-gradient);
         padding: 1px;

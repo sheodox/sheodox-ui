@@ -2,11 +2,13 @@ nav {
     ul, ol {
         list-style: none;
 
-        a[href] {
+        a[href], .a {
             color: white;
             font-weight: bold;
             text-decoration: none;
             border-bottom: 0.2rem solid transparent;
+            margin: 0;
+            border-radius: 0;
 
             &:hover {
                 border-bottom-color: var(--accent-purple);

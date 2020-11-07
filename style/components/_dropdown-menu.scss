@@ -1,0 +1,22 @@
+.dropdown-menu {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    border: 1px solid var(--accent-purple);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        li a, li .a {
+            padding: 0.5rem;
+            border: none;
+        }
+    }
+
+    ul, li, a, .a {
+        width: 100%;
+    }
+}

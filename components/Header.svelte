@@ -40,9 +40,6 @@
             flex-direction: column !important;
         }
     }
-    header :global(nav a) {
-        font-size: 1rem;
-    }
 </style>
 
 <header class="row" class:slim={slim} class:centered-branding={!$$slots.nav}>

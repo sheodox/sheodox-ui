@@ -13,8 +13,14 @@
             height: 100%;
         }
 
-        a[href] {
+        li {
+            // this lets a 'width: 100%' on a contained div in a dropdown menu get the same width as the li
+            position: relative;
+        }
+
+        a[href], .a {
             height: 100%;
+            font-size: 1rem;
             color: white;
             border: none;
             font-weight: bold;
@@ -28,6 +34,11 @@
                 background: var(--panel-header-bg-light);
                 text-decoration: none;
                 border-color: var(--accent-purple);
+            }
+
+            &.pressed {
+                border-bottom-color: transparent !important;
+                background-color: var(--bg);
             }
         }
     }

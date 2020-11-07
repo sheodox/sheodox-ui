@@ -5,6 +5,7 @@
 
 @import "style/elements/a";
 @import "style/elements/button";
+@import "style/elements/footer";
 @import "style/elements/header";
 @import "style/elements/heading";
 @import "style/elements/hr";
@@ -13,8 +14,9 @@
 @import "style/elements/nav";
 @import "style/elements/progress";
 
-@import "style/components/panel";
 @import "style/components/containers";
+@import "style/components/dropdown-menu";
+@import "style/components/panel";
 
 html {
     min-height: 100%;
