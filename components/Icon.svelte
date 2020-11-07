@@ -1,8 +1,6 @@
 <style>
     i {
-        font-size: initial;
         padding-right: 0.25rem;
-        vertical-align: middle;
     }
     i.no-padding {
         padding: 0;
@@ -11,10 +9,13 @@
         font-size: 12px;
     }
 </style>
-<i class="{variantClass} md-light" class:no-padding={noPadding}>{icon}</i>
+<i class="{variantClass} fa-{icon}" class:no-padding={noPadding}></i>
 <script>
 	export let icon;
 	export let noPadding = false;
-	export let variant = '';
-	const variantClass = 'material-icons' + (variant ? `-${variant}` : '');
+	export let variant = 'solid';
+	const variantClass = {
+		solid: 'fas',
+		brand: 'fab'
+	}[variant];
 </script>

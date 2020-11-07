@@ -1,6 +1,14 @@
+<style>
+	.down-icon {
+		padding-left: 0.5rem;
+	}
+</style>
+
 <button class="a" on:click|stopPropagation={() => showMenu = !showMenu} class:pressed={showMenu}>
 	<slot name="button" />
-	<Icon icon="keyboard_arrow_down" />
+	<span class="down-icon">
+		<Icon icon="angle-down" />
+	</span>
 </button>
 
 {#if showMenu}

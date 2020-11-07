@@ -45,7 +45,7 @@
 		<div class="modal-title header">
 			<h1>{title}</h1>
 			<button class="close" on:click={() => visible = false}>
-				<Icon icon="close" />
+				<Icon icon="times" />
 				<span class="sr-only">Close modal</span>
 			</button>
 		</div>
