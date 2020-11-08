@@ -4,7 +4,7 @@
 	}
 </style>
 
-<div class="dropdown-menu f-column panel" class:shift-left={shiftLeft}>
+<div class="dropdown-menu f-column" class:shift-left={shiftLeft}>
 	<slot />
 </div>
 
