@@ -6,4 +6,5 @@ module.exports = {
 	Footer: require('./components/Footer.svelte').default,
 	DropdownMenu: require('./components/DropdownMenu.svelte').default,
 	NavDropdown: require('./components/NavDropdown.svelte').default,
+	ButtonDropdown: require('./components/ButtonDropdown.svelte').default,
 };
