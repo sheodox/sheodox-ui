@@ -41,6 +41,12 @@
                 background-color: var(--bg);
             }
         }
+
+        .dropdown-menu {
+            a, .a {
+                padding: 1rem !important;
+            }
+        }
     }
 }
 
