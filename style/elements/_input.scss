@@ -15,6 +15,10 @@ input[type=text], input:not([type]), textarea, select {
         background: rgba(11,15,21,0.8);
         border-color: var(--input-focus-color);
     }
+
+    &:disabled {
+        color: var(--muted);
+    }
 }
 input[type=text], input:not([type]), textarea, select {
     font-size: 1.1rem;

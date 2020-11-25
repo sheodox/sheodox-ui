@@ -21,6 +21,9 @@
 		overflow: auto;
 		font-size: 0.7rem;
 	}
+	button {
+		padding: 0.3rem;
+	}
 </style>
 
 <div class="toast {toast.variant}">
