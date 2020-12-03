@@ -3,6 +3,8 @@
 		position: fixed;
 		max-width: 95vw;
 		width: 20rem;
+		/* just over the z-index of the modal overlay so it can show up over modals */
+		z-index: 10001;
 	}
 	.top-right {
         right: 0;
