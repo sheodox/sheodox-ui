@@ -23,7 +23,7 @@
     .modal-title {
         display: flex;
         flex-direction: row;
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
     }
     h1, button.close {
         align-self: center;
