@@ -31,10 +31,6 @@
     h1 {
         flex: 1;
     }
-    .modal-body {
-        flex: 1;
-        overflow: auto;
-    }
     h1 {
         margin: 0;
     }
@@ -49,9 +45,7 @@
 				<span class="sr-only">Close modal</span>
 			</button>
 		</div>
-		<div class="modal-body">
-			<slot />
-		</div>
+		<slot />
 	</div>
 </div>
 
