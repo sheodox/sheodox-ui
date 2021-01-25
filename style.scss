@@ -46,6 +46,10 @@ body, #app-root {
     box-sizing: border-box;
 }
 
+* {
+    scrollbar-color: #444 #121212;
+}
+
 .sr-only {
     position: absolute;
     left: -10000px;

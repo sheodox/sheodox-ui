@@ -79,6 +79,19 @@ export function createPersistentToast(options) {
 
 export function clearToast(id) {
 	toasts.update(toasts => {
-		return toasts.filter(toast => toast.id !== id);
+		const remainingToasts = toasts.filter(toast => toast.id !== id);
+
+		//if only one toast exists and it's dismissed it might not trigger
+		//the mouseleave handler and resume expiration. without this if
+		//you dismiss the last toast, then more toasts appear later they
+		//never auto-dismiss until you trigger mouseleave another time.
+		//this could still possibly be an issue if a second long toast is dismissed
+		//and the toast container no longer contains the cursor (so moving
+		//it away doesn't trigger mouseleave) but the fixed case is most likely and I've
+		//been unable to reproduce the issue with the theoretical case
+		if (!remainingToasts.length) {
+			resumeExpiration();
+		}
+		return remainingToasts;
 	});
 }
