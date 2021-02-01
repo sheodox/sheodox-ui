@@ -4,8 +4,7 @@
         position: relative;
         bottom: 0;
         padding: 1rem;
-        background: var(--panel-footer-bg);
-        border-top: 1px solid var(--accent-purple);
+        border-top: 1px solid var(--panel-border-color);
         display: flex;
         justify-content: center;
     }
