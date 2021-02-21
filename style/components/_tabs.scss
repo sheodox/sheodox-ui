@@ -1,0 +1,17 @@
+.tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline;
+  }
+  button {
+    margin: 0.2rem 0;
+    color: white;
+
+    &.selected {
+      background: var(--input-bg);
+    }
+  }
+}

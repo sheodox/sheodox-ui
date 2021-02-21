@@ -10,6 +10,8 @@ module.exports = {
 	NavDropdown: require('./components/NavDropdown.svelte').default,
 	ButtonDropdown: require('./components/ButtonDropdown.svelte').default,
 	Loading: require('./components/Loading.svelte').default,
+	TabList: require('./components/TabList.svelte').default,
+	Tab: require('./components/Tab.svelte').default,
 	//not exporting Toast, it's internal
 	Toasts: require('./components/Toasts.svelte').default,
 	//expose only public toast methods
