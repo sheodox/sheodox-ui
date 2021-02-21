@@ -6,7 +6,7 @@
         display: block;
     }
 </style>
-<div class="tab" id="tab-content-{tabId}" class:selected={tabId === selectedTab} aria-labelledby="tab-{tabId}">
+<div class="tab" id="tab-content-{tabId}" class:selected={tabId === selectedTab} aria-labelledby="tab-{tabId}" role="tabpanel">
     <slot />
 </div>
 
