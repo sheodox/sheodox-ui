@@ -29,6 +29,8 @@
             padding: 0 1rem;
             border-bottom: 2px solid transparent;
             transition: background 0.1s, border-bottom-color 0.1s;
+            // when on mobile, don't let the buttons get awkwardly short
+            min-height: 3rem;
 
             &:hover {
                 background: var(--panel-header-bg-light);
