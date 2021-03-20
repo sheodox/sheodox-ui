@@ -7,8 +7,8 @@
 		z-index: 10001;
 	}
 	.top-right {
+		/* implicitly "top: 0" allows toasts to be positioned below the header by putting it in the page's <main> */
         right: 0;
-        top: 0;
 	}
 	.bottom-center {
 		bottom: 0;

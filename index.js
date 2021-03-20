@@ -8,6 +8,7 @@ module.exports = {
 	Footer: require('./components/Footer.svelte').default,
 	DropdownMenu: require('./components/DropdownMenu.svelte').default,
 	NavDropdown: require('./components/NavDropdown.svelte').default,
+	MenuButton: require('./components/MenuButton.svelte').default,
 	ButtonDropdown: require('./components/ButtonDropdown.svelte').default,
 	Loading: require('./components/Loading.svelte').default,
 	TabList: require('./components/TabList.svelte').default,
@@ -17,5 +18,7 @@ module.exports = {
 	//expose only public toast methods
 	createAutoExpireToast: toastUtils.createAutoExpireToast,
 	createPersistentToast: toastUtils.createPersistentToast,
+	createProgressToast: toastUtils.createProgressToast,
+	updateToast: toastUtils.updateToast,
 	clearToast: toastUtils.clearToast,
 };

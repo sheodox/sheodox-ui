@@ -34,16 +34,26 @@
 			<span class="sr-only">Clear Toast</span>
 		</button>
 	</div>
-	<p class="message">{toast.message}</p>
+    <p class="message">
+		{#if toast.href}
+			<a href={toast.href}>{toast.message}</a>
+		{:else}
+			{toast.message}
+		{/if}
+	</p>
 	{#if toast.technicalDetails}
 		<pre>
 			{toast.technicalDetails}
 		</pre>
 	{/if}
+	{#if toast.progress}
+		<Progress max={toast.max} min={toast.min} value={toast.value} id="toast-progress-id-{toast.id}" />
+	{/if}
 </div>
 
 <script>
 	import {clearToast} from './toast';
+	import Progress from './Progress.svelte';
 	import Icon from './Icon.svelte';
 
 	export let toast;
