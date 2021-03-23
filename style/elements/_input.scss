@@ -30,6 +30,11 @@ input[type=text], input:not([type]), textarea, select {
     border: 1px solid var(--input-bg);
     display: flex;
 
+    label {
+        align-self: center;
+        padding: 0.2rem;
+    }
+
     input {
         border: 1px solid transparent;
     }

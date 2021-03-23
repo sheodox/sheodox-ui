@@ -1,13 +1,13 @@
 <style>
-	.shift-left {
-		transform: translateX(-100%);
+	.dropdown-menu :global(ul) {
+		list-style: none;
+	}
+	.dropdown-menu :global(button) {
+		color: white;
+		text-align: left;
 	}
 </style>
 
-<div class="dropdown-menu f-column" class:shift-left={shiftLeft}>
+<div class="dropdown-menu f-column">
 	<slot />
 </div>
-
-<script>
-	export let shiftLeft = false;
-</script>

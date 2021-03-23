@@ -19,6 +19,7 @@
         display: flex;
         flex-direction: column;
         max-height: 90vh;
+		border: var(--panel-border);
     }
     .modal-title {
         display: flex;

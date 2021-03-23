@@ -65,7 +65,15 @@ export function createAutoExpireToast(options) {
 		title: options.title,
 		message: options.message || '',
 		technicalDetails: options.technicalDetails,
-		variant: options.variant || 'info'
+		variant: options.variant || 'info',
+		href: options.href,
+        //toasts with a progress bar have additional options
+		...(options.progress ? {
+			min: options.min,
+			max: options.max,
+			value: options.value || 0,
+			progress: true
+		} : {})
 	})
 
 	return id;
@@ -75,6 +83,29 @@ export function createPersistentToast(options) {
 	return createAutoExpireToast(Object.assign(options, {
 		ttl: Infinity
 	}))
+}
+
+export function createProgressToast(options) {
+	return createAutoExpireToast({
+		//expecting all the same options as a normal toast, plus a "min" and "max"
+		...options,
+		progress: true,
+	});
+}
+
+export function updateToast(id, updates) {
+	toasts.update(toasts => {
+		return toasts.map(toast => {
+			if (toast.id === id) {
+				//keep this toast around until it stops updating,
+				//can be used for long running things like uploads
+				toast.ttl = toast.initialTTL;
+				//allow any arbitrary properties to be updated
+				Object.assign(toast, updates);
+			}
+			return toast;
+		})
+	})
 }
 
 export function clearToast(id) {
