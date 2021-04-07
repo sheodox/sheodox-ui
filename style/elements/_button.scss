@@ -15,11 +15,16 @@ button, input[type=submit], .button {
     //buttons don't inherit the body's font stack
     font-family: var(--en-fonts);
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled), &.hover {
         background: rgba(40, 40, 40, 0.4);
     }
-    &:focus {
+    &:focus, &.focus {
         box-shadow: 0 0 0 0.2rem solid var(--input-focus-color);
+    }
+    &[aria-pressed="true"] {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid white;
     }
 }
 

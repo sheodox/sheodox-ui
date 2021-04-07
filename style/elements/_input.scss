@@ -4,7 +4,7 @@ textarea {
 
 input[type=text], input:not([type]), textarea, select {
     color: white;
-    border: 1px solid var(--input-bg);
+    border: var(--input-border);
     transition: border 0.2s;
     border-radius: 0.2rem;
     background: var(--input-bg);
@@ -20,14 +20,17 @@ input[type=text], input:not([type]), textarea, select {
         color: var(--muted);
     }
 }
-input[type=text], input:not([type]), textarea, select {
+input[type=text], input:not([type]), select {
     font-size: 1.1rem;
+}
+textarea {
+    font-size: 0.9rem;
 }
 
 .input-group {
     border-radius: 0.2rem;
     background: var(--input-bg);
-    border: 1px solid var(--input-bg);
+    border: var(--input-border);
     display: flex;
 
     label {
@@ -36,7 +39,7 @@ input[type=text], input:not([type]), textarea, select {
     }
 
     input {
-        border: 1px solid transparent;
+        border-color: transparent;
     }
     button {
         margin: 0;

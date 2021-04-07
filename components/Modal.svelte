@@ -37,11 +37,11 @@
     }
 </style>
 
-<div class="overlay" on:click={() => visible = false}>
+<div class="overlay" on:click={close}>
 	<div class="modal panel" on:click|stopPropagation>
 		<div class="modal-title header">
 			<h1>{title}</h1>
-			<button class="close" on:click={() => visible = false}>
+			<button class="close" on:click={close}>
 				<Icon icon="times" noPadding={true} />
 				<span class="sr-only">Close modal</span>
 			</button>
@@ -51,7 +51,14 @@
 </div>
 
 <script>
+	import {createEventDispatcher} from 'svelte';
 	import Icon from './Icon.svelte';
 	export let title = '';
 	export let visible = false;
+	const dispatch = createEventDispatcher();
+
+	function close() {
+		visible = false;
+		dispatch('closed');
+	}
 </script>
