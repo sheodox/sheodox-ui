@@ -38,7 +38,7 @@
                 border-color: var(--accent-purple);
             }
 
-            &.pressed {
+            &[aria-pressed="true"] {
                 border-bottom-color: transparent !important;
                 background-color: var(--panel-header-bg-dark);
             }

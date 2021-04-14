@@ -11,11 +11,13 @@
     <slot name="trigger" />
 </button>
 {#if showDropdown}
-    <div on:click={() => showDropdown = false} use:positionMenu bind:this={menu} class="menubutton-menu">
-        <DropdownMenu>
-            <slot name="menu" />
-        </DropdownMenu>
-    </div>
+    <Portal>
+        <div on:click={() => showDropdown = false} use:positionMenu bind:this={menu} class="menubutton-menu">
+            <DropdownMenu>
+                <slot name="menu" />
+            </DropdownMenu>
+        </div>
+    </Portal>
 {/if}
 
 <svelte:body on:click={maybeClose} />
@@ -23,6 +25,7 @@
 <script>
     import {createPopper} from '@popperjs/core';
     import DropdownMenu from './DropdownMenu.svelte';
+    import Portal from "./Portal.svelte";
 
     //popperjs placement option
     export let placement = 'bottom-start';

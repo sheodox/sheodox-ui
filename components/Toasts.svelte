@@ -15,6 +15,10 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+	.bottom-left {
+		bottom: 0;
+		left: 0;
+	}
 </style>
 
 <div

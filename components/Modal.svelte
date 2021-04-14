@@ -37,22 +37,26 @@
     }
 </style>
 
-<div class="overlay" on:click={close}>
-	<div class="modal panel" on:click|stopPropagation>
-		<div class="modal-title header">
-			<h1>{title}</h1>
-			<button class="close" on:click={close}>
-				<Icon icon="times" noPadding={true} />
-				<span class="sr-only">Close modal</span>
-			</button>
+<Portal>
+	<div class="overlay" on:click={close}>
+		<div class="modal panel" on:click|stopPropagation>
+			<div class="modal-title header">
+				<h1>{title}</h1>
+				<button class="close" on:click={close}>
+					<Icon icon="times" noPadding={true} />
+					<span class="sr-only">Close modal</span>
+				</button>
+			</div>
+			<slot />
 		</div>
-		<slot />
 	</div>
-</div>
+</Portal>
 
 <script>
 	import {createEventDispatcher} from 'svelte';
 	import Icon from './Icon.svelte';
+	import Portal from "./Portal.svelte";
+
 	export let title = '';
 	export let visible = false;
 	const dispatch = createEventDispatcher();

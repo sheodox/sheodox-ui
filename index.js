@@ -11,6 +11,7 @@ module.exports = {
 	MenuButton: require('./components/MenuButton.svelte').default,
 	ButtonDropdown: require('./components/ButtonDropdown.svelte').default,
 	Loading: require('./components/Loading.svelte').default,
+	Portal: require('./components/Portal.svelte').default,
 	TabList: require('./components/TabList.svelte').default,
 	Tab: require('./components/Tab.svelte').default,
 	//not exporting Toast, it's internal
