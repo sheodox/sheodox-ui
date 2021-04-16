@@ -40,12 +40,22 @@
             flex-direction: column !important;
         }
     }
+	h1 a {
+		color: white;
+		text-decoration: none;
+	}
 </style>
 
 <header class="row" class:slim={slim} class:centered-branding={!$$slots.nav}>
 	<div class="branding row">
 		<slot name="logo" />
-		<h1>{pageName ? `${pageName} -` : ''} {appName}</h1>
+		<h1>
+			{#if href}
+				<a href={href} on:click={headerClick}>{title}</a>
+			{:else}
+				{title}
+			{/if}
+		</h1>
 	</div>
 	{#if $$slots.nav}
 		<div class="toolbar">
@@ -55,10 +65,24 @@
 </header>
 
 <script>
+	import {createEventDispatcher} from 'svelte';
+	const dispatch = createEventDispatcher();
+
 	export let pageName;
 	export let appName;
+	export let href;
+	export let titleClickPreventDefault = false;
+
+	$: title = `${pageName ? `${pageName} -` : ''} ${appName}`.trim();
 
 	//slim=true is a minimal header for use in app pages where screen real estate is more important
 	//slim=false is bigger with no background, used prominently on landing pages
 	export let slim = true;
+
+	function headerClick(e) {
+		if (titleClickPreventDefault) {
+			e.preventDefault();
+		}
+		dispatch('titleclick')
+	}
 </script>
