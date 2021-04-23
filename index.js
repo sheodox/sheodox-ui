@@ -1,25 +1,23 @@
-const toastUtils = require('./components/toast');
+import * as toastUtils from './components/toast';
 
-module.exports = {
-	Modal: require('./components/Modal.svelte').default,
-	Icon: require('./components/Icon.svelte').default,
-	Header: require('./components/Header.svelte').default,
-	Progress: require('./components/Progress.svelte').default,
-	Footer: require('./components/Footer.svelte').default,
-	DropdownMenu: require('./components/DropdownMenu.svelte').default,
-	NavDropdown: require('./components/NavDropdown.svelte').default,
-	MenuButton: require('./components/MenuButton.svelte').default,
-	ButtonDropdown: require('./components/ButtonDropdown.svelte').default,
-	Loading: require('./components/Loading.svelte').default,
-	Portal: require('./components/Portal.svelte').default,
-	TabList: require('./components/TabList.svelte').default,
-	Tab: require('./components/Tab.svelte').default,
-	//not exporting Toast, it's internal
-	Toasts: require('./components/Toasts.svelte').default,
-	//expose only public toast methods
-	createAutoExpireToast: toastUtils.createAutoExpireToast,
-	createPersistentToast: toastUtils.createPersistentToast,
-	createProgressToast: toastUtils.createProgressToast,
-	updateToast: toastUtils.updateToast,
-	clearToast: toastUtils.clearToast,
-};
+export {default as Modal} from './components/Modal.svelte';
+export {default as Icon} from './components/Icon.svelte';
+export {default as Header} from './components/Header.svelte';
+export {default as Progress} from './components/Progress.svelte';
+export {default as Footer} from './components/Footer.svelte';
+export {default as DropdownMenu} from './components/DropdownMenu.svelte';
+export {default as NavDropdown} from './components/NavDropdown.svelte';
+export {default as MenuButton} from './components/MenuButton.svelte';
+export {default as ButtonDropdown} from './components/ButtonDropdown.svelte';
+export {default as Loading} from './components/Loading.svelte';
+export {default as Portal} from './components/Portal.svelte';
+export {default as TabList} from './components/TabList.svelte';
+export {default as Tab} from './components/Tab.svelte';
+//not exporting Toast, it's internal
+export {default as Toasts} from './components/Toasts.svelte';
+//expose only public toast methods
+export const createAutoExpireToast = toastUtils.createAutoExpireToast;
+export const createPersistentToast = toastUtils.createPersistentToast;
+export const createProgressToast = toastUtils.createProgressToast;
+export const updateToast = toastUtils.updateToast;
+export const clearToast = toastUtils.clearToast;
