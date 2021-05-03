@@ -22,7 +22,6 @@
         a[href], .a {
             height: 100%;
             font-size: 1rem;
-            color: white;
             border: none;
             font-weight: bold;
             display: flex;
@@ -36,7 +35,7 @@
             &:hover {
                 background: var(--panel-header-bg-light);
                 text-decoration: none;
-                border-color: var(--accent-purple);
+                border-color: var(--nav-highlight);
             }
 
             &[aria-pressed="true"] {
@@ -45,7 +44,7 @@
             }
 
             &.active {
-                border-color: var(--accent-purple-bright);
+                border-color: var(--nav-highlight-active);
             }
         }
 

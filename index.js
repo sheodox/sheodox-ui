@@ -1,8 +1,10 @@
 import * as toastUtils from './components/toast';
 
+export {default as styles} from './style.scss';
 export {default as Modal} from './components/Modal.svelte';
 export {default as Icon} from './components/Icon.svelte';
 export {default as Header} from './components/Header.svelte';
+export {default as Checkbox} from './components/Checkbox.svelte';
 export {default as Progress} from './components/Progress.svelte';
 export {default as Footer} from './components/Footer.svelte';
 export {default as DropdownMenu} from './components/DropdownMenu.svelte';

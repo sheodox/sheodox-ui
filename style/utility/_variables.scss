@@ -1,6 +1,7 @@
 :root {
     --accent-blue: #0cacff;
     --accent-blue-dark: #0cacff21;
+    --accent-blue-light: #0185c9;
     --accent-red: #e83450;
     --accent-red-bright: #ff0e32;
     $purple: #7700ff;
@@ -17,22 +18,27 @@
     --gradient-end-light: #{lighten($pink, 5%)};
     --accent-gradient: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
     --accent-gradient-light: linear-gradient(to right, var(--gradient-start-light), var(--gradient-end-light));
+
+    --text-color: rgba(255, 255, 255, 0.9);
     --muted: #5b5c6f;
+    --nav-highlight: #01fdc2;
+    --nav-highlight-active: #01fdfd;
 
     //to preserve the blueish tint, some of these are auto-generated, some are manually adjusted, otherwise the saturation is all over the place.
-    $base: #0c1015;
+    $base: #15171e;
     --bg: #{$base};
     --panel-bg: #0c0e15;
-    --sub-panel-bg: #181d2d;
-    --sub-panel-bg-light: #1e2539;
+    $subPanel: #22242c;
+    --sub-panel-bg: #{$subPanel};
+    --sub-panel-bg-light: #{lighten($subPanel, 3%)};
     --panel-border-color: #8c8c8c21;
     --panel-border: 1px solid var(--panel-border-color);
-    $header: #181d2b;
+    $header: #22242c;
     --panel-header-bg: #{$header};
     --panel-header-bg-light: #{lighten($header, 3%)};
     --panel-header-bg-dark: #{darken($header, 3%)};
     --panel-footer-bg: #111118;
-    --input-bg: #050506;
+    --input-bg: #1c1c20;
     --input-border-color: #303035;
     --input-border: 1px solid var(--input-border-color);
     --input-focus-color: #3584e4;
