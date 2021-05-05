@@ -4,9 +4,9 @@
         justify-content: space-around;
     }
     header.slim {
-        background: var(--panel-header-bg);
+        background: var(--shdx-panel-header-bg);
         justify-content: space-between;
-        border-bottom: var(--panel-border);
+        border-bottom: var(--shdx-panel-border);
     }
 
 	header.centered-branding {

@@ -1,53 +1,57 @@
 :root {
-    --accent-blue: #0cacff;
-    --accent-blue-dark: #0cacff21;
-    --accent-blue-light: #0185c9;
-    --accent-red: #e83450;
-    --accent-red-bright: #ff0e32;
+    --shdx-accent-blue: #0cacff;
+    --shdx-accent-blue-dark: #0cacff21;
+    --shdx-accent-blue-light: #0185c9;
+    --shdx-accent-red: #e83450;
+    --shdx-accent-red-bright: #ff0e32;
+    --shdx-accent-mint: #01fdc2;
+    --shdx-accent-cyan: #01fdfd;
     $purple: #7700ff;
     $pink: #bb24e2;
-    --accent-purple: #{$purple};
-    --accent-purple-dark: #7804cd;
-    --accent-purple-bright: #b300ff;
-    --accent-pink: #{$pink};
-    --accent-pink-light: #cc00ff;
-    --accent-gray: #3d3d42;
-    --gradient-start: var(--accent-purple-dark);
-    --gradient-end: var(--accent-pink);
-    --gradient-start-light: #{lighten($purple, 5%)};
-    --gradient-end-light: #{lighten($pink, 5%)};
-    --accent-gradient: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-    --accent-gradient-light: linear-gradient(to right, var(--gradient-start-light), var(--gradient-end-light));
+    --shdx-accent-purple: #{$purple};
+    --shdx-accent-purple-dark: #7804cd;
+    --shdx-accent-purple-bright: #b300ff;
+    --shdx-accent-pink: #{$pink};
+    --shdx-accent-pink-light: #cc00ff;
+    --shdx-accent-gray: #3d3d42;
+    --shdx-gradient-start: var(--shdx-accent-purple-dark);
+    --shdx-gradient-end: var(--shdx-accent-pink);
+    --shdx-gradient-start-light: #{lighten($purple, 5%)};
+    --shdx-gradient-end-light: #{lighten($pink, 5%)};
+    --shdx-accent-gradient: linear-gradient(to right, var(--shdx-gradient-start), var(--shdx-gradient-end));
+    --shdx-accent-gradient-light: linear-gradient(to right, var(--shdx-gradient-start-light), var(--shdx-gradient-end-light));
 
-    --text-color: rgba(255, 255, 255, 0.9);
-    --muted: #5b5c6f;
-    --nav-highlight: #01fdc2;
-    --nav-highlight-active: #01fdfd;
+    --shdx-text-color: rgba(255, 255, 255, 0.9);
+    --shdx-muted: #5b5c6f;
+    --shdx-less-muted: #7e8099;
+    --shdx-least-muted: #b8badb;
+    --shdx-nav-highlight: var(--shdx-accent-mint);
+    --shdx-nav-highlight-active: var(--shdx-accent-cyan);
 
     //to preserve the blueish tint, some of these are auto-generated, some are manually adjusted, otherwise the saturation is all over the place.
     $base: #15171e;
-    --bg: #{$base};
-    --panel-bg: #0c0e15;
+    --shdx-bg: #{$base};
+    --shdx-panel-bg: #0c0e15;
     $subPanel: #22242c;
-    --sub-panel-bg: #{$subPanel};
-    --sub-panel-bg-light: #{lighten($subPanel, 3%)};
-    --panel-border-color: #8c8c8c21;
-    --panel-border: 1px solid var(--panel-border-color);
+    --shdx-sub-panel-bg: #{$subPanel};
+    --shdx-sub-panel-bg-light: #{lighten($subPanel, 3%)};
+    --shdx-panel-border-color: #8c8c8c21;
+    --shdx-panel-border: 1px solid var(--shdx-panel-border-color);
     $header: #22242c;
-    --panel-header-bg: #{$header};
-    --panel-header-bg-light: #{lighten($header, 3%)};
-    --panel-header-bg-dark: #{darken($header, 3%)};
-    --panel-footer-bg: #111118;
-    --input-bg: #1c1c20;
-    --input-border-color: #303035;
-    --input-border: 1px solid var(--input-border-color);
-    --input-focus-color: #3584e4;
+    --shdx-panel-header-bg: #{$header};
+    --shdx-panel-header-bg-light: #{lighten($header, 3%)};
+    --shdx-panel-header-bg-dark: #{darken($header, 3%)};
+    --shdx-panel-footer-bg: #111118;
+    --shdx-input-bg: #1c1c20;
+    --shdx-input-border-color: #303035;
+    --shdx-input-border: 1px solid var(--shdx-input-border-color);
+    --shdx-input-focus-color: #3584e4;
     //a text color indicating an export option is recommended, like highlighting "use kana" if
     //one of the meanings for the selected definition is usually kana
     $suggestion: #00ffc3; //or maybe try #ff00ef (bright pink)
-    --primary: #{$suggestion};
-    --primary-light: #{lighten($suggestion, 5%)};
-    --primary-dark: #{darken($suggestion, 34%)};
+    --shdx-primary: #{$suggestion};
+    --shdx-primary-light: #{lighten($suggestion, 5%)};
+    --shdx-primary-dark: #{darken($suggestion, 34%)};
 
-    --en-fonts: Arial, Noto Sans, sans-serif;
+    --shdx-en-fonts: Arial, Noto Sans, sans-serif;
 }

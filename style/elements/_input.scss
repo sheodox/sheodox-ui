@@ -2,26 +2,26 @@ textarea {
     font-size: 0.7rem;
 }
 
-input[type=text], input:not([type]), textarea, select {
+input[type=text], input:not([type]), input[type=date], input[type=time], textarea, select {
     color: white;
-    border: var(--input-border);
+    border: var(--shdx-input-border);
     transition: border 0.2s;
     border-radius: 0.2rem;
-    background: var(--input-bg);
+    background: var(--shdx-input-bg);
     padding: 0.2rem;
-    font-family: var(--en-fonts);
+    font-family: var(--shdx-en-fonts);
 
     &:focus {
         background: rgba(11,15,21,0.8);
-        border-color: var(--input-focus-color);
+        border-color: var(--shdx-input-focus-color);
     }
 
     &:disabled {
-        color: var(--muted);
+        color: var(--shdx-muted);
     }
 }
-input[type=text], input:not([type]), select {
-    font-size: 1.1rem;
+input[type=text], input:not([type]), input[type=date], input[type=time] select {
+    font-size: 1rem;
 }
 textarea {
     font-size: 0.9rem;
@@ -29,14 +29,9 @@ textarea {
 
 .input-group {
     border-radius: 0.2rem;
-    background: var(--input-bg);
-    border: var(--input-border);
+    background: var(--shdx-input-bg);
+    border: var(--shdx-input-border);
     display: flex;
-
-    label {
-        align-self: center;
-        padding: 0.2rem;
-    }
 
     input {
         border-color: transparent;

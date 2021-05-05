@@ -4,7 +4,7 @@ button, input[type=submit], .button {
     border-radius: 0.2rem;
     background: none;
     border: none;
-    color: var(--accent-blue);
+    color: var(--shdx-accent-blue);
     cursor: pointer;
     padding: 0.7rem;
     margin: 0.2rem;
@@ -13,7 +13,7 @@ button, input[type=submit], .button {
     font-size: 0.9rem;
     transition: color 0.15s, background 0.15s;
     //buttons don't inherit the body's font stack
-    font-family: var(--en-fonts);
+    font-family: var(--shdx-en-fonts);
 
     &:hover:not(:disabled), &.hover {
         background: rgba(40, 40, 40, 0.4);
@@ -28,13 +28,13 @@ button, input[type=submit], .button {
 }
 
 button.primary, .button.primary {
-    color: var(--primary);
+    color: var(--shdx-primary);
 
     &:hover:not(:disabled) {
-        color: var(--primary-light);
+        color: var(--shdx-primary-light);
     }
     &:disabled {
-        color: var(--primary-dark);
+        color: var(--shdx-primary-dark);
     }
 }
 button:disabled {
@@ -44,19 +44,19 @@ button:disabled {
 }
 
 button.galaxy, .button.galaxy {
-    background: var(--accent-gradient);
+    background: var(--shdx-accent-gradient);
     color: white;
 
     &:hover:not(:disabled) {
-        background: var(--accent-gradient-light);
+        background: var(--shdx-accent-gradient-light);
     }
 }
 
 button.danger:not(:disabled) {
-    background: var(--accent-red);
+    background: var(--shdx-accent-red);
     color: black;
     &:hover {
-        background: var(--accent-red-bright);
+        background: var(--shdx-accent-red-bright);
     }
 }
 

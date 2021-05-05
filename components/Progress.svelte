@@ -1,6 +1,6 @@
 <style>
     .progress-border {
-        background: var(--accent-gradient);
+        background: var(--shdx-accent-gradient);
         padding: 1px;
         border-radius: 0.2rem;
         flex: 1;

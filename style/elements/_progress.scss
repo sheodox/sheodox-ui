@@ -1,15 +1,15 @@
 progress {
     -webkit-appearance: none;
-    background: var(--bg);
+    background: var(--shdx-bg);
     border: none;
 
     &::-webkit-progress-bar {
-        background: var(--bg);
+        background: var(--shdx-bg);
     }
     &::-moz-progress-bar {
-        background: var(--accent-gradient);
+        background: var(--shdx-accent-gradient);
     }
     &::-webkit-progress-value {
-        background: var(--accent-gradient);
+        background: var(--shdx-accent-gradient);
     }
 }

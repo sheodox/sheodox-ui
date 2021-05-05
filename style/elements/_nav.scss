@@ -3,7 +3,7 @@ nav {
         list-style: none;
 
         a[href], .a {
-            color: var(--text-color);
+            color: var(--shdx-text-color);
             font-weight: bold;
             text-decoration: none;
             border-bottom: 0.2rem solid transparent;
@@ -11,7 +11,7 @@ nav {
             border-radius: 0;
 
             &:hover {
-                border-bottom-color: var(--nav-highlight);
+                border-bottom-color: var(--shdx-nav-highlight);
                 color: white;
             }
         }

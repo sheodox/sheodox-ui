@@ -13,6 +13,7 @@ export {default as MenuButton} from './components/MenuButton.svelte';
 export {default as ButtonDropdown} from './components/ButtonDropdown.svelte';
 export {default as Loading} from './components/Loading.svelte';
 export {default as Portal} from './components/Portal.svelte';
+export {default as TextInput} from './components/TextInput.svelte';
 export {default as TabList} from './components/TabList.svelte';
 export {default as Tab} from './components/Tab.svelte';
 //not exporting Toast, it's internal

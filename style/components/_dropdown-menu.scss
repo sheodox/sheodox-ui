@@ -1,6 +1,6 @@
 .dropdown-menu {
     box-shadow: 0 0 0.4rem black;
-    background: var(--panel-header-bg);
+    background: var(--shdx-panel-header-bg);
 
     ul {
         margin: 0;
@@ -16,7 +16,7 @@
             line-height: 1;
         }
         li:hover {
-            background: var(--panel-header-bg-light);
+            background: var(--shdx-panel-header-bg-light);
         }
     }
 

@@ -12,10 +12,10 @@
 		margin: 0;
 	}
 	.error {
-		background: var(--accent-red);
+		background: var(--shdx-accent-red);
 	}
 	.info {
-        background: var(--panel-header-bg-light);
+        background: var(--shdx-panel-header-bg-light);
 	}
 	pre {
 		overflow: auto;

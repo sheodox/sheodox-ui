@@ -1,5 +1,5 @@
 .panel {
-    background: var(--panel-bg);
+    background: var(--shdx-panel-bg);
     padding: 0;
     margin: 0;
 
@@ -8,12 +8,12 @@
     }
 
     &.bordered {
-        border: var(--panel-border);
+        border: var(--shdx-panel-border);
     }
 }
 .sub-panel {
     margin: 1rem 1rem 2rem;
-    background: var(--sub-panel-bg);
+    background: var(--shdx-sub-panel-bg);
     padding: 0.5rem;
     border-radius: 0.2rem;
 }
