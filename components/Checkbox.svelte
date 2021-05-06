@@ -22,7 +22,7 @@
 </style>
 
 <div>
-    <input type="checkbox" id="checkbox-{id}" bind:checked {disabled} />
+    <input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change />
     <label for="checkbox-{id}" class:disabled={disabled}>
         <span class="checkbox-icon" class:checked={checked}>
             <Icon icon="{checked ? 'check-square' : 'square'}" noPadding={true} />

@@ -2,7 +2,7 @@
     div {
         padding: 0.2rem 0.5rem;
         position: relative;
-        flex-direction: column;
+        flex-direction: row;
     }
     .focused {
         outline: 1px solid var(--shdx-input-focus-color);
@@ -52,12 +52,16 @@
         {placeholder}
         on:focus={() => focused = true}
         on:blur={() => focused = false}
+        on:keyup
+        on:keydown
+        on:keypress
     />
     <label
         for="text-input-{id}"
     >
         <slot />
     </label>
+    <slot name="append" />
 </div>
 
 <script>

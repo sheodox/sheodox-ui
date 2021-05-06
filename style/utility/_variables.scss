@@ -31,7 +31,7 @@
     //to preserve the blueish tint, some of these are auto-generated, some are manually adjusted, otherwise the saturation is all over the place.
     $base: #15171e;
     --shdx-bg: #{$base};
-    --shdx-panel-bg: #0c0e15;
+    --shdx-panel-bg: #1d2028;
     $subPanel: #22242c;
     --shdx-sub-panel-bg: #{$subPanel};
     --shdx-sub-panel-bg-light: #{lighten($subPanel, 3%)};
