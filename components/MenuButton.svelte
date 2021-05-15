@@ -1,13 +1,15 @@
 <style>
-    button {
-        color: white;
-    }
     .menubutton-menu {
         z-index: 1000;
     }
 </style>
 
-<button on:click|stopPropagation={() => showDropdown = !showDropdown} bind:this={button}>
+<button
+    on:click|stopPropagation={() => showDropdown = !showDropdown}
+    bind:this={button}
+    aria-pressed={showDropdown}
+    class="{triggerClasses}"
+>
     <slot name="trigger" />
 </button>
 {#if showDropdown}
@@ -29,6 +31,8 @@
 
     //popperjs placement option
     export let placement = 'bottom-start';
+    // optional additional classes to apply to the button that opens the dropdown
+    export let triggerClasses = '';
 
     let showDropdown = false,
         button,

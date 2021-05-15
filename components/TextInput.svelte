@@ -13,26 +13,28 @@
         background: transparent !important;
         transition: opacity 0.2s;
         padding: 0.7rem 0 0.4rem;
+        width: 100%;
     }
     label {
         vertical-align: top;
-        transition: font-size 0.2s ease-in-out, top 0.2s ease-in-out, transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out, color 0.2s ease-in-out;
         display: block;
         min-height: 0.7rem;
         cursor: text;
         position: absolute;
         top: 0;
+        font-size: 1rem;
         pointer-events: none;
+        transform-origin: top left;
     }
     .muted-label label {
-        font-size: 0.7rem;
-        color: var(--shdx-less-muted);
+        transform: scale(0.7);
+        color: var(--shdx-gray-75);
     }
     .emphasized-label label {
-        font-size: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--shdx-least-muted);
+        transform: scale(1);
+        margin-top: 0.7rem;
+        color: var(--shdx-gray-50);
     }
     .emphasized-label input {
         opacity: 0;

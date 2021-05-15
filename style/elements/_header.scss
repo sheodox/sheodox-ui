@@ -33,18 +33,18 @@
             min-height: 3rem;
 
             &:hover {
-                background: var(--shdx-panel-header-bg-light);
+                background: var(--shdx-gray-500);
                 text-decoration: none;
-                border-color: var(--shdx-nav-highlight);
+                border-color: var(--shdx-blue-500) !important;
             }
 
             &[aria-pressed="true"] {
                 border-bottom-color: transparent !important;
-                background-color: var(--shdx-panel-header-bg-dark);
+                background-color: var(--shdx-gray-500);
             }
 
             &.active {
-                border-color: var(--shdx-nav-highlight-active);
+                border-color: var(--shdx-blue-300);
             }
         }
 

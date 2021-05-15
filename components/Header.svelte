@@ -2,11 +2,11 @@
     header {
         width: 100%;
         justify-content: space-around;
+		box-shadow: var(--shdx-shadow-1);
     }
     header.slim {
-        background: var(--shdx-panel-header-bg);
+        background: var(--shdx-gray-600);
         justify-content: space-between;
-        border-bottom: var(--shdx-panel-border);
     }
 
 	header.centered-branding {
@@ -41,7 +41,7 @@
         }
     }
 	h1 a {
-		color: white;
+		color: var(--shdx-text-color);
 		text-decoration: none;
 	}
 </style>

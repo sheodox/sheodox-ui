@@ -8,10 +8,15 @@
   }
   button {
     margin: 0.2rem 0;
-    color: white;
+    color: var(--shdx-gray-75);
+
+    &:hover {
+      color: var(--shdx-text-color);
+    }
 
     &.selected {
-      background: var(--shdx-accent-gray);
+      color: var(--shdx-text-color);
+      background: var(--shdx-gray-400);
     }
   }
 }

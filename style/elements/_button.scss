@@ -4,7 +4,7 @@ button, input[type=submit], .button {
     border-radius: 0.2rem;
     background: none;
     border: none;
-    color: var(--shdx-accent-blue);
+    color: var(--shdx-text-color);
     cursor: pointer;
     padding: 0.7rem;
     margin: 0.2rem;
@@ -16,11 +16,11 @@ button, input[type=submit], .button {
     font-family: var(--shdx-en-fonts);
 
     &:hover:not(:disabled), &.hover {
-        background: rgba(40, 40, 40, 0.4);
+        background: var(--shdx-gray-400);
     }
     &[aria-pressed="true"] {
         color: white;
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--shdx-gray-500);
         > * {
             filter: drop-shadow(0 0 0.5rem)
         }
@@ -28,13 +28,14 @@ button, input[type=submit], .button {
 }
 
 button.primary, .button.primary {
-    color: var(--shdx-primary);
+    color: var(--shdx-blue-400);
+    background: var(--shdx-gray-500);
 
     &:hover:not(:disabled) {
-        color: var(--shdx-primary-light);
+        color: var(--shdx-blue-300);
     }
     &:disabled {
-        color: var(--shdx-primary-dark);
+        color: var(--shdx-gray-300);
     }
 }
 button:disabled {

@@ -33,6 +33,9 @@
 .align-items-end {
     align-items: end;
 }
+.align-items-baseline {
+    align-items: baseline;
+}
 
 .align-self-start {
     align-self: start;
@@ -51,5 +54,11 @@
 @for $i from 0 through 5 {
     .f-#{$i} {
         flex: #{$i};
+    }
+}
+
+@for $i from 0 through 15 {
+    .gap-#{$i} {
+        gap: var(--shdx-spacing-#{$i});
     }
 }

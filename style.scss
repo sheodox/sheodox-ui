@@ -1,4 +1,7 @@
 @import "node_modules/normalize.css/normalize";
+@import "style/utility/colors";
+@import "style/utility/shadows";
+@import "style/utility/spacing";
 @import "style/utility/variables";
 @import "style/utility/flex";
 @import "style/utility/text";
@@ -17,6 +20,8 @@
 @import "style/elements/progress";
 @import "style/elements/table";
 
+@import "style/components/badges";
+@import "style/components/card";
 @import "style/components/containers";
 @import "style/components/dropdown-menu";
 @import "style/components/modal";
@@ -29,10 +34,10 @@ html {
 }
 
 body, #app-root {
-    font-size: 14px;
+    font-size: var(--shdx-font-size-3);
     line-height: 1.4;
     font-family: var(--shdx-en-fonts);
-    background-color: var(--shdx-bg);
+    background-color: var(--shdx-gray-700);
     color: var(--shdx-text-color);
     margin: 0;
     padding: 0;

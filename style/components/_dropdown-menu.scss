@@ -1,6 +1,6 @@
 .dropdown-menu {
-    box-shadow: 0 0 0.4rem black;
-    background: var(--shdx-panel-header-bg);
+    box-shadow: var(--shdx-shadow-3);
+    background: var(--shdx-gray-500);
 
     ul {
         margin: 0;
@@ -9,14 +9,20 @@
         flex-direction: column;
 
         li a, li .a {
-            padding: 0.7rem;
+            padding: var(--shdx-spacing-4);
+            margin: 0;
             border: none;
             color: white;
             background: none;
             line-height: 1;
+            width: 100%;
         }
         li:hover {
-            background: var(--shdx-panel-header-bg-light);
+            background: var(--shdx-gray-400);
+
+            button, a {
+                background: none;
+            }
         }
     }
 
