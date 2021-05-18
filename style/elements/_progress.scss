@@ -1,10 +1,10 @@
 progress {
     -webkit-appearance: none;
-    background: var(--shdx-bg);
+    background: var(--shdx-gray-600);
     border: none;
 
     &::-webkit-progress-bar {
-        background: var(--shdx-bg);
+        background: var(--shdx-gray-600);
     }
     &::-moz-progress-bar {
         background: var(--shdx-accent-gradient);
