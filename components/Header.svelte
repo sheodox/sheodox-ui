@@ -2,11 +2,11 @@
     header {
         width: 100%;
         justify-content: space-around;
-		box-shadow: var(--shdx-shadow-1);
     }
     header.slim {
         background: var(--shdx-gray-600);
         justify-content: space-between;
+		box-shadow: var(--shdx-shadow-1);
     }
 
 	header.centered-branding {
