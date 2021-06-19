@@ -47,17 +47,31 @@
     class:muted-label={!emphasizedLabel}
     class:emphasized-label={emphasizedLabel}
 >
-    <input
-        id="text-input-{id}"
-        type="text"
-        bind:value
-        {placeholder}
-        on:focus={() => focused = true}
-        on:blur={() => focused = false}
-        on:keyup
-        on:keydown
-        on:keypress
-    />
+    {#if type === 'text'}
+        <input
+            id="text-input-{id}"
+            type="text"
+            bind:value
+            {placeholder}
+            on:focus={() => focused = true}
+            on:blur={() => focused = false}
+            on:keyup
+            on:keydown
+            on:keypress
+        />
+    {:else if type === 'password'}
+        <input
+            id="text-input-{id}"
+            type="password"
+            bind:value
+            {placeholder}
+            on:focus={() => focused = true}
+            on:blur={() => focused = false}
+            on:keyup
+            on:keydown
+            on:keypress
+        />
+    {/if}
     <label
         for="text-input-{id}"
     >
@@ -70,6 +84,8 @@
     export let value;
     export let placeholder;
     export let id;
+    export let type = 'text';
+
     let focused;
 
     if (!id) {

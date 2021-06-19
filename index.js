@@ -10,7 +10,6 @@ export {default as Footer} from './components/Footer.svelte';
 export {default as DropdownMenu} from './components/DropdownMenu.svelte';
 export {default as NavDropdown} from './components/NavDropdown.svelte';
 export {default as MenuButton} from './components/MenuButton.svelte';
-export {default as ButtonDropdown} from './components/ButtonDropdown.svelte';
 export {default as Loading} from './components/Loading.svelte';
 export {default as Portal} from './components/Portal.svelte';
 export {default as TextInput} from './components/TextInput.svelte';
