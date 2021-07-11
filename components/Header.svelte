@@ -36,17 +36,22 @@
 		height: 100%;
     }
     @media (max-width: 960px) {
-        header {
+        header.breakpoint-large {
             flex-direction: column !important;
         }
     }
+	@media (max-width: 600px) {
+		header.breakpoint-medium {
+			flex-direction: column !important;
+		}
+	}
 	h1 a {
 		color: var(--shdx-text-color);
 		text-decoration: none;
 	}
 </style>
 
-<header class="row" class:slim={slim} class:centered-branding={!$$slots.nav}>
+<header class="row breakpoint-{breakpoint}" class:slim={slim} class:centered-branding={!$$slots.nav}>
 	<div class="branding row">
 		<slot name="logo" />
 		<h1>
@@ -72,6 +77,7 @@
 	export let appName;
 	export let href;
 	export let titleClickPreventDefault = false;
+	export let breakpoint = 'large';
 
 	$: title = `${pageName ? `${pageName} -` : ''} ${appName}`.trim();
 
