@@ -6,11 +6,15 @@
         display: block;
     }
 </style>
-<div class="tab" id="tab-content-{tabId}" class:selected={tabId === selectedTab} aria-labelledby="tab-{tabId}" role="tabpanel">
-    <slot />
+<div class="tab" id="tab-content-{tabId}" class:selected aria-labelledby="tab-{tabId}" role="tabpanel">
+    {#if selected}
+        <slot />
+    {/if}
 </div>
 
 <script>
     export let tabId;
     export let selectedTab;
+
+    $: selected = selectedTab === tabId;
 </script>
