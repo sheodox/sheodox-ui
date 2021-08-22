@@ -71,6 +71,18 @@
             on:keydown
             on:keypress
         />
+    {:else if type === 'email'}
+        <input
+            id="text-input-{id}"
+            type="email"
+            bind:value
+            {placeholder}
+            on:focus={() => focused = true}
+            on:blur={() => focused = false}
+            on:keyup
+            on:keydown
+            on:keypress
+        />
     {/if}
     <label
         for="text-input-{id}"

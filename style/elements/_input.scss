@@ -2,7 +2,7 @@ textarea {
     font-size: 0.7rem;
 }
 
-input[type=text], input:not([type]), input[type=date], input[type=time], input[type=password], textarea, select {
+input[type=text], input:not([type]), input[type=date], input[type=time], input[type=password], input[type=email], textarea, select {
     color: white;
     transition: border 0.2s;
     border-radius: 0.2rem;
@@ -20,7 +20,7 @@ input[type=text], input:not([type]), input[type=date], input[type=time], input[t
         color: var(--shdx-muted);
     }
 }
-input[type=text], input:not([type]), input[type=date], input[type=password], input[type=time] select {
+input[type=text], input:not([type]), input[type=date], input[type=password], input[type=time], input[type=email], select {
     font-size: 1rem;
 }
 textarea {
