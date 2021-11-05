@@ -1,0 +1,64 @@
+.f-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.f-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-start {
+	justify-content: start;
+}
+.justify-content-end {
+	justify-content: end;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+.justify-content-around {
+	justify-content: space-around;
+}
+
+.align-items-center {
+	align-items: center;
+}
+.align-items-start {
+	align-items: start;
+}
+.align-items-end {
+	align-items: end;
+}
+.align-items-baseline {
+	align-items: baseline;
+}
+
+.align-self-start {
+	align-self: start;
+}
+.align-self-center {
+	align-self: center;
+}
+.align-self-end {
+	align-self: end;
+}
+
+.f-wrap {
+	flex-wrap: wrap;
+}
+
+@for $i from 0 through 5 {
+	.f-#{$i} {
+		flex: #{$i};
+	}
+}
+
+@for $i from 0 through 15 {
+	.gap-#{$i} {
+		gap: var(--shdx-spacing-#{$i});
+	}
+}

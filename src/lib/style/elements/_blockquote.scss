@@ -1,0 +1,9 @@
+blockquote {
+	padding-left: 0.5rem;
+	border-left: 0.2rem solid white;
+
+	//paragraph elements have too much space!
+	> p {
+		margin: 0;
+	}
+}

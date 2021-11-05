@@ -1,0 +1,3 @@
+package*.json
+package
+test/*.bundle.js

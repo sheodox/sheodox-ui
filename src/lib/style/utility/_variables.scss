@@ -1,0 +1,43 @@
+:root {
+	--shdx-accent-blue: #0cacff;
+	--shdx-accent-blue-dark: #0cacff21;
+	--shdx-accent-blue-light: #0185c9;
+	--shdx-accent-red: #e83450;
+	--shdx-accent-red-bright: #ff0e32;
+	--shdx-accent-mint: #01fdc2;
+	--shdx-accent-cyan: #01fdfd;
+	$purple: #7700ff;
+	$pink: #bb24e2;
+	--shdx-accent-purple: #{$purple};
+	--shdx-accent-purple-dark: #7804cd;
+	--shdx-accent-purple-bright: #b300ff;
+	--shdx-accent-pink: #{$pink};
+	--shdx-accent-pink-light: #cc00ff;
+	--shdx-accent-gray: #3d3d42;
+	--shdx-gradient-start: var(--shdx-accent-purple-dark);
+	--shdx-gradient-end: var(--shdx-accent-pink);
+	--shdx-gradient-start-light: #{lighten($purple, 5%)};
+	--shdx-gradient-end-light: #{lighten($pink, 5%)};
+	--shdx-accent-gradient: linear-gradient(to right, var(--shdx-gradient-start), var(--shdx-gradient-end));
+	--shdx-accent-gradient-light: linear-gradient(
+		to right,
+		var(--shdx-gradient-start-light),
+		var(--shdx-gradient-end-light)
+	);
+
+	--shdx-text-color: rgba(255, 255, 255, 0.9);
+	--shdx-muted: #5b5c6f;
+	--shdx-nav-highlight: var(--shdx-accent-mint);
+	--shdx-nav-highlight-active: var(--shdx-accent-cyan);
+
+	--shdx-input-bg: var(--shdx-gray-800);
+	--shdx-input-focus-color: #3584e4;
+	//a text color indicating an export option is recommended, like highlighting "use kana" if
+	//one of the meanings for the selected definition is usually kana
+	$suggestion: #00ffc3; //or maybe try #ff00ef (bright pink)
+	--shdx-primary: #{$suggestion};
+	--shdx-primary-light: #{lighten($suggestion, 5%)};
+	--shdx-primary-dark: #{darken($suggestion, 34%)};
+
+	--shdx-en-fonts: -apple-system, Noto Sans, Roboto, Ubuntu, Segoe UI, sans-serif;
+}
