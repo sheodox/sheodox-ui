@@ -36,19 +36,22 @@ header {
 			// when on mobile, don't let the buttons get awkwardly short
 			min-height: 3rem;
 
-			&:hover {
+			&:disabled {
+				color: var(--shdx-gray-300);
+			}
+			&:hover:enabled {
 				background: var(--shdx-gray-500);
 				text-decoration: none;
 				border-color: var(--shdx-blue-500) !important;
 			}
 
+			&.active:enabled {
+				border-color: var(--shdx-blue-300);
+			}
+
 			&[aria-pressed='true'] {
 				border-bottom-color: transparent !important;
 				background-color: var(--shdx-gray-500);
-			}
-
-			&.active {
-				border-color: var(--shdx-blue-300);
 			}
 		}
 
