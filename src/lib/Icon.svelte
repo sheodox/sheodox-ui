@@ -1,24 +1,29 @@
 <style>
-	i {
-		padding-right: 0.25rem;
+	i.prepend {
+		padding-right: var(--shdx-spacing-1);
 	}
-	i.no-padding {
-		padding: 0;
+	i.append {
+		padding-left: var(--shdx-spacing-1);
 	}
 	:global(button.small) i {
 		font-size: 12px;
 	}
 </style>
 
-<i class="{variantClass} fa-{icon}" class:no-padding={noPadding} />
+<i class="{iconVariantClass} {variant} fa-{icon}" />
 
 <script lang="ts">
 	export let icon: string;
-	export let noPadding = false;
-	export let variant: 'solid' | 'brand' = 'solid';
+	// the usage type of the icon, controls the placement of padding
+	// 'prepend' = icon before text, like: "[save icon] Save"
+	// 'append' = icon after text, like: "Next [next icon]"
+	// 'icon-only' = no text with icon, like: "[close icon]"
+	export let variant: 'prepend' | 'append' | 'icon-only' = 'prepend';
+	// the fontawesome icon set in use
+	export let iconVariant: 'solid' | 'brand' = 'solid';
 
-	const variantClass = {
+	const iconVariantClass = {
 		solid: 'fas',
 		brand: 'fab',
-	}[variant];
+	}[iconVariant];
 </script>
