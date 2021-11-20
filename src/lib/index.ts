@@ -1,11 +1,12 @@
 /// <reference types="svelte" />
-/// <reference types="sass-loader" />
 /// <reference types="sass" />
 import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast, clearToast } from './toast';
 
-//@ts-ignore - webpack knows how to import this, not actually used beyond importing
-//so type checking doesn't really get us anything
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore - bundlers knows how to import this, but typescript doesn't
+// and the side effect of importing is all that matters
 import styles from './style.scss';
+
 import Modal from './Modal.svelte';
 import Icon from './Icon.svelte';
 import Header from './Header.svelte';

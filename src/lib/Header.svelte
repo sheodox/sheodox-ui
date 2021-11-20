@@ -73,9 +73,9 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher<{ titleclick: void }>();
 
-	export let pageName: string = '';
+	export let pageName = '';
 	export let appName: string;
 	export let href: string = null;
 	export let titleClickPreventDefault = false;

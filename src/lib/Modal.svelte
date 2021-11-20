@@ -60,7 +60,7 @@
 
 	export let title = '';
 	export let visible = false;
-	const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher<{ closed: void }>();
 
 	function close() {
 		visible = false;
