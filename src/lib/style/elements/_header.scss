@@ -39,13 +39,13 @@ header {
 			&:disabled {
 				color: var(--shdx-gray-300);
 			}
-			&:hover:enabled {
+			&:hover:not(:disabled) {
 				background: var(--shdx-gray-500);
 				text-decoration: none;
 				border-color: var(--shdx-blue-500) !important;
 			}
 
-			&.active:enabled {
+			&.active:not(:disabled) {
 				border-color: var(--shdx-blue-300);
 			}
 

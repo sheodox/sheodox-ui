@@ -12,7 +12,7 @@ nav {
 			margin: 0;
 			border-radius: 0;
 
-			&:hover:enabled {
+			&:hover:not(:disabled) {
 				border-bottom-color: var(--shdx-nav-highlight);
 				color: white;
 			}
