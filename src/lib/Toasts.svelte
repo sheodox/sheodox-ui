@@ -28,8 +28,38 @@
 </div>
 
 <script lang="ts">
-	import { toasts, pauseExpiration, resumeExpiration } from './toast';
+	import { onMount } from 'svelte';
+	import { toasts, pauseExpiration, resumeExpiration, expirationPaused } from './toast';
 	import Toast from './_Toast.svelte';
 
 	export let dockedAt: 'top-right' | 'bottom-center' | 'bottom-left' = 'top-right';
+
+	let lastFrame = Date.now();
+
+	function onFrame() {
+		requestAnimationFrame(onFrame);
+		const now = Date.now(),
+			delta = now - lastFrame;
+		lastFrame = now;
+
+		if ($expirationPaused) {
+			return;
+		}
+
+		toasts.update((toasts) => {
+			return toasts
+				.map((toast) => {
+					toast.ttl -= delta;
+					return toast;
+				})
+				.filter((toast) => {
+					return toast.ttl > 0;
+				});
+		});
+	}
+
+	onMount(() => {
+		lastFrame = Date.now();
+		onFrame();
+	});
 </script>

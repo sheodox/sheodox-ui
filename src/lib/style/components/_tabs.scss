@@ -2,21 +2,26 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	border-bottom: 1px solid var(--shdx-gray-400);
 
 	li {
 		display: inline;
 	}
 	button {
-		margin: 0.2rem 0;
+		margin: 0;
 		color: var(--shdx-gray-75);
+		border-radius: 0;
+		border-bottom: 2px solid transparent;
 
 		&:hover {
+			background: transparent;
 			color: var(--shdx-text-color);
+			border-bottom-color: var(--shdx-gray-400);
 		}
 
 		&.selected {
 			color: var(--shdx-text-color);
-			background: var(--shdx-gray-400);
+			border-bottom-color: var(--shdx-blue-400);
 		}
 	}
 }

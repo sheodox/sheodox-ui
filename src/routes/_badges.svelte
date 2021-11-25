@@ -11,5 +11,5 @@
 </div>
 
 <script lang="ts">
-	import { colors } from './util';
+	import { colors } from './_util';
 </script>

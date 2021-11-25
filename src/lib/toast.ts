@@ -20,6 +20,8 @@ export type Toasts = ToastOptions[];
 
 export const toasts = writable([]);
 
+export const expirationPaused = writable(false);
+
 let toastId = 0;
 function getToastId() {
 	return toastId++;
@@ -31,11 +33,8 @@ function addToast(newToast: ToastOptions) {
 	});
 }
 
-let lastFrame = Date.now(),
-	expirationPaused = false;
-
 export function pauseExpiration() {
-	expirationPaused = true;
+	expirationPaused.set(true);
 	toasts.update((toasts) => {
 		return toasts.map((toast) => {
 			toast.ttl = toast.initialTTL;
@@ -44,31 +43,8 @@ export function pauseExpiration() {
 	});
 }
 export function resumeExpiration() {
-	expirationPaused = false;
+	expirationPaused.set(false);
 }
-
-function onFrame() {
-	requestAnimationFrame(onFrame);
-	const now = Date.now(),
-		delta = now - lastFrame;
-	lastFrame = now;
-
-	if (expirationPaused) {
-		return;
-	}
-
-	toasts.update((toasts) => {
-		return toasts
-			.map((toast) => {
-				toast.ttl -= delta;
-				return toast;
-			})
-			.filter((toast) => {
-				return toast.ttl > 0;
-			});
-	});
-}
-onFrame();
 
 export function createAutoExpireToast(options: ToastOptionsCreatable) {
 	const id = getToastId(),

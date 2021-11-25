@@ -1,3 +1,4 @@
 package*.json
 package
 test/*.bundle.js
+.svelte-kit
