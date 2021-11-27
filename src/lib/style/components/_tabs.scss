@@ -12,6 +12,7 @@
 		color: var(--shdx-gray-75);
 		border-radius: 0;
 		border-bottom: 2px solid transparent;
+		transition: border-bottom-color 0.2s;
 
 		&:hover {
 			background: transparent;
