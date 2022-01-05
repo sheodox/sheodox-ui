@@ -19,7 +19,7 @@ input[type='submit'],
 
 	&:hover:not(:disabled),
 	&.hover {
-		background: var(--shdx-gray-400);
+		background: var(--shdx-gray-300);
 	}
 	&[aria-pressed='true'] {
 		color: white;
@@ -33,7 +33,7 @@ input[type='submit'],
 button.primary,
 .button.primary {
 	color: var(--shdx-blue-400);
-	background: var(--shdx-gray-500);
+	background: var(--shdx-gray-400);
 
 	&:hover:not(:disabled) {
 		color: var(--shdx-blue-300);
