@@ -44,7 +44,7 @@
 			<div class="modal-title header">
 				<h1>{title}</h1>
 				<button class="close" on:click={close}>
-					<Icon icon="times" variant="icon-only" />
+					&times;
 					<span class="sr-only">Close modal</span>
 				</button>
 			</div>
@@ -55,7 +55,6 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import Icon from './Icon.svelte';
 	import Portal from './Portal.svelte';
 
 	export let title = '';
