@@ -11,6 +11,12 @@
 			<li>
 				<a href="/">Link 2</a>
 			</li>
+			<li>
+				<a href="/">Link 2</a>
+			</li>
+			<li>
+				<a href="/">Link 2</a>
+			</li>
 		</ul>
 	</nav>
 	<nav slot="headerEnd">

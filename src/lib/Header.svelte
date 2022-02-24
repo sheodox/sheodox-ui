@@ -17,6 +17,18 @@
 		justify-content: space-around;
 	}
 
+	header.has-toolbar {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		.header-center {
+			margin: 0 auto;
+		}
+		.header-end {
+			margin-left: auto;
+		}
+	}
+
 	header .branding {
 		:global(img),
 		:global(svg) {
@@ -42,6 +54,14 @@
 		.branding {
 			flex-basis: 100%;
 		}
+		header.has-toolbar {
+			display: flex;
+
+			.header-center,
+			.header-end {
+				margin: 0;
+			}
+		}
 	}
 	@media (max-width: 600px) {
 		.branding {
@@ -66,10 +86,10 @@
 		</h1>
 	</div>
 	{#if $$slots.headerCenter}
-		<div class="px-3">
+		<div class="px-3 header-center">
 			<slot name="headerCenter" />
 		</div>
-		<div class="px-3">
+		<div class="px-3 header-end">
 			<slot name="headerEnd" />
 		</div>
 	{/if}
