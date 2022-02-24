@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
 	header {
 		width: 100%;
 		justify-content: space-around;
@@ -7,25 +7,30 @@
 		background: var(--shdx-gray-600);
 		justify-content: space-between;
 		box-shadow: var(--shdx-shadow-1);
+
+		h1 {
+			margin: 0.3rem 0;
+		}
 	}
 
-	header.centered-branding {
+	header.no-toolbar {
 		justify-content: space-around;
 	}
 
-	header .branding :global(img),
-	header .branding :global(svg) {
-		height: 4rem;
-		width: 4rem;
-		margin: 0 1rem;
+	header .branding {
+		:global(img),
+		:global(svg) {
+			height: 4rem;
+			width: 4rem;
+			margin: 0 1rem;
+		}
 	}
-	header.slim .branding :global(img),
-	header.slim .branding :global(svg) {
-		height: 3rem;
-		width: 3rem;
-	}
-	header.slim h1 {
-		margin: 0.3rem 0;
+	header.slim .branding {
+		:global(img),
+		:global(svg) {
+			height: 3rem;
+			width: 3rem;
+		}
 	}
 
 	.row {
@@ -33,18 +38,14 @@
 		flex-direction: row;
 		align-items: center;
 	}
-	.toolbar {
-		margin: 0 1rem;
-		height: 100%;
-	}
 	@media (max-width: 960px) {
-		header.breakpoint-large {
-			flex-direction: column !important;
+		.branding {
+			flex-basis: 100%;
 		}
 	}
 	@media (max-width: 600px) {
-		header.breakpoint-medium {
-			flex-direction: column !important;
+		.branding {
+			flex-basis: 100%;
 		}
 	}
 	h1 a {
@@ -53,8 +54,8 @@
 	}
 </style>
 
-<header class="row breakpoint-{breakpoint}" class:slim class:centered-branding={!$$slots.nav}>
-	<div class="branding row">
+<header class="row f-wrap breakpoint-{breakpoint} {$$slots.headerCenter ? 'has-toolbar' : 'no-toolbar'}" class:slim>
+	<div class="branding row px-3">
 		<slot name="logo" />
 		<h1>
 			{#if href}
@@ -64,9 +65,12 @@
 			{/if}
 		</h1>
 	</div>
-	{#if $$slots.nav}
-		<div class="toolbar">
-			<slot name="nav" />
+	{#if $$slots.headerCenter}
+		<div class="px-3">
+			<slot name="headerCenter" />
+		</div>
+		<div class="px-3">
+			<slot name="headerEnd" />
 		</div>
 	{/if}
 </header>
