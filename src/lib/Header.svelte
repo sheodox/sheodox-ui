@@ -51,7 +51,7 @@
 		align-items: center;
 	}
 	@media (max-width: 960px) {
-		.branding {
+		.has-toolbar .branding {
 			flex-basis: 100%;
 		}
 		header.has-toolbar {
@@ -63,18 +63,16 @@
 			}
 		}
 	}
-	@media (max-width: 600px) {
-		.branding {
-			flex-basis: 100%;
-		}
-	}
 	h1 a {
 		color: var(--shdx-text-color);
 		text-decoration: none;
 	}
 </style>
 
-<header class="row f-wrap breakpoint-{breakpoint} {$$slots.headerCenter ? 'has-toolbar' : 'no-toolbar'}" class:slim>
+<header
+	class="row f-wrap breakpoint-{breakpoint} {$$slots.headerCenter || $$slots.headerEnd ? 'has-toolbar' : 'no-toolbar'}"
+	class:slim
+>
 	<div class="branding row px-3">
 		<slot name="logo" />
 		<h1>
@@ -85,7 +83,7 @@
 			{/if}
 		</h1>
 	</div>
-	{#if $$slots.headerCenter}
+	{#if $$slots.headerCenter || $$slots.headerEnd}
 		<div class="px-3 header-center">
 			<slot name="headerCenter" />
 		</div>
