@@ -5,13 +5,15 @@
 	}
 </style>
 
-{#each colors as color}
-	<div class="f-row">
-		{#each weights as weight}
-			<div class="swatch" style="background-color: var(--shdx-{color}-{weight})" />
-		{/each}
-	</div>
-{/each}
+<div class="m-3">
+	{#each colors as color}
+		<div class="f-row">
+			{#each weights as weight}
+				<div class="swatch" style="background-color: var(--sx-{color}-{weight})" />
+			{/each}
+		</div>
+	{/each}
+</div>
 
 <script lang="ts">
 	import { colors } from './_util';

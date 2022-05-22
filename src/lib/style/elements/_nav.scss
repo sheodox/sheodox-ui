@@ -5,15 +5,20 @@ nav {
 
 		a[href],
 		.a {
-			color: var(--shdx-text-color);
+			color: var(--sx-text-color);
 			font-weight: bold;
 			text-decoration: none;
 			border-bottom: 0.2rem solid transparent;
 			margin: 0;
 			border-radius: 0;
 
+			&:focus {
+				outline: 2px solid var(--sx-blue-500);
+				border-radius: 3px;
+			}
+
 			&:hover:not(:disabled) {
-				border-bottom-color: var(--shdx-nav-highlight);
+				border-bottom-color: var(--sx-nav-highlight);
 				color: white;
 			}
 		}

@@ -10,13 +10,13 @@
 
 <div class="light f-row">
 	{#each shadowLevels as level}
-		<div class="shadow-box m-6" style="box-shadow: var(--shdx-shadow-{level})" />
+		<div class="shadow-box m-6" style="box-shadow: var(--sx-shadow-{level})" />
 	{/each}
 </div>
 
 <div class="dark f-row">
 	{#each shadowLevels as level}
-		<div class="shadow-box m-6" style="box-shadow: var(--shdx-light-shadow-{level})" />
+		<div class="shadow-box m-6" style="box-shadow: var(--sx-light-shadow-{level})" />
 	{/each}
 </div>
 

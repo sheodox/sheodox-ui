@@ -2,27 +2,34 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid var(--shdx-gray-400);
+	display: flex;
 
 	li {
 		display: inline;
 	}
 	button {
 		margin: 0;
-		color: var(--shdx-gray-75);
+		color: var(--sx-gray-75);
 		border-radius: 0;
-		border-bottom: 2px solid transparent;
+		border-bottom: 2px solid var(--sx-gray-400);
 		transition: border-bottom-color 0.2s;
+		font-size: var(--sx-font-size-4);
 
 		&:hover {
 			background: transparent;
-			color: var(--shdx-text-color);
-			border-bottom-color: var(--shdx-gray-400);
+			border-bottom-color: var(--sx-blue-400);
+			color: var(--sx-text-color);
+		}
+
+		&:focus {
+			border-bottom-color: var(--sx-blue-transparent);
+			color: var(--sx-text-color);
+			outline: none;
 		}
 
 		&.selected {
-			color: var(--shdx-text-color);
-			border-bottom-color: var(--shdx-blue-400);
+			color: var(--sx-text-color);
+			border-bottom-color: var(--sx-blue-400);
 		}
 	}
 }

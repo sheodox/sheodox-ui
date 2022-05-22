@@ -6,7 +6,7 @@ input[type='submit'],
 	border-radius: 0.2rem;
 	background: none;
 	border: none;
-	color: var(--shdx-text-color);
+	color: var(--sx-text-color);
 	cursor: pointer;
 	padding: 0.7rem;
 	margin: 0.2rem;
@@ -15,31 +15,36 @@ input[type='submit'],
 	font-size: 0.9rem;
 	transition: color 0.15s, background 0.15s;
 	//buttons don't inherit the body's font stack
-	font-family: var(--shdx-en-fonts);
+	font-family: var(--sx-en-fonts);
 
 	&:hover:not(:disabled),
 	&.hover {
-		background: var(--shdx-gray-300);
+		background: var(--sx-gray-transparent);
 	}
 	&[aria-pressed='true'] {
 		color: white;
-		background: var(--shdx-gray-500);
+		background: var(--sx-gray-transparent);
 		> * {
 			filter: drop-shadow(0 0 0.5rem);
 		}
+	}
+
+	&:focus {
+		outline: 2px solid var(--sx-input-focus-color);
+		outline-offset: 2px;
 	}
 }
 
 button.primary,
 .button.primary {
-	color: var(--shdx-blue-400);
-	background: var(--shdx-gray-400);
+	color: var(--sx-blue-400);
+	background: var(--sx-gray-transparent);
 
 	&:hover:not(:disabled) {
-		color: var(--shdx-blue-300);
+		color: var(--sx-blue-200);
 	}
 	&:disabled {
-		color: var(--shdx-gray-300);
+		color: var(--sx-gray-transparent);
 	}
 }
 button:disabled {
@@ -50,19 +55,19 @@ button:disabled {
 
 button.galaxy,
 .button.galaxy {
-	background: var(--shdx-accent-gradient);
+	background: var(--sx-accent-gradient);
 	color: white;
 
 	&:hover:not(:disabled) {
-		background: var(--shdx-accent-gradient-light);
+		background: var(--sx-accent-gradient-light);
 	}
 }
 
 button.danger:not(:disabled) {
-	background: var(--shdx-accent-red);
+	background: var(--sx-accent-red);
 	color: black;
 	&:hover {
-		background: var(--shdx-accent-red-bright);
+		background: var(--sx-accent-red-bright);
 	}
 }
 

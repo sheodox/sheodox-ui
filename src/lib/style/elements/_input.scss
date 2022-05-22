@@ -8,23 +8,25 @@ input[type='date'],
 input[type='time'],
 input[type='password'],
 input[type='email'],
+input[type='number'],
 textarea,
 select {
 	color: white;
 	transition: border 0.2s;
 	border-radius: 0.2rem;
-	background: var(--shdx-input-bg);
+	background: var(--sx-input-bg);
 	padding: 0.2rem;
-	font-family: var(--shdx-en-fonts);
+	font-family: var(--sx-en-fonts);
 	border: 1px solid transparent;
 
 	&:focus {
 		background: rgba(11, 15, 21, 0.8);
-		border-color: var(--shdx-input-focus-color);
+		border-color: transparent;
+		outline: 2px solid var(--sx-input-focus-color);
 	}
 
 	&:disabled {
-		color: var(--shdx-muted);
+		color: var(--sx-muted);
 	}
 }
 input[type='text'],
@@ -33,6 +35,7 @@ input[type='date'],
 input[type='password'],
 input[type='time'],
 input[type='email'],
+input[type='number'],
 select {
 	font-size: 1rem;
 }
@@ -42,7 +45,7 @@ textarea {
 
 .input-group {
 	border-radius: 0.2rem;
-	background: var(--shdx-input-bg);
+	background: var(--sx-input-bg);
 	display: flex;
 
 	input {

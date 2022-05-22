@@ -3,7 +3,7 @@
 		list-style: none;
 	}
 	.dropdown-menu :global(button) {
-		color: var(--shdx-text-color);
+		color: var(--sx-text-color);
 		text-align: left;
 	}
 </style>

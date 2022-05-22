@@ -1,9 +1,9 @@
 <style>
 	i.prepend {
-		padding-right: var(--shdx-spacing-1);
+		padding-right: var(--sx-spacing-1);
 	}
 	i.append {
-		padding-left: var(--shdx-spacing-1);
+		padding-left: var(--sx-spacing-1);
 	}
 	:global(button.small) i {
 		font-size: 12px;

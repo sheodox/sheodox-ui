@@ -4,9 +4,9 @@
 	}
 </style>
 
-<div>
+<div class="p-3">
 	{#each colors as color}
-		<span class="p-1 m-3 shdx-badge-{color}">{color}</span>
+		<span class="sx-badge-{color}">{color}</span>
 	{/each}
 </div>
 

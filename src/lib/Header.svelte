@@ -4,9 +4,9 @@
 		justify-content: space-around;
 	}
 	header.slim {
-		background: var(--shdx-gray-600);
+		background: var(--sx-gray-600);
 		justify-content: space-between;
-		box-shadow: var(--shdx-shadow-1);
+		box-shadow: var(--sx-shadow-1);
 
 		h1 {
 			margin: 0.3rem 0;
@@ -64,7 +64,7 @@
 		}
 	}
 	h1 a {
-		color: var(--shdx-text-color);
+		color: var(--sx-text-color);
 		text-decoration: none;
 	}
 </style>

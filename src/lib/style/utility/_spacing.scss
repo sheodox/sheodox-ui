@@ -1,68 +1,68 @@
 :root {
-	--shdx-spacing-0: 0;
-	--shdx-spacing-1: 4px;
-	--shdx-spacing-2: 8px;
-	--shdx-spacing-3: 12px;
-	--shdx-spacing-4: 16px;
-	--shdx-spacing-5: 24px;
-	--shdx-spacing-6: 32px;
-	--shdx-spacing-7: 48px;
-	--shdx-spacing-8: 64px;
-	--shdx-spacing-9: 96px;
-	--shdx-spacing-10: 128px;
-	--shdx-spacing-11: 256px;
-	--shdx-spacing-12: 384px;
-	--shdx-spacing-13: 512px;
-	--shdx-spacing-14: 640px;
-	--shdx-spacing-15: 768px;
+	--sx-spacing-0: 0;
+	--sx-spacing-1: 4px;
+	--sx-spacing-2: 8px;
+	--sx-spacing-3: 12px;
+	--sx-spacing-4: 16px;
+	--sx-spacing-5: 24px;
+	--sx-spacing-6: 32px;
+	--sx-spacing-7: 48px;
+	--sx-spacing-8: 64px;
+	--sx-spacing-9: 96px;
+	--sx-spacing-10: 128px;
+	--sx-spacing-11: 256px;
+	--sx-spacing-12: 384px;
+	--sx-spacing-13: 512px;
+	--sx-spacing-14: 640px;
+	--sx-spacing-15: 768px;
 }
 
 @for $i from 0 through 15 {
 	.m-#{$i} {
-		margin: var(--shdx-spacing-#{$i}) !important;
+		margin: var(--sx-spacing-#{$i}) !important;
 	}
 	.mt-#{$i} {
-		margin-top: var(--shdx-spacing-#{$i}) !important;
+		margin-top: var(--sx-spacing-#{$i}) !important;
 	}
 	.mb-#{$i} {
-		margin-bottom: var(--shdx-spacing-#{$i}) !important;
+		margin-bottom: var(--sx-spacing-#{$i}) !important;
 	}
 	.ml-#{$i} {
-		margin-left: var(--shdx-spacing-#{$i}) !important;
+		margin-left: var(--sx-spacing-#{$i}) !important;
 	}
 	.mr-#{$i} {
-		margin-right: var(--shdx-spacing-#{$i}) !important;
+		margin-right: var(--sx-spacing-#{$i}) !important;
 	}
 	.my-#{$i} {
-		margin-top: var(--shdx-spacing-#{$i}) !important;
-		margin-bottom: var(--shdx-spacing-#{$i}) !important;
+		margin-top: var(--sx-spacing-#{$i}) !important;
+		margin-bottom: var(--sx-spacing-#{$i}) !important;
 	}
 	.mx-#{$i} {
-		margin-left: var(--shdx-spacing-#{$i}) !important;
-		margin-right: var(--shdx-spacing-#{$i}) !important;
+		margin-left: var(--sx-spacing-#{$i}) !important;
+		margin-right: var(--sx-spacing-#{$i}) !important;
 	}
 
 	.p-#{$i} {
-		padding: var(--shdx-spacing-#{$i}) !important;
+		padding: var(--sx-spacing-#{$i}) !important;
 	}
 	.pt-#{$i} {
-		padding-top: var(--shdx-spacing-#{$i}) !important;
+		padding-top: var(--sx-spacing-#{$i}) !important;
 	}
 	.pb-#{$i} {
-		padding-bottom: var(--shdx-spacing-#{$i}) !important;
+		padding-bottom: var(--sx-spacing-#{$i}) !important;
 	}
 	.pl-#{$i} {
-		padding-left: var(--shdx-spacing-#{$i}) !important;
+		padding-left: var(--sx-spacing-#{$i}) !important;
 	}
 	.pr-#{$i} {
-		padding-right: var(--shdx-spacing-#{$i}) !important;
+		padding-right: var(--sx-spacing-#{$i}) !important;
 	}
 	.py-#{$i} {
-		padding-top: var(--shdx-spacing-#{$i}) !important;
-		padding-bottom: var(--shdx-spacing-#{$i}) !important;
+		padding-top: var(--sx-spacing-#{$i}) !important;
+		padding-bottom: var(--sx-spacing-#{$i}) !important;
 	}
 	.px-#{$i} {
-		padding-left: var(--shdx-spacing-#{$i}) !important;
-		padding-right: var(--shdx-spacing-#{$i}) !important;
+		padding-left: var(--sx-spacing-#{$i}) !important;
+		padding-right: var(--sx-spacing-#{$i}) !important;
 	}
 }

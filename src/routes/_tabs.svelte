@@ -25,8 +25,8 @@
 
 	let selectedTab: string;
 	const tabs = [
-		{ id: 'colors', title: 'Colors' },
 		{ id: 'badges', title: 'Badges' },
+		{ id: 'colors', title: 'Colors' },
 		{ id: 'shadows', title: 'Shadows' },
 		{ id: 'toasts', title: 'Toasts' },
 	];

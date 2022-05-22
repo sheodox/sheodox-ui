@@ -1,6 +1,6 @@
 .dropdown-menu {
-	box-shadow: var(--shdx-shadow-3);
-	background: var(--shdx-gray-500);
+	box-shadow: var(--sx-shadow-3);
+	background: var(--sx-gray-500);
 
 	ul {
 		margin: 0;
@@ -10,7 +10,7 @@
 
 		li a,
 		li .a {
-			padding: var(--shdx-spacing-4);
+			padding: var(--sx-spacing-4);
 			margin: 0;
 			border: none;
 			color: white;
@@ -19,7 +19,7 @@
 			width: 100%;
 		}
 		li:hover {
-			background: var(--shdx-gray-400);
+			background: var(--sx-gray-400);
 
 			button,
 			a {

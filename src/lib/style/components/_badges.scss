@@ -1,9 +1,11 @@
 $colors: 'gray', 'red', 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue', 'purple', 'pink';
 
 @each $color in $colors {
-	.shdx-badge-#{$color} {
-		color: var(--shdx-#{$color}-200);
-		background-color: var(--shdx-#{$color}-900);
+	.sx-badge-#{$color} {
+		color: var(--sx-#{$color}-200);
+		background-color: var(--sx-#{$color}-transparent);
 		border-radius: 3px;
+		padding: 2px var(--sx-spacing-1);
+		margin: var(--sx-spacing-1);
 	}
 }

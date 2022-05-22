@@ -1,10 +1,10 @@
 .card {
-	background-color: var(--shdx-gray-500);
+	background-color: var(--sx-gray-500);
 	border: 1px solid transparent;
 	transition: border-color 0.1s, background-color 0.1s;
 
 	&.clickable:hover {
-		background-color: var(--shdx-blue-700);
-		border-color: var(--shdx-blue-500);
+		background-color: var(--sx-blue-700);
+		border-color: var(--sx-blue-500);
 	}
 }

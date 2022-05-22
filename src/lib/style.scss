@@ -10,6 +10,7 @@
 @import 'style/elements/button';
 @import 'style/elements/blockquote';
 @import 'style/elements/code';
+@import 'style/elements/fieldset';
 @import 'style/elements/footer';
 @import 'style/elements/header';
 @import 'style/elements/heading';
@@ -35,11 +36,11 @@ html {
 
 body,
 #app-root {
-	font-size: var(--shdx-font-size-3);
+	font-size: var(--sx-font-size-3);
 	line-height: 1.4;
-	font-family: var(--shdx-en-fonts);
-	background-color: var(--shdx-gray-700);
-	color: var(--shdx-text-color);
+	font-family: var(--sx-en-fonts);
+	background-color: var(--sx-gray-700);
+	color: var(--sx-text-color);
 	margin: 0;
 	padding: 0;
 	width: 100%;

@@ -37,21 +37,21 @@ header {
 			min-height: 3rem;
 
 			&:disabled {
-				color: var(--shdx-gray-300);
+				color: var(--sx-gray-300);
 			}
 			&:hover:not(:disabled) {
-				background: var(--shdx-gray-500);
+				background: var(--sx-gray-500);
 				text-decoration: none;
-				border-color: var(--shdx-blue-500) !important;
+				border-color: var(--sx-blue-500) !important;
 			}
 
 			&.active:not(:disabled) {
-				border-color: var(--shdx-blue-300);
+				border-color: var(--sx-blue-300);
 			}
 
 			&[aria-pressed='true'] {
 				border-bottom-color: transparent !important;
-				background-color: var(--shdx-gray-500);
+				background-color: var(--sx-gray-500);
 			}
 		}
 

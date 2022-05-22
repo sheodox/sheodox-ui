@@ -12,10 +12,10 @@
 		margin: 0;
 	}
 	.error {
-		background: var(--shdx-red-400);
+		background: var(--sx-red-400);
 	}
 	.info {
-		background: var(--shdx-gray-500);
+		background: var(--sx-gray-500);
 	}
 	pre {
 		overflow: auto;

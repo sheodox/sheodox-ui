@@ -5,7 +5,7 @@
 		flex-direction: row;
 	}
 	.focused {
-		outline: 1px solid var(--shdx-input-focus-color);
+		outline: 2px solid var(--sx-input-focus-color);
 	}
 	input {
 		outline: none !important;
@@ -28,12 +28,12 @@
 	}
 	.muted-label label {
 		transform: scale(0.7);
-		color: var(--shdx-gray-75);
+		color: var(--sx-gray-75);
 	}
 	.emphasized-label label {
 		transform: scale(1);
 		margin-top: 0.7rem;
-		color: var(--shdx-gray-50);
+		color: var(--sx-gray-50);
 	}
 	.emphasized-label input {
 		opacity: 0;
@@ -45,6 +45,18 @@
 		<input
 			id="text-input-{id}"
 			type="text"
+			bind:value
+			{placeholder}
+			on:focus={() => (focused = true)}
+			on:blur={() => (focused = false)}
+			on:keyup
+			on:keydown
+			on:keypress
+		/>
+	{:else if type === 'number'}
+		<input
+			id="text-input-{id}"
+			type="number"
 			bind:value
 			{placeholder}
 			on:focus={() => (focused = true)}
@@ -88,7 +100,7 @@
 	export let value: string | number;
 	export let placeholder = '';
 	export let id: string;
-	export let type: 'text' | 'password' | 'email' = 'text';
+	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
 
 	let focused: boolean;
 

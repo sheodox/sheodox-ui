@@ -19,7 +19,7 @@
 		display: flex;
 		flex-direction: column;
 		max-height: 90vh;
-		background: var(--shdx-gray-600);
+		background: var(--sx-gray-600);
 	}
 	.modal-title {
 		display: flex;

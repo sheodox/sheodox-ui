@@ -59,6 +59,6 @@
 
 @for $i from 0 through 15 {
 	.gap-#{$i} {
-		gap: var(--shdx-spacing-#{$i});
+		gap: var(--sx-spacing-#{$i});
 	}
 }

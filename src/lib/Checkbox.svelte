@@ -3,21 +3,22 @@
 		opacity: 0;
 	}
 	input:focus + label > .checkbox-icon > :global(i) {
-		outline: 0.1rem solid var(--shdx-accent-blue);
+		outline: 2px solid var(--sx-input-focus-color);
+		outline-offset: 1px;
 		border-radius: 3px;
 	}
 	.checkbox-icon {
 		margin-left: -1.2rem;
-		color: var(--shdx-text-color);
+		color: var(--sx-text-color);
 	}
 	.checkbox-icon :global(i) {
 		padding: 1px;
 	}
 	.checkbox-icon.checked {
-		color: var(--shdx-accent-blue);
+		color: var(--sx-accent-blue);
 	}
 	.disabled {
-		color: var(--shdx-muted);
+		color: var(--sx-muted);
 	}
 </style>
 

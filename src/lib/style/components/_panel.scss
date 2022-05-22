@@ -1,5 +1,5 @@
 .panel {
-	background: var(--shdx-gray-600);
+	background: var(--sx-gray-600);
 	padding: 0;
 	margin: 0;
 
@@ -9,12 +9,12 @@
 	}
 
 	&.bordered {
-		border: var(--shdx-panel-border);
+		border: var(--sx-panel-border);
 	}
 }
 .sub-panel {
 	margin: 1rem 1rem 2rem;
-	background: var(--shdx-sub-panel-bg);
+	background: var(--sx-sub-panel-bg);
 	padding: 0.5rem;
 	border-radius: 0.2rem;
 }
