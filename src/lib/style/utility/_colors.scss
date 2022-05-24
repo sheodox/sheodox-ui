@@ -1,20 +1,22 @@
 $transparency: 25%;
 
 :root {
-	--sx-gray-900: hsl(227, 18%, 0%);
-	--sx-gray-800: hsl(227, 18%, 5%);
-	--sx-gray-700: hsl(227, 18%, 10%);
-	--sx-gray-600: hsl(227, 18%, 15%);
-	--sx-gray-500: hsl(227, 18%, 20%);
-	--sx-gray-400: hsl(227, 18%, 23%);
-	--sx-gray-300: hsl(227, 18%, 32%);
-	--sx-gray-200: hsl(227, 21%, 43%);
-	--sx-gray-100: hsl(227, 22%, 55%);
-	--sx-gray-75: hsl(227, 15%, 75%);
-	--sx-gray-50: hsl(227, 10%, 85%);
-	--sx-gray-25: hsl(227, 5%, 95%);
-	--sx-gray-transparent: hsla(227, 18%, 35%, #{$transparency});
-	--sx-gray-transparent-dark: hsla(227, 18%, 0%, 45%);
+	--sx-hue-gray: 227;
+	--sx-gray-900: hsl(var(--sx-hue-gray), 18%, 0%);
+	--sx-gray-800: hsl(var(--sx-hue-gray), 18%, 5%);
+	--sx-gray-700: hsl(var(--sx-hue-gray), 18%, 10%);
+	--sx-gray-600: hsl(var(--sx-hue-gray), 18%, 15%);
+	--sx-gray-500: hsl(var(--sx-hue-gray), 18%, 20%);
+	--sx-gray-400: hsl(var(--sx-hue-gray), 18%, 23%);
+	--sx-gray-300: hsl(var(--sx-hue-gray), 18%, 32%);
+	--sx-gray-200: hsl(var(--sx-hue-gray), 21%, 43%);
+	--sx-gray-100: hsl(var(--sx-hue-gray), 22%, 55%);
+	--sx-gray-75: hsl(var(--sx-hue-gray), 15%, 75%);
+	--sx-gray-50: hsl(var(--sx-hue-gray), 10%, 85%);
+	--sx-gray-25: hsl(var(--sx-hue-gray), 5%, 95%);
+	--sx-gray-transparent: hsla(var(--sx-hue-gray), 18%, 35%, #{$transparency});
+	--sx-gray-transparent-light: hsla(var(--sx-hue-gray), 18%, 50%, #{$transparency});
+	--sx-gray-transparent-dark: hsla(var(--sx-hue-gray), 18%, 0%, 45%);
 
 	--sx-red-900: hsl(0, 80%, 10%);
 	--sx-red-800: hsl(0, 75%, 17%);

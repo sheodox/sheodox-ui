@@ -15,7 +15,7 @@
 		padding: 1px;
 	}
 	.checkbox-icon.checked {
-		color: var(--sx-accent-blue);
+		color: var(--sx-blue-500);
 	}
 	.disabled {
 		color: var(--sx-muted);

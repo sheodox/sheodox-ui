@@ -42,9 +42,7 @@
 		{/if}
 	</p>
 	{#if toast.technicalDetails}
-		<pre>
-			{toast.technicalDetails}
-		</pre>
+		<pre>{toast.technicalDetails}</pre>
 	{/if}
 	{#if toast.progress}
 		<Progress max={toast.max} min={toast.min} value={toast.value} id="toast-progress-id-{toast.id}" />

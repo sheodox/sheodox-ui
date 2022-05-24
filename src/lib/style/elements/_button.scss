@@ -19,7 +19,7 @@ input[type='submit'],
 
 	&:hover:not(:disabled),
 	&.hover {
-		background: var(--sx-gray-transparent);
+		background: var(--sx-gray-transparent-light);
 	}
 	&[aria-pressed='true'] {
 		color: white;
@@ -39,13 +39,10 @@ button.primary,
 .button.primary {
 	color: var(--sx-blue-400);
 	background: var(--sx-gray-transparent);
-
-	&:hover:not(:disabled) {
-		color: var(--sx-blue-200);
-	}
-	&:disabled {
-		color: var(--sx-gray-transparent);
-	}
+}
+button.secondary,
+.button.secondary {
+	background: var(--sx-gray-transparent);
 }
 button:disabled {
 	color: #2b394a;
@@ -55,8 +52,10 @@ button:disabled {
 
 button.galaxy,
 .button.galaxy {
-	background: var(--sx-accent-gradient);
-	color: white;
+	&:not(:disabled) {
+		background: var(--sx-accent-gradient);
+		color: white;
+	}
 
 	&:hover:not(:disabled) {
 		background: var(--sx-accent-gradient-light);

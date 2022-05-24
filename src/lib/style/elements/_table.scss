@@ -6,9 +6,17 @@ table {
 	}
 }
 th {
-	background: #5766a221;
+	background: var(--sx-gray-transparent);
 }
 td,
 th {
 	padding: 0.2rem 0.5rem;
+}
+
+table {
+	border: 1px solid var(--sx-gray-300);
+}
+th {
+	padding: var(--sx-spacing-3);
+	text-align: left;
 }

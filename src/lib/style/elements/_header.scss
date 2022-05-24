@@ -49,6 +49,12 @@ header {
 				border-color: var(--sx-blue-300);
 			}
 
+			&:focus {
+				border-color: var(--sx-blue-300);
+				background: var(--sx-blue-transparent);
+				outline: none !important;
+			}
+
 			&[aria-pressed='true'] {
 				border-bottom-color: transparent !important;
 				background-color: var(--sx-gray-500);
