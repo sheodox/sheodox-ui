@@ -51,8 +51,8 @@ header {
 
 			&:focus {
 				border-color: var(--sx-blue-300);
-				background: var(--sx-blue-transparent);
-				outline: none !important;
+				border-bottom-color: transparent;
+				border-radius: 3px;
 			}
 
 			&[aria-pressed='true'] {
