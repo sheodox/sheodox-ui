@@ -26,7 +26,11 @@
 	<input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change />
 	<label for="checkbox-{id}" class:disabled>
 		<span class="checkbox-icon" class:checked>
-			<Icon icon={checked ? 'check-square' : 'square'} variant="icon-only" />
+			<Icon
+				icon={checked ? 'check-square' : 'square'}
+				iconVariant={checked ? 'solid' : 'regular'}
+				variant="icon-only"
+			/>
 		</span>
 		<slot />
 	</label>

@@ -20,10 +20,11 @@
 	// 'icon-only' = no text with icon, like: "[close icon]"
 	export let variant: 'prepend' | 'append' | 'icon-only' = 'prepend';
 	// the fontawesome icon set in use
-	export let iconVariant: 'solid' | 'brand' = 'solid';
+	export let iconVariant: 'solid' | 'brand' | 'regular' = 'solid';
 
-	const iconVariantClass = {
+	$: iconVariantClass = {
 		solid: 'fas',
 		brand: 'fab',
+		regular: 'far',
 	}[iconVariant];
 </script>
