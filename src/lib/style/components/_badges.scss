@@ -1,11 +1,17 @@
-$colors: 'gray', 'red', 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue', 'purple', 'pink';
+$colors: 'red', 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue', 'purple', 'pink';
 
-@each $color in $colors {
-	.sx-badge-#{$color} {
-		color: var(--sx-#{$color}-200);
-		background-color: var(--sx-#{$color}-transparent);
+@mixin badge($colorName, $color, $bg) {
+	.sx-badge-#{$colorName} {
+		color: var(--sx-#{$color});
+		background-color: var(--sx-#{$bg});
 		border-radius: 3px;
 		padding: 2px var(--sx-spacing-1);
 		margin: var(--sx-spacing-1);
 	}
 }
+
+@each $color in $colors {
+	@include badge($color, '#{$color}-200', '#{$color}-transparent');
+}
+
+@include badge('gray', 'gray-50', 'gray-transparent');
