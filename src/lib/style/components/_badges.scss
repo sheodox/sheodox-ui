@@ -1,4 +1,4 @@
-$colors: 'red', 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue', 'purple', 'pink';
+$colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 
 @mixin badge($colorName, $color, $bg) {
 	.sx-badge-#{$colorName} {
@@ -7,11 +7,15 @@ $colors: 'red', 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue', 'purple', '
 		border-radius: 3px;
 		padding: 2px var(--sx-spacing-1);
 		margin: var(--sx-spacing-1);
+		font-weight: bold;
 	}
 }
 
 @each $color in $colors {
-	@include badge($color, '#{$color}-200', '#{$color}-transparent');
+	@include badge($color, '#{$color}-500', '#{$color}-transparent');
 }
 
 @include badge('gray', 'gray-50', 'gray-transparent');
+@include badge('red', 'red-400', 'red-transparent');
+@include badge('purple', 'purple-300', 'purple-transparent');
+@include badge('pink', 'pink-400', 'pink-transparent');
