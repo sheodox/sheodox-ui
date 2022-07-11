@@ -59,6 +59,7 @@
 			type="number"
 			bind:value
 			{placeholder}
+			{autocomplete}
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -71,6 +72,7 @@
 			type="password"
 			bind:value
 			{placeholder}
+			{autocomplete}
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -83,6 +85,7 @@
 			type="email"
 			bind:value
 			{placeholder}
+			{autocomplete}
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -97,9 +100,12 @@
 </div>
 
 <script lang="ts">
+	import { genId } from './util';
+
 	export let value: string | number;
 	export let placeholder = '';
-	export let id: string;
+	export let id = genId();
+	export let autocomplete = 'off';
 	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
 
 	let focused: boolean;
@@ -107,5 +113,5 @@
 	if (!id) {
 		throw new Error(`'id' not provided for text input.`);
 	}
-	$: emphasizedLabel = !value && !focused;
+	$: emphasizedLabel = (value === '' || value === null) && !focused;
 </script>

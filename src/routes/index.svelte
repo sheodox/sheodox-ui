@@ -81,10 +81,11 @@
 	<br />
 
 	<div style="width: 20rem;" class="f-column gap-3 p-3">
-		<TextInput id="text-input-demo-1" value="something">Text Input</TextInput>
-		<TextInput id="text-input-demo-2" value="">Text Input</TextInput>
-		<Checkbox id="checkbox-demo-1" checked={true}>Checkbox</Checkbox>
-		<Checkbox id="checkbox-demo-2" checked={false}>Checkbox</Checkbox>
+		<TextInput value="something">Text Input</TextInput>
+		<TextInput value="">Text Input</TextInput>
+		<TextInput value="0" type="number">Number Input</TextInput>
+		<Checkbox checked={true}>Checkbox</Checkbox>
+		<Checkbox checked={false}>Checkbox</Checkbox>
 		<button on:click={() => (showModal = true)} class="secondary">Show modal</button>
 	</div>
 	<code>some code element</code>

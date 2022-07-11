@@ -38,8 +38,9 @@
 
 <script lang="ts">
 	import Icon from './Icon.svelte';
+	import { genId } from './util';
 
-	export let id: string;
+	export let id = genId();
 	export let checked = false;
 	export let disabled = false;
 
