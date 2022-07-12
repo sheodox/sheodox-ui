@@ -47,6 +47,7 @@
 			type="text"
 			bind:value
 			{placeholder}
+			{autocomplete}
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
