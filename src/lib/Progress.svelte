@@ -23,11 +23,12 @@
 
 <script lang="ts">
 	import { expectProperties } from './component-utils';
+	import { genId } from './util';
 
 	export let value = 0;
 	export let max = 1;
 	export let min = 0;
-	export let id: string;
+	export let id = genId();
 	$: bgSize = (max / value) * 100;
 
 	expectProperties('Progress', new Map([['id', id]]));

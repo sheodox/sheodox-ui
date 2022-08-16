@@ -90,6 +90,11 @@
 	</div>
 	<code>some code element</code>
 
+	<br />
+
+	<label for="test-progress">Progress</label>
+	<Progress id="test-progress" max={100} min={0} value={50} />
+
 	<Tabs />
 </main>
 
@@ -105,7 +110,7 @@
 {/if}
 
 <script lang="ts">
-	import { Modal, Header, Toasts, TextInput, Checkbox } from '../lib';
+	import { Modal, Header, Toasts, TextInput, Checkbox, Progress } from '../lib';
 	import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 	import Tabs from './_tabs.svelte';
 

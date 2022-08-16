@@ -2,6 +2,7 @@ progress {
 	-webkit-appearance: none;
 	background: var(--sx-gray-600);
 	border: none;
+	height: var(--sx-spacing-1);
 
 	&::-webkit-progress-bar {
 		background: var(--sx-gray-600);

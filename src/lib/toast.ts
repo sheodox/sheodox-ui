@@ -92,9 +92,11 @@ export function createProgressToast(options: ToastOptions & Required<Pick<ToastO
 	}
 
 	return createAutoExpireToast({
-		//expecting all the same options as a normal toast, plus a "min" and "max"
+		// expecting all the same options as a normal toast, plus a "min" and "max"
 		...options,
 		progress: true,
+		// don't let progress toasts expire until they're done
+		ttl: Infinity,
 	});
 }
 
@@ -107,6 +109,12 @@ export function updateToast(id: number, updates: Partial<ToastOptions>) {
 				toast.ttl = toast.initialTTL;
 				//allow any arbitrary properties to be updated
 				Object.assign(toast, updates);
+
+				if (toast.progress && toast.value === toast.max) {
+					// progress toasts don't expire, but once it's done it should. if progress updates are slow
+					// we shouldn't make it seem like it's done by hiding the toast
+					toast.ttl = 5000;
+				}
 			}
 			return toast;
 		});
