@@ -38,6 +38,8 @@
 
 <Toasts />
 
+<Modals />
+
 <main class="my-4">
 	<table>
 		<thead>
@@ -87,6 +89,8 @@
 		<Checkbox checked={true}>Checkbox</Checkbox>
 		<Checkbox checked={false}>Checkbox</Checkbox>
 		<button on:click={() => (showModal = true)} class="secondary">Show modal</button>
+
+		<BuiltInModals />
 	</div>
 	<code>some code element</code>
 
@@ -110,8 +114,9 @@
 {/if}
 
 <script lang="ts">
-	import { Modal, Header, Toasts, TextInput, Checkbox, Progress } from '../lib';
+	import { Modal, Modals, Header, Toasts, TextInput, Checkbox, Progress } from '../lib';
 	import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+	import BuiltInModals from './_builtin-modals.svelte';
 	import Tabs from './_tabs.svelte';
 
 	let showModal = false;

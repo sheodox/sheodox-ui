@@ -1,6 +1,7 @@
 /// <reference types="svelte" />
 /// <reference types="sass" />
 import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast, clearToast } from './toast';
+import { showAlertModal, showPromptModal, showConfirmModal } from './modals';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore - bundlers knows how to import this, but typescript doesn't
@@ -21,6 +22,7 @@ import Portal from './Portal.svelte';
 import TextInput from './TextInput.svelte';
 import TabList from './TabList.svelte';
 import Tab from './Tab.svelte';
+import Modals from './Modals.svelte';
 //not exporting Toast, it's internal
 import Toasts from './Toasts.svelte';
 
@@ -46,4 +48,8 @@ export {
 	createProgressToast,
 	updateToast,
 	clearToast,
+	Modals,
+	showPromptModal,
+	showConfirmModal,
+	showAlertModal,
 };
