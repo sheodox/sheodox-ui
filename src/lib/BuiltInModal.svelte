@@ -17,7 +17,7 @@
 		{/if}
 	</div>
 	<div class="modal-footer">
-		{#if modal.type === 'confirm'}
+		{#if modal.type === 'confirm' || modal.type === 'prompt'}
 			<button on:click={() => cancel()} class="secondary my-0">
 				{modal.noPhrase || 'Cancel'}
 			</button>
