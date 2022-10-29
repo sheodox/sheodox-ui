@@ -12,7 +12,7 @@
 			<label>
 				{modal.label}
 				<br />
-				<input bind:value />
+				<input bind:value bind:this={promptInput} on:keydown={maybeSubmit} />
 			</label>
 		{/if}
 	</div>
@@ -29,11 +29,13 @@
 </Modal>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Modal from './Modal.svelte';
 	import type { WrappedModal } from './modals';
 
 	export let modal: WrappedModal;
-	let value = modal.type === 'prompt' && !!modal.default ? modal.default : '';
+	let value = modal.type === 'prompt' && !!modal.default ? modal.default : '',
+		promptInput: HTMLInputElement;
 
 	function cancel() {
 		if (modal.type === 'confirm' || modal.type === 'prompt') {
@@ -47,4 +49,17 @@
 			modal.onYes(value);
 		}
 	}
+
+	function maybeSubmit(e: KeyboardEvent) {
+		if (e.key === 'Enter') {
+			yes();
+		}
+	}
+
+	onMount(() => {
+		if (promptInput) {
+			promptInput.select();
+			promptInput.focus();
+		}
+	});
 </script>
