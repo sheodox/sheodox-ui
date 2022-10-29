@@ -18,11 +18,11 @@
 	</div>
 	<div class="modal-footer">
 		{#if modal.type === 'confirm' || modal.type === 'prompt'}
-			<button on:click={() => cancel()} class="secondary my-0">
+			<button on:click={() => cancel()} class="secondary my-0" bind:this={noButton}>
 				{modal.noPhrase || 'Cancel'}
 			</button>
 		{/if}
-		<button on:click={() => yes()} class="primary my-0">
+		<button on:click={() => yes()} class="primary my-0" bind:this={okButton}>
 			{modal.yesPhrase || 'Ok'}
 		</button>
 	</div>
@@ -35,7 +35,9 @@
 
 	export let modal: WrappedModal;
 	let value = modal.type === 'prompt' && !!modal.default ? modal.default : '',
-		promptInput: HTMLInputElement;
+		promptInput: HTMLInputElement,
+		okButton: HTMLButtonElement,
+		noButton: HTMLButtonElement;
 
 	function cancel() {
 		if (modal.type === 'confirm' || modal.type === 'prompt') {
@@ -53,13 +55,26 @@
 	function maybeSubmit(e: KeyboardEvent) {
 		if (e.key === 'Enter') {
 			yes();
+		} else if (e.key === 'Escape') {
+			cancel();
 		}
 	}
 
 	onMount(() => {
+		// prompts
 		if (promptInput) {
 			promptInput.select();
 			promptInput.focus();
+			return;
+		}
+		// confirms
+		if (noButton) {
+			noButton.focus();
+			return;
+		}
+		// alerts
+		if (okButton) {
+			okButton.focus();
 		}
 	});
 </script>
