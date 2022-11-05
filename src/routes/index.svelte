@@ -99,6 +99,12 @@
 	<label for="test-progress">Progress</label>
 	<Progress id="test-progress" max={100} min={0} value={50} />
 
+	<label for="test-progress-empty">Empty Progress</label>
+	<Progress id="test-progress-empty" max={100} min={0} value={0} />
+
+	<label for="test-progress-max">Complete Progress</label>
+	<Progress id="test-progress-max" max={100} min={0} value={100} />
+
 	<Tabs />
 </main>
 

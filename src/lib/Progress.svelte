@@ -1,24 +1,29 @@
 <style>
-	.progress-border {
-		background: var(--sx-accent-gradient);
-		padding: 1px;
-		border-radius: 0.2rem;
-		flex: 1;
-	}
-	progress {
+	.sx-progress {
 		width: 100%;
 		border-radius: 0.2rem;
+		background: var(--sx-gray-transparent-light);
+		border: none;
+		border-radius: 3px;
+		height: var(--sx-spacing-2);
+		overflow: hidden;
 	}
-	progress::-moz-progress-bar {
-		background-size: var(--progress-bg-size) 100%;
-	}
-	progress::-webkit-progress-value {
-		background-size: var(--progress-bg-size) 100%;
+	.sx-progress-bar {
+		background: var(--sx-pink-500);
+		height: 100%;
 	}
 </style>
 
-<div class="progress-border f-column">
-	<progress {id} {value} {min} {max} style="--progress-bg-size: {bgSize}%" />
+<div class="sx-progress">
+	<div
+		class="sx-progress-bar"
+		role="progressbar"
+		{id}
+		aria-valuenow={value}
+		aria-valuemin={min}
+		aria-valuemax={max}
+		style="width: {bgSize}%"
+	/>
 </div>
 
 <script lang="ts">
@@ -29,7 +34,7 @@
 	export let max = 1;
 	export let min = 0;
 	export let id = genId();
-	$: bgSize = (max / value) * 100;
+	$: bgSize = (value / max) * 100;
 
 	expectProperties('Progress', new Map([['id', id]]));
 </script>
