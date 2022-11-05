@@ -22,6 +22,7 @@
 	.sx-progress-bar {
 		background: var(--sx-pink-500);
 		height: 100%;
+		transition: width 0.1s ease-in-out;
 	}
 </style>
 
