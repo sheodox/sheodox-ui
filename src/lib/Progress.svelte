@@ -1,12 +1,23 @@
-<style>
+<style lang="scss">
 	.sx-progress {
 		width: 100%;
 		border-radius: 0.2rem;
 		background: var(--sx-gray-transparent-light);
 		border: none;
 		border-radius: 3px;
-		height: var(--sx-spacing-2);
 		overflow: hidden;
+
+		&.variant-normal {
+			height: var(--sx-spacing-2);
+		}
+
+		&.variant-slim {
+			height: var(--sx-spacing-1);
+		}
+
+		&.variant-minimal {
+			height: 1px;
+		}
 	}
 	.sx-progress-bar {
 		background: var(--sx-pink-500);
@@ -14,7 +25,7 @@
 	}
 </style>
 
-<div class="sx-progress">
+<div class="sx-progress variant-{variant}">
 	<div
 		class="sx-progress-bar"
 		role="progressbar"
@@ -34,6 +45,8 @@
 	export let max = 1;
 	export let min = 0;
 	export let id = genId();
+	export let variant: 'slim' | 'normal' | 'minimal' = 'normal';
+
 	$: bgSize = (value / max) * 100;
 
 	expectProperties('Progress', new Map([['id', id]]));

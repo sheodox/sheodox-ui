@@ -96,6 +96,12 @@
 
 	<br />
 
+	<label for="test-progress-minimal">Minimal Progress</label>
+	<Progress id="test-progress-minimal" max={100} min={0} value={50} variant="minimal" />
+
+	<label for="test-progress-slim">Slim Progress</label>
+	<Progress id="test-progress-slim" max={100} min={0} value={50} variant="slim" />
+
 	<label for="test-progress">Progress</label>
 	<Progress id="test-progress" max={100} min={0} value={50} />
 
