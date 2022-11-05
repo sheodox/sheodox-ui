@@ -80,6 +80,20 @@
 		</tbody>
 	</table>
 
+	<div class="f-row gap-3 m-3">
+		<Fieldset title="Normal fieldset">
+			<p>this is some fieldset content</p>
+		</Fieldset>
+
+		<Fieldset title="Small fieldset" variant="small">
+			<p>this is some fieldset content</p>
+		</Fieldset>
+
+		<Fieldset title="Small fieldset" variant="small" centeredLegend mutedLegend>
+			<p>this one has different styles</p>
+		</Fieldset>
+	</div>
+
 	<br />
 
 	<div style="width: 20rem;" class="f-column gap-3 p-3">
@@ -130,7 +144,7 @@
 {/if}
 
 <script lang="ts">
-	import { Modal, Modals, Header, Toasts, TextInput, Checkbox, Progress } from '../lib';
+	import { Fieldset, Modal, Modals, Header, Toasts, TextInput, Checkbox, Progress } from '../lib';
 	import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 	import BuiltInModals from './_builtin-modals.svelte';
 	import Tabs from './_tabs.svelte';

@@ -23,6 +23,7 @@ import TextInput from './TextInput.svelte';
 import TabList from './TabList.svelte';
 import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
+import Fieldset from './Fieldset.svelte';
 //not exporting Toast, it's internal
 import Toasts from './Toasts.svelte';
 
@@ -34,6 +35,7 @@ export {
 	Checkbox,
 	Progress,
 	Footer,
+	Fieldset,
 	DropdownMenu,
 	NavDropdown,
 	MenuButton,
