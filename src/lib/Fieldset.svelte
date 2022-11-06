@@ -1,9 +1,68 @@
 <style lang="scss">
-	fieldset {
+	fieldset.variant-bordered {
+		--sx-fieldset-bordered-legend-color: white;
+		--sx-fieldset-background-color: var(--sx-gray-transparent);
+		--sx-fieldset-bordered-border-color: var(--sx-gray-400);
+
+		&,
+		legend {
+			border: 1px solid var(--sx-fieldset-bordered-border-color);
+			border-radius: 3px;
+			background-color: var(--sx-fieldset-background-color);
+		}
+
+		legend {
+			background: var(--sx-fieldset-bordered-border-color);
+			padding-left: var(--sx-spacing-1);
+			color: var(--sx-fieldset-bordered-legend-color);
+			padding-right: var(--sx-spacing-1);
+			line-height: 1;
+			font-weight: bold;
+			span {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				max-width: calc(100% - var(--sx-spacing-3) * 2);
+				display: inline-block;
+			}
+		}
+	}
+	fieldset.variant-box {
+		--sx-fieldset-background-color: var(--sx-gray-transparent);
+		border: none;
+		background-color: var(--sx-fieldset-background-color);
+		overflow: hidden;
+		position: relative;
+		padding-top: var(--sx-legend-font-size);
+		clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%, 0% 5%);
+
+		legend {
+			font-size: var(--sx-font-size-3);
+			color: var(--sx-text-color);
+			border-radius: 2px;
+			position: relative;
+			margin-left: var(--sx-spacing-3);
+			width: 100%;
+
+			span {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				max-width: calc(100% - var(--sx-spacing-3) * 2);
+				display: inline-block;
+				font-weight: bold;
+				position: relative;
+				top: var(--sx-legend-font-size);
+				font-size: var(--sx-legend-font-size);
+			}
+		}
+	}
+	fieldset.variant-tab {
 		--sx-fieldset-background-color: var(--sx-gray-500);
 		border: none;
-		background-color: var(--sx-gray-500);
+		background-color: var(--sx-fieldset-background-color);
 		overflow: hidden;
+		position: relative;
 		border-radius: 5px;
 
 		legend {
@@ -12,7 +71,14 @@
 			border-radius: 2px;
 			position: relative;
 			margin-left: var(--sx-spacing-3);
+			width: 100%;
+
 			span {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				max-width: calc(100% - var(--sx-spacing-3) * 2);
+				display: inline-block;
 				background: var(--sx-fieldset-background-color);
 				font-weight: bold;
 			}
@@ -24,7 +90,8 @@
 				height: 0;
 				position: absolute;
 				background-color: transparent;
-				border: 0.65rem solid transparent;
+				border-color: transparent;
+				border-style: solid;
 			}
 			&::after {
 				border-left-color: var(--sx-fieldset-background-color);
@@ -34,55 +101,70 @@
 				border-right-color: var(--sx-fieldset-background-color);
 			}
 		}
-	}
 
-	.variant-small {
-		legend {
-			font-size: var(--sx-font-size-1);
-			span {
-				font-weight: bold;
+		&.size-small {
+			legend {
+				font-size: var(--sx-font-size-1);
+				span {
+					font-weight: bold;
+				}
+
+				&::after,
+				&::before {
+					border-width: 0.6rem;
+				}
 			}
+		}
 
-			&::after,
-			&::before {
-				border-width: 0.45rem solid transparent;
+		&.size-normal {
+			legend {
+				font-size: var(--sx-font-size-3);
+				span {
+					font-weight: bold;
+				}
+
+				&::after,
+				&::before {
+					border-width: 0.75rem;
+				}
 			}
 		}
 	}
 
-	.variant-normal {
-		legend {
-			font-size: var(--sx-font-size-3);
-			span {
-				font-weight: bold;
-			}
+	.size-small {
+		--sx-legend-font-size: var(--sx-font-size-1);
+	}
 
-			&::after,
-			&::before {
-				border-width: 0.65rem;
-			}
-		}
+	.size-normal {
+		--sx-legend-font-size: var(--sx-font-size-3);
 	}
 	.centeredLegend legend {
-		margin: 0 auto;
+		text-align: center;
+		margin: 0 !important;
+		span {
+			display: inline;
+		}
 	}
 	.mutedLegend legend {
 		color: var(--sx-gray-75);
 	}
 </style>
 
-<fieldset class="variant-{variant} {fieldsetClasses}" class:centeredLegend class:mutedLegend>
-	<legend class={legendClasses}><span>{title}</span></legend>
+<fieldset class="size-{size} variant-{variant} {fieldsetClasses}" class:centeredLegend class:mutedLegend {disabled}>
+	<legend class={legendClasses} title={legend}><span>{legend}</span></legend>
 	<slot />
 </fieldset>
 
 <script lang="ts">
-	export let title: string;
+	export let legend: string;
 	export let fieldsetClasses = '';
 	export let legendClasses = '';
 	// if the legend should be centered
 	export let centeredLegend = false;
 	// if the legend should use an unintrusive text color
 	export let mutedLegend = false;
-	export let variant: 'normal' | 'small' = 'normal';
+	export let size: 'normal' | 'small' = 'normal';
+	// the style the fieldset/legend will have
+	export let variant: 'box' | 'tab' | 'bordered' = 'box';
+	export let disabled = false;
 </script>

@@ -1,4 +1,4 @@
-<Fieldset title="Built in modals">
+<Fieldset legend="Built in modals">
 	<p>Prompt result: "{promptResult}"</p>
 	<p>Confirm result: "{confirmResult}"</p>
 	<button on:click={doConfirm}>Confirm</button>
