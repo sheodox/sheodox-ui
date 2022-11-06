@@ -146,7 +146,7 @@
 		}
 	}
 	.mutedLegend legend {
-		color: var(--sx-gray-75);
+		--sx-text-color: var(--sx-gray-75);
 	}
 </style>
 
