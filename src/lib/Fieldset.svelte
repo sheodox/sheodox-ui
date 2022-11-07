@@ -43,10 +43,11 @@
 			width: 100%;
 
 			span {
-				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 				text-overflow: ellipsis;
-				white-space: nowrap;
-				display: inline-block;
+				overflow: hidden;
 				font-weight: bold;
 				position: relative;
 				top: calc(var(--sx-legend-font-size) + var(--sx-spacing-1));
