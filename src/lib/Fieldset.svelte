@@ -39,18 +39,16 @@
 			color: var(--sx-text-color);
 			border-radius: 2px;
 			position: relative;
-			margin-left: var(--sx-spacing-3);
 			width: 100%;
 
 			span {
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
-				max-width: calc(100% - var(--sx-spacing-3) * 2);
 				display: inline-block;
 				font-weight: bold;
 				position: relative;
-				top: var(--sx-legend-font-size);
+				top: calc(var(--sx-legend-font-size) + var(--sx-spacing-1));
 				font-size: var(--sx-legend-font-size);
 			}
 		}
