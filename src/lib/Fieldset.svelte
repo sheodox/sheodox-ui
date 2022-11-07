@@ -20,6 +20,7 @@
 				padding-left: var(--sx-spacing-1);
 				padding-right: var(--sx-spacing-1);
 				background: var(--sx-fieldset-bordered-border-color);
+				font-size: var(--sx-legend-font-size);
 				display: inline-block;
 			}
 		}
@@ -125,6 +126,20 @@
 				}
 			}
 		}
+
+		&.size-large {
+			legend {
+				font-size: var(--sx-font-size-5);
+				span {
+					font-weight: bold;
+				}
+
+				&::after,
+				&::before {
+					border-width: 1rem;
+				}
+			}
+		}
 	}
 
 	.size-small {
@@ -134,6 +149,10 @@
 	.size-normal {
 		--sx-legend-font-size: var(--sx-font-size-3);
 	}
+	.size-large {
+		--sx-legend-font-size: var(--sx-font-size-5);
+	}
+
 	.centeredLegend legend {
 		text-align: center;
 		margin: 0 !important;
@@ -159,7 +178,7 @@
 	export let centeredLegend = false;
 	// if the legend should use an unintrusive text color
 	export let mutedLegend = false;
-	export let size: 'normal' | 'small' = 'normal';
+	export let size: 'small' | 'normal' | 'large' = 'normal';
 	// the style the fieldset/legend will have
 	export let variant: 'box' | 'tab' | 'bordered' = 'box';
 	export let disabled = false;

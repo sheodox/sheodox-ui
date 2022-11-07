@@ -136,6 +136,18 @@
 		<Fieldset legend="Small fieldset" size="small" centeredLegend mutedLegend variant="tab">
 			<p>this one has different styles</p>
 		</Fieldset>
+
+		<Fieldset legend="Large fieldset" size="large">
+			<p>this is some fieldset content</p>
+		</Fieldset>
+
+		<Fieldset legend="Large fieldset" size="large" variant="tab">
+			<p>this is some fieldset content</p>
+		</Fieldset>
+
+		<Fieldset legend="Large fieldset" size="large" variant="bordered">
+			<p>this is some fieldset content</p>
+		</Fieldset>
 	</div>
 
 	<br />
