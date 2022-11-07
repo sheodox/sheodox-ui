@@ -5,24 +5,21 @@
 		--sx-fieldset-bordered-border-color: var(--sx-gray-400);
 
 		&,
-		legend {
+		span {
+			background-color: var(--sx-fieldset-background-color);
 			border: 1px solid var(--sx-fieldset-bordered-border-color);
 			border-radius: 3px;
-			background-color: var(--sx-fieldset-background-color);
 		}
 
 		legend {
-			background: var(--sx-fieldset-bordered-border-color);
-			padding-left: var(--sx-spacing-1);
 			color: var(--sx-fieldset-bordered-legend-color);
-			padding-right: var(--sx-spacing-1);
 			line-height: 1;
 			font-weight: bold;
+
 			span {
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				max-width: calc(100% - var(--sx-spacing-3) * 2);
+				padding-left: var(--sx-spacing-1);
+				padding-right: var(--sx-spacing-1);
+				background: var(--sx-fieldset-bordered-border-color);
 				display: inline-block;
 			}
 		}
@@ -35,6 +32,7 @@
 		position: relative;
 		padding-top: var(--sx-legend-font-size);
 		clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%, 0% 5%);
+		border-radius: 3px;
 
 		legend {
 			font-size: var(--sx-font-size-3);
