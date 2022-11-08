@@ -27,11 +27,12 @@
 	}
 	fieldset.variant-box {
 		--sx-fieldset-background-color: var(--sx-gray-transparent);
+		--sx-fieldset-box-top: calc(var(--sx-legend-font-size) + var(--sx-spacing-1));
 		border: none;
 		background-color: var(--sx-fieldset-background-color);
 		overflow: hidden;
 		position: relative;
-		padding-top: var(--sx-legend-font-size);
+		padding-top: var(--sx-fieldset-box-top);
 		clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%, 0% 5%);
 		border-radius: 3px;
 
@@ -50,7 +51,7 @@
 				overflow: hidden;
 				font-weight: bold;
 				position: relative;
-				top: calc(var(--sx-legend-font-size) + var(--sx-spacing-1));
+				top: var(--sx-fieldset-box-top);
 				font-size: var(--sx-legend-font-size);
 			}
 		}
