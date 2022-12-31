@@ -77,6 +77,7 @@
 
 <script lang="ts">
 	import Icon from './Icon.svelte';
+	import { sidebarAssumeMobilePx } from './util';
 
 	// a value bound here and the Header component that determines if the sidebar shows
 	export let menuOpen: boolean;
@@ -90,7 +91,7 @@
 
 	function checkWindowWidth() {
 		// can't use `browser` from `$app/environment` because not all consumers of sheodox-ui use sveltekit
-		isMobileBreakpoint = typeof window !== 'undefined' && window.innerWidth < 500;
+		isMobileBreakpoint = typeof window !== 'undefined' && window.innerWidth < sidebarAssumeMobilePx;
 	}
 
 	let aside: HTMLElement;

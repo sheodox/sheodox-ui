@@ -4,7 +4,7 @@
 	@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 	.main-content {
-		max-width: 95%;
+		max-width: 95vw;
 		width: 80rem;
 		margin: 0 auto;
 	}
@@ -83,8 +83,9 @@
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon } from '$lib';
+	import { sidebarAssumeMobilePx } from '$lib/util';
 
-	let menuOpen = browser && window.innerHeight > 500,
+	let menuOpen = browser && window.innerHeight > sidebarAssumeMobilePx,
 		showSidebar = true,
 		sidebarDocked = true,
 		currentPathname = '';
@@ -103,5 +104,6 @@
 		{ href: '/shadows', text: 'Shadows' },
 		{ href: '/tabs', text: 'Tabs' },
 		{ href: '/toasts', text: 'Toasts' },
+		{ href: '/debug', text: 'Debug' },
 	];
 </script>
