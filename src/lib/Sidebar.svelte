@@ -19,13 +19,13 @@
 		}
 
 		&.docked {
+			/* 48px is the height of the header, give it the full remaining height
+				without extending below the bottom of the viewport */
+			height: calc(100vh - 48px);
 			&.open {
 				width: #{$sidebarWidth};
 				min-width: #{$sidebarWidth};
 				transform: translateX(0);
-				/* 48px is the height of the header, give it the full remaining height
-				without extending below the bottom of the viewport */
-				height: calc(100vh - 48px);
 			}
 
 			&.closed {
