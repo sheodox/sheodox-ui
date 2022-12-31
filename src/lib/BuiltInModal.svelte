@@ -40,11 +40,15 @@
 		noButton: HTMLButtonElement;
 
 	function cancel() {
-		if (modal.type === 'confirm' || modal.type === 'prompt') {
+		if ((modal.type === 'confirm' || modal.type === 'prompt') && modal.onNo) {
 			modal.onNo();
 		}
 	}
 	function yes() {
+		if (!modal.onYes) {
+			return;
+		}
+
 		if (modal.type === 'confirm' || modal.type === 'alert') {
 			modal.onYes();
 		} else {

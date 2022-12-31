@@ -33,7 +33,6 @@
 		overflow: hidden;
 		position: relative;
 		padding-top: var(--sx-fieldset-box-top);
-		clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 100%, 0% 100%, 0% 5%);
 		border-radius: 3px;
 
 		legend {

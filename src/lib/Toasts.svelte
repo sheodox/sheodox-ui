@@ -28,16 +28,17 @@
 </div>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import { toasts, pauseExpiration, resumeExpiration, expirationPaused } from './toast';
 	import Toast from './_Toast.svelte';
 
 	export let dockedAt: 'top-right' | 'bottom-center' | 'bottom-left' = 'top-right';
 
-	let lastFrame = Date.now();
+	let lastFrame = Date.now(),
+		animationFrame: ReturnType<typeof requestAnimationFrame>;
 
 	function onFrame() {
-		requestAnimationFrame(onFrame);
+		animationFrame = requestAnimationFrame(onFrame);
 		const now = Date.now(),
 			delta = now - lastFrame;
 		lastFrame = now;
@@ -49,11 +50,11 @@
 		toasts.update((toasts) => {
 			return toasts
 				.map((toast) => {
-					toast.ttl -= delta;
+					toast.ttl = (toast.ttl ?? 5000) - delta;
 					return toast;
 				})
 				.filter((toast) => {
-					return toast.ttl > 0;
+					return (toast.ttl ?? 5000) > 0;
 				});
 		});
 	}
@@ -61,5 +62,9 @@
 	onMount(() => {
 		lastFrame = Date.now();
 		onFrame();
+	});
+
+	onDestroy(() => {
+		typeof cancelAnimationFrame === 'function' && cancelAnimationFrame(animationFrame);
 	});
 </script>

@@ -18,7 +18,13 @@
 
 {#if showMenu}
 	<Portal>
-		<div class="nav-dropdown-menu" bind:this={menu} on:click={() => (showMenu = false)} use:positionMenu>
+		<div
+			class="nav-dropdown-menu"
+			bind:this={menu}
+			on:click={() => (showMenu = false)}
+			use:positionMenu
+			on:keydown={keydown}
+		>
 			<DropdownMenu>
 				<slot name="menu" />
 			</DropdownMenu>
@@ -49,5 +55,11 @@
 		createPopper(button, menu, {
 			placement: 'bottom-start',
 		});
+	}
+
+	function keydown(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			showMenu = false;
+		}
 	}
 </script>

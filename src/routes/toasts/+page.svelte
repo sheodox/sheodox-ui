@@ -11,7 +11,7 @@
 {/if}
 
 <script lang="ts">
-	import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast } from '../lib';
+	import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast } from '$lib';
 
 	function autoExpire() {
 		createAutoExpireToast({
@@ -45,7 +45,7 @@
 		});
 	}
 
-	let progressToastId: number = null;
+	let progressToastId: number | null = null;
 	$: hasProgress = progressToastId !== null;
 
 	function progress() {

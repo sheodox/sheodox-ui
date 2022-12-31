@@ -50,13 +50,16 @@
 </div>
 
 <script lang="ts">
-	import { clearToast, ToastOptions } from './toast';
+	import { clearToast } from './toast';
+	import type { ToastOptions } from './toast';
 	import Progress from './Progress.svelte';
 	import Icon from './Icon.svelte';
 
 	export let toast: ToastOptions;
 
 	function clear() {
-		clearToast(toast.id);
+		if (toast.id) {
+			clearToast(toast.id);
+		}
 	}
 </script>

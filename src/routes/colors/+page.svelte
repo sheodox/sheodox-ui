@@ -16,7 +16,7 @@
 </div>
 
 <script lang="ts">
-	import { colors } from './_util';
+	import { colors } from '../_util';
 	const weights: number[] = [];
 
 	for (let i = 900; i >= 100; i -= 100) {

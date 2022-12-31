@@ -6,10 +6,26 @@
 	<button on:click={doAlert}>Alert</button>
 </Fieldset>
 
-<script lang="ts">
-	import { Fieldset, showPromptModal, showConfirmModal, showAlertModal } from '../lib';
+<Fieldset legend="Custom modal">
+	<button on:click={() => (showCustomModal = true)} class="secondary">Show modal</button>
+</Fieldset>
 
-	let promptResult = '',
+{#if showCustomModal}
+	<Modal bind:visible={showCustomModal} title="Modal">
+		<div class="modal-body">
+			<p>This is modal with a lot of text on it. Here is more text to pad it out even more.</p>
+		</div>
+		<div class="modal-footer">
+			<button on:click={() => (showCustomModal = false)}>Close</button>
+		</div>
+	</Modal>
+{/if}
+
+<script lang="ts">
+	import { Fieldset, showPromptModal, showConfirmModal, showAlertModal, Modal } from '$lib';
+
+	let showCustomModal = false,
+		promptResult: string | null = '',
 		confirmResult = false;
 
 	async function doAlert() {
@@ -24,7 +40,7 @@
 		promptResult = await showPromptModal({
 			title: 'Prompt Example',
 			label: 'Name',
-			default: promptResult,
+			default: promptResult ?? '',
 		});
 	}
 </script>

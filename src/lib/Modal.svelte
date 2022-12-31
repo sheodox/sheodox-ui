@@ -40,8 +40,8 @@
 </style>
 
 <Portal>
-	<div class="overlay" on:click={close}>
-		<div class="modal panel" on:click|stopPropagation>
+	<div class="overlay" on:click={close} on:keydown={keydown}>
+		<div class="modal panel" on:click|stopPropagation on:keydown={keydown}>
 			<div class="modal-title header">
 				<h1>{title}</h1>
 				<button class="close" on:click={close}>
@@ -65,5 +65,11 @@
 	function close() {
 		visible = false;
 		dispatch('closed');
+	}
+
+	function keydown(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			visible = false;
+		}
 	}
 </script>

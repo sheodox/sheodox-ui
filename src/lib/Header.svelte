@@ -10,6 +10,7 @@
 
 		h1 {
 			margin: 0.3rem 0;
+			font-weight: normal;
 		}
 	}
 
@@ -67,6 +68,9 @@
 		color: var(--sx-text-color);
 		text-decoration: none;
 	}
+	.sx-header-menu-trigger {
+		border-radius: 50%;
+	}
 </style>
 
 <header
@@ -74,6 +78,16 @@
 	class:slim
 >
 	<div class="branding row px-3">
+		{#if showMenuTrigger}
+			<button
+				on:click|stopPropagation={() => (menuOpen = !menuOpen)}
+				aria-pressed={menuOpen}
+				class="sx-header-menu-trigger"
+			>
+				<Icon icon="bars" variant="icon-only" />
+				<span class="sr-only">{menuOpen ? 'Close' : 'Open'} menu</span>
+			</button>
+		{/if}
 		<slot name="logo" />
 		<h1>
 			{#if href}
@@ -95,19 +109,21 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import Icon from './Icon.svelte';
 	const dispatch = createEventDispatcher<{ titleclick: void }>();
 
 	export let pageName = '';
 	export let appName: string;
-	export let href: string = null;
+	export let href: string | null = null;
 	export let titleClickPreventDefault = false;
 	export let breakpoint = 'large';
-
-	$: title = `${pageName ? `${pageName} -` : ''} ${appName}`.trim();
-
+	export let showMenuTrigger = false;
+	export let menuOpen = false;
 	//slim=true is a minimal header for use in app pages where screen real estate is more important
 	//slim=false is bigger with no background, used prominently on landing pages
 	export let slim = true;
+
+	$: title = `${pageName ? `${pageName} -` : ''} ${appName}`.trim();
 
 	function headerClick(e: Event) {
 		if (titleClickPreventDefault) {

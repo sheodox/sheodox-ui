@@ -9,7 +9,13 @@
 </button>
 {#if showDropdown}
 	<Portal>
-		<div on:click={() => (showDropdown = false)} use:positionMenu bind:this={menu} class="menubutton-menu">
+		<div
+			on:click={() => (showDropdown = false)}
+			on:keydown={keydown}
+			use:positionMenu
+			bind:this={menu}
+			class="menubutton-menu"
+		>
 			<DropdownMenu>
 				<slot name="menu" />
 			</DropdownMenu>
@@ -21,16 +27,17 @@
 
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import { createPopper, Placement } from '@popperjs/core';
+	import { createPopper } from '@popperjs/core';
 	import DropdownMenu from './DropdownMenu.svelte';
 	import Portal from './Portal.svelte';
+	import type { Placement } from '@popperjs/core';
 
 	// popperjs placement option
 	export let placement: Placement = 'bottom-start';
 	// optional additional classes to apply to the button that opens the dropdown
 	export let triggerClasses = '';
 	// optionally allow triggering by binding context menu to a DOM element
-	export let contextTriggerElement: HTMLElement = null;
+	export let contextTriggerElement: HTMLElement | null = null;
 
 	let showDropdown = false,
 		button: HTMLButtonElement,
@@ -85,6 +92,12 @@
 	function destroyContextHandler() {
 		if (contextTriggerElement) {
 			contextTriggerElement.removeEventListener('contextmenu', contextTrigger);
+		}
+	}
+
+	function keydown(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			showDropdown = false;
 		}
 	}
 

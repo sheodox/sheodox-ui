@@ -1,27 +1,23 @@
 <TabList {tabs} bind:selectedTab />
 
 <Tab {selectedTab} tabId="colors">
-	<Colors />
+	<p>This used to be a tab for colors</p>
 </Tab>
 
 <Tab {selectedTab} tabId="badges">
-	<Badges />
+	<p>This used to be a tab for badges</p>
 </Tab>
 
 <Tab {selectedTab} tabId="shadows">
-	<Shadows />
+	<p>This used to be a tab for shadows</p>
 </Tab>
 
 <Tab {selectedTab} tabId="toasts">
-	<DemoToasts />
+	<p>This used to be a tab for toasts</p>
 </Tab>
 
 <script lang="ts">
-	import { TabList, Tab } from '../lib';
-	import Colors from './_colors.svelte';
-	import Badges from './_badges.svelte';
-	import Shadows from './_shadows.svelte';
-	import DemoToasts from './_demo-toasts.svelte';
+	import { TabList, Tab } from '$lib';
 
 	let selectedTab: string;
 	const tabs = [

@@ -1,0 +1,29 @@
+aside.sx-sidebar {
+	.sx-sidebar-header {
+		h1 {
+			margin: 0.3rem 0;
+			font-size: var(--sx-font-size-7);
+			font-weight: normal;
+		}
+	}
+
+	.sx-sidebar-simple-links {
+		display: flex;
+		flex-direction: column;
+		padding: var(--sx-spacing-2);
+
+		a {
+			border-radius: 5px;
+			display: block;
+			padding: var(--sx-spacing-2);
+			font-size: var(--sx-font-size-4);
+			&:hover {
+				background-color: var(--sx-gray-transparent);
+			}
+
+			&.active {
+				background-color: var(--sx-gray-transparent);
+			}
+		}
+	}
+}

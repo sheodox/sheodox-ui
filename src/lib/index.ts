@@ -6,7 +6,6 @@ import { showAlertModal, showPromptModal, showConfirmModal } from './modals';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore - bundlers knows how to import this, but typescript doesn't
 // and the side effect of importing is all that matters
-import styles from './style.scss';
 
 import Modal from './Modal.svelte';
 import Icon from './Icon.svelte';
@@ -23,12 +22,12 @@ import TextInput from './TextInput.svelte';
 import TabList from './TabList.svelte';
 import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
+import Sidebar from './Sidebar.svelte';
 import Fieldset from './Fieldset.svelte';
 //not exporting Toast, it's internal
 import Toasts from './Toasts.svelte';
 
 export {
-	styles,
 	Modal,
 	Icon,
 	Header,
@@ -42,6 +41,7 @@ export {
 	Loading,
 	Portal,
 	TextInput,
+	Sidebar,
 	TabList,
 	Tab,
 	Toasts,

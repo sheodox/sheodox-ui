@@ -18,7 +18,7 @@ export type ToastOptionsCreatable = Omit<ToastOptions, 'id'>;
 
 export type Toasts = ToastOptions[];
 
-export const toasts = writable([]);
+export const toasts = writable<ToastOptions[]>([]);
 
 export const expirationPaused = writable(false);
 
