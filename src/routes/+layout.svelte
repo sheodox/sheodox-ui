@@ -84,8 +84,8 @@
 	import { afterNavigate } from '$app/navigation';
 	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon } from '$lib';
 
-	let menuOpen = true,
-		showSidebar = browser && window.innerHeight > 500,
+	let menuOpen = browser && window.innerHeight > 500,
+		showSidebar = true,
 		sidebarDocked = true,
 		currentPathname = '';
 
