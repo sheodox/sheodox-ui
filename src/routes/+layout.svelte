@@ -80,11 +80,12 @@
 </main>
 
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
 	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon } from '$lib';
 
 	let menuOpen = true,
-		showSidebar = true,
+		showSidebar = browser && window.innerHeight > 500,
 		sidebarDocked = true,
 		currentPathname = '';
 
