@@ -2,6 +2,9 @@
 	header {
 		width: 100%;
 		justify-content: space-around;
+		h1 {
+			font-size: var(--sx-font-size-9);
+		}
 	}
 	header.slim {
 		background: var(--sx-gray-600);
@@ -11,6 +14,7 @@
 		h1 {
 			margin: 0.3rem 0;
 			font-weight: normal;
+			font-size: var(--sx-font-size-7);
 		}
 	}
 
