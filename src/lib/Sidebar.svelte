@@ -9,8 +9,8 @@
 		left: 0;
 		right: 0;
 		background-color: var(--sx-gray-800);
-		/* below modal overlay */
-		z-index: 9999;
+		/* below modal overlay and menu buttons */
+		z-index: 999;
 		transition: transform #{$animationSpeed};
 		overflow-y: auto;
 
