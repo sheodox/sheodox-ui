@@ -23,6 +23,7 @@ import TabList from './TabList.svelte';
 import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
 import Sidebar from './Sidebar.svelte';
+import SheodoxUIStyles from './SheodoxUIStyles.svelte';
 import Fieldset from './Fieldset.svelte';
 //not exporting Toast, it's internal
 import Toasts from './Toasts.svelte';
@@ -41,6 +42,7 @@ export {
 	Loading,
 	Portal,
 	TextInput,
+	SheodoxUIStyles,
 	Sidebar,
 	TabList,
 	Tab,

@@ -1,6 +1,4 @@
 <style lang="scss">
-	$sidebarWidth: 30rem;
-
 	aside {
 		$animationSpeed: 0.2s;
 		max-width: 100vw;
@@ -23,8 +21,8 @@
 				without extending below the bottom of the viewport */
 			height: calc(100vh - 48px);
 			&.open {
-				width: #{$sidebarWidth};
-				min-width: #{$sidebarWidth};
+				width: var(--sx-sidebar-width);
+				min-width: var(--sx-sidebar-width);
 				transform: translateX(0);
 			}
 
@@ -37,7 +35,7 @@
 
 		&.as-overlay {
 			position: fixed;
-			width: #{$sidebarWidth};
+			width: var(--sx-sidebar-width);
 
 			&.open {
 				transform: translateX(0);
@@ -51,13 +49,14 @@
 </style>
 
 <aside
+	bind:this={aside}
+	class="sx-sidebar"
 	class:closed={!menuOpen}
 	class:open={menuOpen}
 	aria-hidden={!menuOpen}
-	bind:this={aside}
-	class="sx-sidebar"
 	class:docked={!asOverlay}
 	class:as-overlay={asOverlay}
+	style="--sx-sidebar-width: {width}"
 >
 	{#if asOverlay}
 		<div class="py-1 px-3 f-row sx-font-size-7 sx-sidebar-header">
@@ -83,6 +82,8 @@
 	export let menuOpen: boolean;
 	// whether the sidebar should overlay the page or show as part of the page
 	export let docked = false;
+
+	export let width = '20rem';
 
 	let isMobileBreakpoint = false;
 	checkWindowWidth();

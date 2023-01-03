@@ -10,6 +10,8 @@
 	<title>sheodox-ui</title>
 </svelte:head>
 
+<SheodoxUIStyles />
+
 <Header appName="sheodox-ui" showMenuTrigger={showSidebar} bind:menuOpen>
 	<nav slot="headerCenter">
 		<ul>
@@ -78,7 +80,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { afterNavigate } from '$app/navigation';
-	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon } from '$lib';
+	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon, SheodoxUIStyles } from '$lib';
 	import { sidebarAssumeMobilePx } from '$lib/util';
 
 	let menuOpen = browser && window.innerHeight > sidebarAssumeMobilePx,
