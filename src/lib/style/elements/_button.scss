@@ -46,7 +46,7 @@ button.secondary,
 	background: var(--sx-gray-transparent);
 }
 button:disabled {
-	color: #2b394a;
+	color: var(--sx-disabled-button-color);
 	background: none;
 	cursor: auto;
 }

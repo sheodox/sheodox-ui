@@ -47,6 +47,9 @@
 									>{sidebarDocked ? 'Disable' : 'Enable'} Sidebar Docking</button
 								>
 							</li>
+							<li>
+								<button disabled>Disabled button</button>
+							</li>
 						</ul>
 					</div>
 				</NavDropdown>

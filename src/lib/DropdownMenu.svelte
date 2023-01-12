@@ -6,6 +6,9 @@
 		color: var(--sx-text-color);
 		text-align: left;
 	}
+	.dropdown-menu :global(button:disabled) {
+		color: var(--sx-disabled-button-color);
+	}
 </style>
 
 <div class="dropdown-menu f-column">
