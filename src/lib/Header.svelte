@@ -45,8 +45,8 @@
 	header.slim .branding {
 		:global(img),
 		:global(svg) {
-			height: 3rem;
-			width: 3rem;
+			height: 2rem;
+			width: 2rem;
 		}
 	}
 

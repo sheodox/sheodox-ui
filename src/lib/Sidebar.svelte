@@ -19,7 +19,10 @@
 		&.docked {
 			/* 48px is the height of the header, give it the full remaining height
 				without extending below the bottom of the viewport */
-			height: calc(100vh - 48px);
+			$headerHeight: '48px';
+			height: calc(100vh - #{$headerHeight});
+			top: #{$headerHeight};
+
 			&.open {
 				width: var(--sx-sidebar-width);
 				min-width: var(--sx-sidebar-width);
