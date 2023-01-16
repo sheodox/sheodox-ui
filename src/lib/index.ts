@@ -2,6 +2,7 @@
 /// <reference types="sass" />
 import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast, clearToast } from './toast';
 import { showAlertModal, showPromptModal, showConfirmModal } from './modals';
+import { focus } from './util';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore - bundlers knows how to import this, but typescript doesn't
@@ -25,6 +26,7 @@ import Modals from './Modals.svelte';
 import Sidebar from './Sidebar.svelte';
 import SheodoxUIStyles from './SheodoxUIStyles.svelte';
 import Fieldset from './Fieldset.svelte';
+import Pagination from './Pagination.svelte';
 //not exporting Toast, it's internal
 import Toasts from './Toasts.svelte';
 
@@ -44,6 +46,7 @@ export {
 	TextInput,
 	SheodoxUIStyles,
 	Sidebar,
+	Pagination,
 	TabList,
 	Tab,
 	Toasts,
@@ -56,4 +59,5 @@ export {
 	showPromptModal,
 	showConfirmModal,
 	showAlertModal,
+	focus,
 };

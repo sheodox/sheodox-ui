@@ -107,6 +107,7 @@
 		{ href: '/toasts', text: 'Toasts' },
 		{ href: '/debug', text: 'Debug' },
 		{ href: '/scrolling', text: 'Scrolling' },
+		{ href: '/pagination', text: 'Pagination' },
 		{ href: '/landing-page', text: 'Landing Page' },
 	];
 </script>
