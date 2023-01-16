@@ -11,5 +11,5 @@
 	let page = 1;
 	let max = 20;
 
-	let asLinks = true;
+	let asLinks = false;
 </script>
