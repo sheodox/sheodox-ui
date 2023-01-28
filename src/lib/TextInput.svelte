@@ -48,6 +48,7 @@
 			bind:value
 			{placeholder}
 			{autocomplete}
+			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -61,6 +62,7 @@
 			bind:value
 			{placeholder}
 			{autocomplete}
+			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -74,6 +76,7 @@
 			bind:value
 			{placeholder}
 			{autocomplete}
+			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -87,6 +90,7 @@
 			bind:value
 			{placeholder}
 			{autocomplete}
+			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
 			on:keyup
@@ -101,12 +105,13 @@
 </div>
 
 <script lang="ts">
-	import { genId } from './util';
+	import { genId, focus as focusUtil } from './util';
 
 	export let value: string | number;
 	export let placeholder = '';
 	export let id = genId();
 	export let autocomplete = 'off';
+	export let autofocus = false;
 	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
 
 	let focused: boolean;
@@ -115,4 +120,10 @@
 		throw new Error(`'id' not provided for text input.`);
 	}
 	$: emphasizedLabel = (value === '' || value === null) && !focused;
+
+	function focus(el: HTMLInputElement) {
+		if (autofocus) {
+			focusUtil(el);
+		}
+	}
 </script>

@@ -4,8 +4,9 @@
 	}
 	.long-fieldset-tests {
 		width: 20rem;
-		border: 1px solid var(--sx-gray-100);
+		border: 1px solid var(--sx-gray-transparent-light);
 		padding: var(--sx-spacing-1);
+		overflow: hidden;
 	}
 </style>
 

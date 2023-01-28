@@ -1,10 +1,67 @@
 .card {
-	background-color: var(--sx-gray-500);
+	--card-padding: var(--sx-arg-card-padding, var(--sx-spacing-2));
+	background-color: var(--sx-gray-transparent-light);
 	border: 1px solid transparent;
 	transition: border-color 0.1s, background-color 0.1s;
+	border-radius: 5px;
 
 	&.clickable:hover {
 		background-color: var(--sx-blue-700);
 		border-color: var(--sx-blue-500);
+		cursor: pointer;
+	}
+
+	.card-title {
+		font-size: var(--sx-font-size-5);
+		padding-top: var(--card-padding);
+		padding-right: var(--card-padding);
+		padding-left: var(--card-padding);
+	}
+	.card-body {
+		padding: var(--card-padding);
+	}
+
+	&.two-tone {
+		.card-title {
+			background-color: var(--sx-gray-transparent-light);
+			padding: var(--card-padding);
+		}
+	}
+
+	&.card-image {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+
+		.card-inset {
+			background: var(--sx-gray-500);
+			border-radius: 8px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: var(--sx-spacing-4);
+			width: calc(100% - 2 * var(--sx-spacing-4));
+			transition: margin-bottom 0.1s, background-color 0.1s;
+			.card-body {
+				color: var(--sx-gray-75);
+			}
+		}
+
+		img {
+			transition: transform 0.1s, filter 0.1s;
+		}
+
+		&:hover > img {
+			transform: scale(102%);
+			filter: brightness(80%);
+		}
+
+		&.clickable:hover {
+			.card-inset {
+				margin-bottom: var(--sx-spacing-5);
+				background: var(--sx-gray-400);
+			}
+		}
 	}
 }

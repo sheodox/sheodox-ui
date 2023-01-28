@@ -48,7 +48,7 @@
 				<input type="number" min={1} {max} bind:value={pageFormValue} use:focus />
 			</label>
 		</div>
-		<div class="modal-footer">
+		<div class="modal-footer gap-2">
 			<button class="secondary" on:click={() => (showSetPage = false)}>Cancel</button>
 			<button class="primary" on:click={gotoFormPage}>Go</button>
 		</div>

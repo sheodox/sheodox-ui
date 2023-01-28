@@ -70,7 +70,9 @@
 			<slot name="header" />
 		</div>
 	{/if}
-	<slot />
+	<div on:click={maybeCloseOnLinkFollow} on:keydown={closeOnEscape}>
+		<slot />
+	</div>
 </aside>
 
 <svelte:body on:click={maybeClose} />
@@ -92,6 +94,7 @@
 	checkWindowWidth();
 
 	$: asOverlay = !docked || isMobileBreakpoint;
+	$: overlayMenuOpen = asOverlay && menuOpen;
 
 	function checkWindowWidth() {
 		// can't use `browser` from `$app/environment` because not all consumers of sheodox-ui use sveltekit
@@ -101,7 +104,21 @@
 	let aside: HTMLElement;
 
 	function maybeClose(e: MouseEvent) {
-		if (asOverlay && menuOpen && aside && !aside.contains(e.target as HTMLElement)) {
+		if (overlayMenuOpen && aside && !aside.contains(e.target as HTMLElement)) {
+			menuOpen = false;
+		}
+	}
+
+	function maybeCloseOnLinkFollow(e: MouseEvent) {
+		const isLinkElement = (e.target as HTMLElement).tagName === 'A';
+		// if they followed a link while in overlay mode, the sidebar should close
+		if (overlayMenuOpen && isLinkElement) {
+			menuOpen = false;
+		}
+	}
+
+	function closeOnEscape(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
 			menuOpen = false;
 		}
 	}

@@ -14,14 +14,14 @@
 	--sx-accent-pink: #{$pink};
 	--sx-accent-pink-light: #cc00ff;
 	--sx-accent-gray: #3d3d42;
-	--sx-gradient-start: var(--sx-accent-purple-dark);
+	--sx-gradient-start: var(--sx-accent-purple);
 	--sx-gradient-end: var(--sx-accent-pink);
 	--sx-gradient-start-light: #{lighten($purple, 5%)};
 	--sx-gradient-end-light: #{lighten($pink, 5%)};
 	--sx-accent-gradient: linear-gradient(to right, var(--sx-gradient-start), var(--sx-gradient-end));
 	--sx-accent-gradient-light: linear-gradient(to right, var(--sx-gradient-start-light), var(--sx-gradient-end-light));
 
-	--sx-text-color: rgba(255, 255, 255, 0.9);
+	--sx-text-color: var(--sx-gray-25);
 	--sx-muted: #5b5c6f;
 	--sx-nav-highlight: var(--sx-accent-mint);
 	--sx-nav-highlight-active: var(--sx-accent-cyan);

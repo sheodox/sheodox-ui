@@ -42,6 +42,9 @@
 	function cancel() {
 		if ((modal.type === 'confirm' || modal.type === 'prompt') && modal.onNo) {
 			modal.onNo();
+		} else if (modal.type === 'alert') {
+			// alert modals only have 'Ok'
+			modal.onYes?.();
 		}
 	}
 	function yes() {

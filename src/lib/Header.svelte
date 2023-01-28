@@ -7,9 +7,10 @@
 		}
 	}
 	header.slim {
-		background: var(--sx-gray-600);
 		justify-content: space-between;
 		box-shadow: var(--sx-shadow-1);
+		background: var(--sx-gray-transparent);
+		backdrop-filter: blur(10px);
 
 		h1 {
 			margin: 0.3rem 0;

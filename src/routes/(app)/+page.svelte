@@ -43,12 +43,23 @@
 	<TextInput value="0" type="number">Number Input</TextInput>
 	<Checkbox checked={true}>Checkbox</Checkbox>
 	<Checkbox checked={false}>Checkbox</Checkbox>
+
+	<button on:click={() => (showAutoFocus = !showAutoFocus)} class="secondary"
+		>{showAutoFocus ? 'Hide' : 'Show'} auto focusing input</button
+	>
+	{#if showAutoFocus}
+		<TextInput autofocus value="">Text Input</TextInput>
+	{/if}
 </div>
 
-<code>some code element</code>
+<p>
+	<code>some code element</code>
+</p>
 
 <br />
 
 <script lang="ts">
 	import { TextInput, Checkbox } from '$lib';
+
+	let showAutoFocus = false;
 </script>

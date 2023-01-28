@@ -92,13 +92,14 @@
 		currentPathname = '';
 
 	afterNavigate(({ to }) => {
-		currentPathname = to?.route.id || '';
+		currentPathname = to?.url.pathname || '';
 	});
 
 	const links = [
 		{ href: '/', text: 'Home' },
 		{ href: '/badges', text: 'Badges' },
 		{ href: '/colors', text: 'Colors' },
+		{ href: '/cards', text: 'Cards' },
 		{ href: '/fieldsets', text: 'Fieldsets' },
 		{ href: '/modals', text: 'Modals' },
 		{ href: '/progress', text: 'Progress' },

@@ -6,7 +6,7 @@
 		left: 0;
 		height: 100vh;
 		width: 100vw;
-		background: rgba(0, 0, 0, 0.95);
+		background: rgba(0, 0, 0, 0.6);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

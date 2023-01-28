@@ -6,7 +6,7 @@
 
 <div class="p-3">
 	{#each colors as color}
-		<span class="sx-badge-{color}">.sx-badge-{color}</span>
+		<p><span class="sx-badge-{color}">.sx-badge-{color}</span></p>
 	{/each}
 </div>
 

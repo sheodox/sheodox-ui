@@ -3,16 +3,33 @@
 		height: 5rem;
 		width: 5rem;
 	}
+	td {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
 </style>
 
 <div class="m-3">
-	{#each colors as color}
-		<div class="f-row">
-			{#each weights as weight}
-				<div class="swatch" style="background-color: var(--sx-{color}-{weight})" />
+	<table>
+		<thead>
+			<tr>
+				<th scope="row">weight</th>
+				{#each weights as weight}
+					<th>{weight}</th>{/each}
+			</tr>
+		</thead>
+		<tbody>
+			{#each colors as color}
+				<tr>
+					<th scope="row">{color}</th>
+					{#each weights as weight}
+						<td><div class="swatch" style="background-color: var(--sx-{color}-{weight})" /></td>
+					{/each}
+				</tr>
 			{/each}
-		</div>
-	{/each}
+		</tbody>
+	</table>
 </div>
 
 <script lang="ts">
@@ -22,4 +39,5 @@
 	for (let i = 900; i >= 100; i -= 100) {
 		weights.push(i);
 	}
+	weights.push(75, 50, 25);
 </script>

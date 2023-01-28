@@ -12,10 +12,10 @@ $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 }
 
 @each $color in $colors {
-	@include badge($color, '#{$color}-500', '#{$color}-transparent');
+	@include badge($color, '#{$color}-400', '#{$color}-transparent');
 }
 
 @include badge('gray', 'gray-50', 'gray-transparent');
 @include badge('red', 'red-400', 'red-transparent');
-@include badge('purple', 'purple-300', 'purple-transparent');
-@include badge('pink', 'pink-400', 'pink-transparent');
+@include badge('purple', 'purple-200', 'purple-transparent');
+@include badge('pink', 'pink-300', 'pink-transparent');
