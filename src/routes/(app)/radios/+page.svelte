@@ -1,11 +1,11 @@
 <Fieldset legend="Demo radio toggles" fieldsetClasses="f-column">
-	<div class="sx-radio-toggles f-row align-self-start">
+	<div class="sx-toggles f-row align-self-start">
 		{#each radios as radio}
 			{@const radioId = 'radio-test-' + radio.value}
 			<div class="sx-radio">
 				<input id={radioId} value={radio.value} type="radio" bind:group={value} />
 				<label for={radioId}>
-					{radio.text}
+					<span>{radio.text}</span>
 				</label>
 			</div>
 		{/each}
