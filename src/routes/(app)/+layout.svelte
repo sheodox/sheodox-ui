@@ -105,6 +105,7 @@
 		{ href: '/progress', text: 'Progress' },
 		{ href: '/shadows', text: 'Shadows' },
 		{ href: '/tabs', text: 'Tabs' },
+		{ href: '/radios', text: 'Radios' },
 		{ href: '/toasts', text: 'Toasts' },
 		{ href: '/debug', text: 'Debug' },
 		{ href: '/scrolling', text: 'Scrolling' },

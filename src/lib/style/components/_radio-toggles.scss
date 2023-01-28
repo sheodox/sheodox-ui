@@ -1,0 +1,29 @@
+.sx-radio-toggles {
+	border: 1px solid var(--sx-gray-400);
+	border-radius: 3px;
+
+	input {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+	input:checked + label {
+		background-color: var(--sx-gray-400);
+		color: var(--sx-gray-25);
+	}
+	input:focus + label {
+		outline: 2px solid var(--sx-input-focus-color);
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
+	label {
+		padding: var(--sx-spacing-1) var(--sx-spacing-2);
+		color: var(--sx-gray-100);
+		transition: color 0.1s, background-color 0.1s;
+		cursor: pointer;
+		display: inline-block;
+	}
+}
