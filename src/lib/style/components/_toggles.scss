@@ -28,6 +28,9 @@
 		transition: color 0.1s, background-color 0.1s;
 		cursor: pointer;
 		display: inline-block;
+		&:not(:last-child) {
+			border-right: 1px solid var(--sx-gray-400);
+		}
 
 		&:hover {
 			color: var(--sx-gray-25);
