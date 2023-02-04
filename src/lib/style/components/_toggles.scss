@@ -28,5 +28,9 @@
 		transition: color 0.1s, background-color 0.1s;
 		cursor: pointer;
 		display: inline-block;
+
+		&:hover {
+			color: var(--sx-gray-25);
+		}
 	}
 }
