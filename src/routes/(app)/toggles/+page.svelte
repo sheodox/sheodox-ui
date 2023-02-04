@@ -1,4 +1,4 @@
-<Fieldset legend="Demo radio toggles" fieldsetClasses="f-column">
+<Fieldset legend="Select your favorite color" fieldsetClasses="f-column">
 	<div class="sx-toggles f-row align-self-start">
 		{#each radios as radio}
 			{@const radioId = 'radio-test-' + radio.value}
@@ -8,17 +8,25 @@
 			</label>
 		{/each}
 	</div>
+
+	{#if value}
+		<p>
+			Your favorite color is {value}.
+		</p>
+	{/if}
 </Fieldset>
 
 <script lang="ts">
 	import { Fieldset } from '$lib';
-	let value = 'one';
+	let value = '';
 
 	const radios = [
-		{ value: 'one', text: 'One' },
-		{ value: 'two', text: 'Two' },
-		{ value: 'three', text: 'Three' },
-		{ value: 'four', text: 'Four' },
-		{ value: 'five', text: 'Five' },
+		{ value: 'red', text: 'Red' },
+		{ value: 'orange', text: 'Orange' },
+		{ value: 'yellow', text: 'Yellow' },
+		{ value: 'green', text: 'Green' },
+		{ value: 'blue', text: 'Blue' },
+		{ value: 'indigo', text: 'Indigo' },
+		{ value: 'violet', text: 'Violet' },
 	];
 </script>
