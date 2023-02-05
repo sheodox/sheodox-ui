@@ -27,6 +27,10 @@
 			<td><button class="galaxy" disabled>Galaxy button</button></td>
 		</tr>
 		<tr>
+			<td><button class="inverted">Inverted button</button></td>
+			<td><button class="inverted" disabled>Inverted button</button></td>
+		</tr>
+		<tr>
 			<td>
 				<button aria-pressed="true"><span>Pressed button</span></button>
 			</td>

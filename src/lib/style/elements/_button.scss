@@ -51,6 +51,18 @@ button:disabled {
 	cursor: auto;
 }
 
+button.inverted,
+.button.inverted {
+	&:not(:disabled) {
+		color: var(--sx-blue-700);
+		background: var(--sx-gray-25);
+	}
+
+	&:hover:not(:disabled) {
+		background: white;
+	}
+}
+
 button.galaxy,
 .button.galaxy {
 	&:not(:disabled) {
@@ -64,10 +76,10 @@ button.galaxy,
 }
 
 button.danger:not(:disabled) {
-	background: var(--sx-accent-red);
+	background: var(--sx-red-400);
 	color: black;
 	&:hover {
-		background: var(--sx-accent-red-bright);
+		background: var(--sx-red-300);
 	}
 }
 

@@ -2,12 +2,13 @@
 	--sx-accent-blue: #0cacff;
 	--sx-accent-blue-dark: #0cacff21;
 	--sx-accent-blue-light: #0185c9;
-	--sx-accent-red: #e83450;
-	--sx-accent-red-bright: #ff0e32;
+	--sx-accent-red: var(--sx-red-500);
+	--sx-accent-red-bright: var(--sx-red-400);
+	--sx-accent-red-dark: var(--sx-red-600);
 	--sx-accent-mint: #01fdc2;
 	--sx-accent-cyan: #01fdfd;
-	$purple: #7700ff;
-	$pink: #bb24e2;
+	$purple: var(--sx-peach-400);
+	$pink: var(--sx-pink-500);
 	--sx-accent-purple: #{$purple};
 	--sx-accent-purple-dark: #7804cd;
 	--sx-accent-purple-bright: #b300ff;
@@ -16,8 +17,8 @@
 	--sx-accent-gray: #3d3d42;
 	--sx-gradient-start: var(--sx-accent-purple);
 	--sx-gradient-end: var(--sx-accent-pink);
-	--sx-gradient-start-light: #{lighten($purple, 5%)};
-	--sx-gradient-end-light: #{lighten($pink, 5%)};
+	--sx-gradient-start-light: var(--sx-peach-300);
+	--sx-gradient-end-light: var(--sx-pink-400);
 	--sx-accent-gradient: linear-gradient(to right, var(--sx-gradient-start), var(--sx-gradient-end));
 	--sx-accent-gradient-light: linear-gradient(to right, var(--sx-gradient-start-light), var(--sx-gradient-end-light));
 

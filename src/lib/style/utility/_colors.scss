@@ -1,5 +1,4 @@
 $transparency: 20%;
-
 :root {
 	--sx-hue-gray: 227;
 	--sx-gray-900: hsl(var(--sx-hue-gray), 35%, 0%);
@@ -106,14 +105,25 @@ $transparency: 20%;
 	--sx-purple-100: hsl(275, 100%, 90%);
 	--sx-purple-transparent: hsla(268, 90%, 50%, #{$transparency});
 
-	--sx-pink-900: hsl(288, 77%, 10%);
-	--sx-pink-800: hsl(288, 77%, 17%);
-	--sx-pink-700: hsl(288, 77%, 25%);
-	--sx-pink-600: hsl(288, 77%, 40%);
-	--sx-pink-500: hsl(288, 77%, 51%);
-	--sx-pink-400: hsl(288, 77%, 61%);
-	--sx-pink-300: hsl(288, 77%, 72%);
-	--sx-pink-200: hsl(288, 77%, 85%);
-	--sx-pink-100: hsl(288, 77%, 90%);
-	--sx-pink-transparent: hsla(288, 77%, 51%, #{$transparency});
+	--sx-pink-900: hsl(298, 77%, 10%);
+	--sx-pink-800: hsl(298, 77%, 17%);
+	--sx-pink-700: hsl(298, 77%, 25%);
+	--sx-pink-600: hsl(298, 77%, 40%);
+	--sx-pink-500: hsl(298, 77%, 51%);
+	--sx-pink-400: hsl(298, 77%, 61%);
+	--sx-pink-300: hsl(298, 77%, 72%);
+	--sx-pink-200: hsl(298, 77%, 85%);
+	--sx-pink-100: hsl(298, 77%, 90%);
+	--sx-pink-transparent: hsla(298, 77%, 51%, #{$transparency});
+
+	--sx-peach-900: hsl(315, 77%, 10%);
+	--sx-peach-800: hsl(315, 77%, 17%);
+	--sx-peach-700: hsl(315, 77%, 25%);
+	--sx-peach-600: hsl(315, 77%, 40%);
+	--sx-peach-500: hsl(315, 77%, 51%);
+	--sx-peach-400: hsl(315, 77%, 61%);
+	--sx-peach-300: hsl(315, 77%, 72%);
+	--sx-peach-200: hsl(315, 77%, 85%);
+	--sx-peach-100: hsl(315, 77%, 90%);
+	--sx-peach-transparent: hsla(315, 77%, 51%, #{$transparency});
 }
