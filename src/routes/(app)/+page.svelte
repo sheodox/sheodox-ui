@@ -7,32 +7,36 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><button>Regular button</button></td>
+			<td><button use:ripple>Regular button</button></td>
 			<td><button disabled>Regular button</button></td>
 		</tr>
 		<tr>
-			<td><button class="secondary">Secondary button</button></td>
+			<td><button class="secondary" use:ripple>Secondary button</button></td>
 			<td><button class="secondary" disabled>Secondary button</button></td>
 		</tr>
 		<tr>
-			<td><button class="primary">Primary button</button></td>
+			<td><button class="primary" use:ripple>Primary button</button></td>
 			<td><button class="primary" disabled>Primary button</button></td>
 		</tr>
 		<tr>
-			<td><button class="danger">Danger button</button></td>
+			<td><button class="danger" use:ripple>Danger button</button></td>
 			<td><button class="danger" disabled>Danger button</button></td>
 		</tr>
 		<tr>
-			<td><button class="galaxy">Galaxy button</button></td>
+			<td><button class="galaxy" use:ripple>Galaxy button</button></td>
 			<td><button class="galaxy" disabled>Galaxy button</button></td>
 		</tr>
 		<tr>
-			<td><button class="inverted">Inverted button</button></td>
+			<td><button class="inverted" use:ripple>Inverted button</button></td>
 			<td><button class="inverted" disabled>Inverted button</button></td>
 		</tr>
 		<tr>
+			<td><button class="electric" use:ripple>Electric button</button></td>
+			<td><button class="electric" disabled>Electric button</button></td>
+		</tr>
+		<tr>
 			<td>
-				<button aria-pressed="true"><span>Pressed button</span></button>
+				<button aria-pressed="true" use:ripple><span>Pressed button</span></button>
 			</td>
 			<td>
 				<button aria-pressed="true" disabled><span>Pressed button</span></button>
@@ -63,7 +67,7 @@
 <br />
 
 <script lang="ts">
-	import { TextInput, Checkbox } from '$lib';
+	import { TextInput, Checkbox, ripple } from '$lib';
 
 	let showAutoFocus = false;
 </script>

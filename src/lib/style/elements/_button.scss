@@ -67,11 +67,21 @@ button.galaxy,
 .button.galaxy {
 	&:not(:disabled) {
 		background: var(--sx-accent-gradient);
-		color: white;
+		&:hover {
+			background: var(--sx-accent-gradient-light);
+		}
+	}
+}
+
+button.electric,
+.button.electric {
+	&:not(:disabled) {
+		background: var(--sx-yellow-300);
+		color: var(--sx-yellow-900);
 	}
 
 	&:hover:not(:disabled) {
-		background: var(--sx-accent-gradient-light);
+		background: var(--sx-yellow-200);
 	}
 }
 
@@ -86,4 +96,38 @@ button.danger:not(:disabled) {
 button.small,
 .button.small {
 	padding: 0.3rem;
+}
+
+@keyframes sx-button-ripple {
+	from {
+		opacity: 0.6;
+		transform: scale(0%, 0);
+	}
+	to {
+		opacity: 0;
+		transform: scale(400%, 400%);
+	}
+}
+.sx-has-ripple {
+	overflow: hidden;
+	position: relative;
+	* {
+		pointer-events: none;
+	}
+}
+.sx-button-ripple {
+	pointer-events: none;
+	transform-origin: center;
+	box-shadow: inset 0 0 0.5rem var(--sx-gray-50);
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+	animation: sx-button-ripple 0.5s;
+	$size: 1;
+	$translate: calc($size / 2);
+	height: #{$size}rem;
+	width: #{$size}rem;
+	top: calc(var(--y) - #{$translate}rem);
+	left: calc(var(--x) - #{$translate}rem);
 }
