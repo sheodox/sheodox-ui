@@ -15,9 +15,20 @@ export const focus = (element: HTMLElement) => {
 export const ripple = (element: HTMLElement) => {
 	element.classList.add('sx-has-ripple');
 	function spawnRipple(e: MouseEvent) {
+		const offsets = {
+			x: e.offsetX,
+			y: e.offsetY,
+		};
+		// initiated by keyboard if coordinates are 0,0
+		// we need to center the ripple
+		if (offsets.x === 0 && offsets.y === 0) {
+			offsets.x = element.offsetWidth / 2;
+			offsets.y = element.offsetHeight / 2;
+		}
+
 		const r = document.createElement('div'),
-			x = e.offsetX,
-			y = e.offsetY;
+			x = offsets.x,
+			y = offsets.y;
 		r.classList.add('sx-button-ripple');
 		r.setAttribute('style', `--x: ${x}px; --y: ${y}px;`);
 		element.prepend(r);
