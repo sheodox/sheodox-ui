@@ -1,5 +1,6 @@
 table {
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 0;
 
 	&.hoverable tbody tr:hover {
 		background: #5766a221;
@@ -15,6 +16,7 @@ th {
 
 table {
 	border: 2px solid var(--sx-gray-transparent-light);
+	border-radius: 5px;
 }
 th {
 	padding: var(--sx-spacing-3);

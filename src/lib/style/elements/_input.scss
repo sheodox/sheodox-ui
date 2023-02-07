@@ -44,9 +44,10 @@ textarea {
 }
 
 .input-group {
-	border-radius: 0.2rem;
+	border-radius: 6px;
 	background: var(--sx-input-bg);
 	display: flex;
+	border: 1px solid var(--sx-gray-transparent-lighter);
 
 	input {
 		border-color: transparent;

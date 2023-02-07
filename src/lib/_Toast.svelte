@@ -13,6 +13,7 @@
 	}
 	.error {
 		background: var(--sx-red-400);
+		color: white;
 	}
 	.info {
 		background: var(--sx-gray-500);

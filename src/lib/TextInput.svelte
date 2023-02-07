@@ -12,13 +12,13 @@
 		border: none !important;
 		background: transparent !important;
 		transition: opacity 0.2s;
-		padding: 0.7rem 0 0.4rem;
+		padding: 0.7rem 0 0;
 		width: 100%;
 	}
 	label {
 		transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out, color 0.2s ease-in-out;
 		display: block;
-		min-height: 0.7rem;
+		min-height: 0.5rem;
 		cursor: text;
 		position: absolute;
 		top: 0;
@@ -32,7 +32,7 @@
 	}
 	.emphasized-label label {
 		transform: scale(1);
-		margin-top: 0.7rem;
+		margin-top: 0.5rem;
 		color: var(--sx-gray-50);
 	}
 	.emphasized-label input {
@@ -112,6 +112,7 @@
 	export let id = genId();
 	export let autocomplete = 'off';
 	export let autofocus = false;
+	export let autoselect = false;
 	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
 
 	let focused: boolean;
@@ -124,6 +125,9 @@
 	function focus(el: HTMLInputElement) {
 		if (autofocus) {
 			focusUtil(el);
+		}
+		if (autoselect) {
+			el.select();
 		}
 	}
 </script>

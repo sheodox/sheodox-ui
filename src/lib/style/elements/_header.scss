@@ -1,9 +1,5 @@
 .header,
 header {
-	position: sticky;
-	z-index: 10;
-	top: 0;
-
 	nav {
 		height: 100%;
 
@@ -39,13 +35,13 @@ header {
 				color: var(--sx-gray-300);
 			}
 			&:hover:not(:disabled) {
-				background: var(--sx-gray-500);
+				background: var(--sx-gray-transparent);
 				text-decoration: none;
-				border-color: var(--sx-blue-500) !important;
+				border-color: transparent !important;
 			}
 
 			&.active:not(:disabled) {
-				border-color: var(--sx-blue-300);
+				border-color: var(--sx-blue-400);
 			}
 
 			&:focus {

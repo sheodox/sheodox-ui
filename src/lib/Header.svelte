@@ -11,6 +11,9 @@
 		box-shadow: var(--sx-shadow-1);
 		background: var(--sx-gray-transparent);
 		backdrop-filter: blur(10px);
+		position: sticky;
+		z-index: 10;
+		top: 0;
 
 		h1 {
 			margin: 0.3rem 0;

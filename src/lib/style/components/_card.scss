@@ -1,12 +1,11 @@
 .card {
 	--card-padding: var(--sx-arg-card-padding, var(--sx-spacing-2));
-	background-color: var(--sx-gray-transparent-light);
+	background-color: var(--sx-gray-transparent);
 	border: 1px solid transparent;
 	transition: border-color 0.1s, background-color 0.1s;
 	border-radius: 5px;
 
 	&.clickable:hover {
-		background-color: var(--sx-blue-700);
 		border-color: var(--sx-blue-500);
 		cursor: pointer;
 	}
@@ -23,7 +22,7 @@
 
 	&.two-tone {
 		.card-title {
-			background-color: var(--sx-gray-transparent-light);
+			background-color: var(--sx-gray-transparent);
 			padding: var(--card-padding);
 		}
 	}

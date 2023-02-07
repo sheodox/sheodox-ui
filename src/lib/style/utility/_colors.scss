@@ -1,10 +1,10 @@
-$transparency: 20%;
+$transparency: 30%;
 :root {
-	--sx-hue-gray: 227;
+	--sx-hue-gray: 210;
 	--sx-gray-900: hsl(var(--sx-hue-gray), 35%, 0%);
-	--sx-gray-800: hsl(var(--sx-hue-gray), 32%, 5%);
-	--sx-gray-700: hsl(var(--sx-hue-gray), 30%, 8%);
-	--sx-gray-600: hsl(var(--sx-hue-gray), 27%, 12%);
+	--sx-gray-800: hsl(var(--sx-hue-gray), 32%, 6%);
+	--sx-gray-700: hsl(var(--sx-hue-gray), 30%, 9%);
+	--sx-gray-600: hsl(var(--sx-hue-gray), 27%, 13%);
 	--sx-gray-500: hsl(var(--sx-hue-gray), 26%, 19%);
 	--sx-gray-400: hsl(var(--sx-hue-gray), 25%, 25%);
 	--sx-gray-300: hsl(var(--sx-hue-gray), 27%, 42%);
@@ -13,9 +13,11 @@ $transparency: 20%;
 	--sx-gray-75: hsl(var(--sx-hue-gray), 40%, 75%);
 	--sx-gray-50: hsl(var(--sx-hue-gray), 55%, 85%);
 	--sx-gray-25: hsl(var(--sx-hue-gray), 69%, 92%);
-	--sx-gray-transparent: hsla(var(--sx-hue-gray), 26%, 35%, #{$transparency});
-	--sx-gray-transparent-light: hsla(var(--sx-hue-gray), 28%, 50%, #{$transparency});
+	--sx-gray-transparent: hsla(var(--sx-hue-gray), 20%, 29%, #{$transparency});
+	--sx-gray-transparent-light: hsla(var(--sx-hue-gray), 20%, 50%, #{$transparency});
+	--sx-gray-transparent-lighter: hsla(var(--sx-hue-gray), 40%, 70%, #{$transparency});
 	--sx-gray-transparent-dark: hsla(var(--sx-hue-gray), 26%, 0%, 45%);
+	--sx-gray-transparent-darker: hsla(var(--sx-hue-gray), 26%, 0%, 55%);
 
 	--sx-red-900: hsl(0, 80%, 10%);
 	--sx-red-800: hsl(0, 75%, 17%);
@@ -83,15 +85,15 @@ $transparency: 20%;
 	--sx-cyan-100: hsl(185, 85%, 85%);
 	--sx-cyan-transparent: hsla(185, 70%, 50%, #{$transparency});
 
-	--sx-blue-900: hsl(200, 100%, 7%);
-	--sx-blue-800: hsl(200, 100%, 10%);
-	--sx-blue-700: hsl(200, 100%, 20%);
-	--sx-blue-600: hsl(200, 100%, 35%);
-	--sx-blue-500: hsl(198, 100%, 50%);
-	--sx-blue-400: hsl(196, 100%, 55%);
-	--sx-blue-300: hsl(194, 100%, 65%);
-	--sx-blue-200: hsl(192, 100%, 75%);
-	--sx-blue-100: hsl(190, 100%, 85%);
+	--sx-blue-900: hsl(215, 100%, 7%);
+	--sx-blue-800: hsl(215, 100%, 10%);
+	--sx-blue-700: hsl(215, 100%, 20%);
+	--sx-blue-600: hsl(212, 100%, 35%);
+	--sx-blue-500: hsl(207, 100%, 50%);
+	--sx-blue-400: hsl(205, 100%, 55%);
+	--sx-blue-300: hsl(202, 100%, 65%);
+	--sx-blue-200: hsl(200, 100%, 75%);
+	--sx-blue-100: hsl(198, 100%, 85%);
 	--sx-blue-transparent: hsla(200, 100%, 50%, #{$transparency});
 
 	--sx-purple-900: hsl(275, 100%, 10%);

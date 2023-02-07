@@ -69,6 +69,7 @@ button.galaxy,
 .button.galaxy {
 	&:not(:disabled) {
 		background: var(--sx-accent-gradient);
+		color: white;
 		&:hover {
 			background: var(--sx-accent-gradient-light);
 		}

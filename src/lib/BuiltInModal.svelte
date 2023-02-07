@@ -1,19 +1,9 @@
-<style>
-	input {
-		width: 100%;
-	}
-</style>
-
 <Modal on:closed={() => cancel()} title={modal.title}>
 	<div class="modal-body">
 		{#if modal.type === 'alert' || modal.type === 'confirm'}
 			<p class="m-0">{modal.message}</p>
 		{:else if modal.type === 'prompt'}
-			<label>
-				{modal.label}
-				<br />
-				<input bind:value bind:this={promptInput} on:keydown={maybeSubmit} />
-			</label>
+			<TextInput bind:value autofocus autoselect on:keydown={maybeSubmit}>{modal.label}</TextInput>
 		{/if}
 	</div>
 	<div class="modal-footer">
@@ -31,6 +21,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Modal from './Modal.svelte';
+	import TextInput from './TextInput.svelte';
 	import type { WrappedModal } from './modals';
 
 	export let modal: WrappedModal;
