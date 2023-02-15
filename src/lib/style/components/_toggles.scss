@@ -1,39 +1,43 @@
 .sx-toggles {
-	border: 1px solid var(--sx-gray-400);
-	border-radius: 3px;
+	--toggle-border-color: var(--sx-gray-transparent-lighter);
+	--toggle-border-radius: 10px;
+	border-radius: 6px;
+	display: flex;
+	background-color: var(--sx-gray-transparent-dark);
+	border: 1px solid var(--toggle-border-color);
+	padding: var(--sx-spacing-1);
+	gap: var(--sx-spacing-1);
 
 	input {
 		position: absolute;
 		top: auto;
 		width: 1px;
 		height: 1px;
-		overflow: hidden;
 		opacity: 0;
 	}
 	input:checked + label {
-		background-color: var(--sx-gray-400);
 		color: var(--sx-gray-25);
-		> * {
-			filter: drop-shadow(0 0 0.5rem);
-		}
+		background-color: var(--sx-gray-transparent-light);
 	}
 	input:focus + label {
 		outline: 2px solid var(--sx-input-focus-color);
 		outline-offset: 2px;
 		border-radius: 2px;
+		z-index: 1;
 	}
 	label {
 		padding: var(--sx-spacing-1) var(--sx-spacing-2);
-		color: var(--sx-gray-100);
+		color: var(--sx-gray-75);
 		transition: color 0.1s, background-color 0.1s;
 		cursor: pointer;
 		display: inline-block;
-		&:not(:last-child) {
-			border-right: 1px solid var(--sx-gray-400);
-		}
+		font-weight: 500;
+		letter-spacing: (--sx-button-letter-spacing);
+		position: relative;
+		border-radius: 3px;
 
 		&:hover {
-			color: var(--sx-gray-25);
+			background-color: var(--sx-gray-transparent);
 		}
 	}
 }

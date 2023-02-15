@@ -1,26 +1,45 @@
-<Fieldset legend="Select your favorite color" fieldsetClasses="f-column">
-	<div class="sx-toggles f-row align-self-start">
-		{#each radios as radio}
-			{@const radioId = 'radio-test-' + radio.value}
-			<input id={radioId} value={radio.value} type="radio" bind:group={value} />
+<style>
+	.sx-toggles {
+		align-self: start;
+	}
+</style>
+
+<Fieldset legend="Select your favorite colors" fieldsetClasses="f-column">
+	<div class="sx-toggles">
+		{#each colors as color}
+			{@const radioId = 'radio-test-' + color.value}
+			<input id={radioId} value={color.value} type="checkbox" bind:group={chosenColor} />
 			<label for={radioId}>
-				<span>{radio.text}</span>
+				<span>{color.text}</span>
 			</label>
 		{/each}
 	</div>
 
-	{#if value}
+	{#if chosenColor}
 		<p>
-			Your favorite color is {value}.
+			Your favorite colors: {chosenColor.join(', ')}.
 		</p>
 	{/if}
 </Fieldset>
 
-<script lang="ts">
-	import { Fieldset } from '$lib';
-	let value = '';
+<Fieldset legend="Select a font style" fieldsetClasses="f-column">
+	<div class="sx-toggles">
+		{#each icons as radio}
+			{@const radioId = 'radio-test-' + radio}
+			<input id={radioId} value={radio} type="radio" bind:group={chosenFontStyle} />
+			<label for={radioId}>
+				<Icon icon={radio} variant="icon-only" />
+			</label>
+		{/each}
+	</div>
+</Fieldset>
 
-	const radios = [
+<script lang="ts">
+	import { Fieldset, Icon } from '$lib';
+	let chosenColor = ['orange', 'blue'],
+		chosenFontStyle = 'italic';
+
+	const colors = [
 		{ value: 'red', text: 'Red' },
 		{ value: 'orange', text: 'Orange' },
 		{ value: 'yellow', text: 'Yellow' },
@@ -29,4 +48,6 @@
 		{ value: 'indigo', text: 'Indigo' },
 		{ value: 'violet', text: 'Violet' },
 	];
+
+	const icons = ['bold', 'italic', 'underline'];
 </script>

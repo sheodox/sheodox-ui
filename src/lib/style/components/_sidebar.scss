@@ -13,6 +13,7 @@ aside.sx-sidebar {
 		display: flex;
 		flex-direction: column;
 		padding: var(--sx-spacing-2);
+		gap: var(--sx-spacing-2);
 
 		a {
 			border-radius: 5px;
@@ -24,7 +25,7 @@ aside.sx-sidebar {
 			}
 
 			&.active {
-				background-color: var(--sx-gray-transparent);
+				background-color: var(--sx-gray-transparent-light);
 			}
 		}
 	}

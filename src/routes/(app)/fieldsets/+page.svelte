@@ -77,6 +77,12 @@
 	<Fieldset legend="Large fieldset" size="large" variant="bordered">
 		<p>this is some fieldset content</p>
 	</Fieldset>
+
+	<div style="--sx-arg-fieldset-legend-color: var(--sx-blue-300);">
+		<Fieldset legend="Alternate Color Legend">
+			<p>This fieldset overrides the color of the legend</p>
+		</Fieldset>
+	</div>
 </div>
 
 <script lang="ts">

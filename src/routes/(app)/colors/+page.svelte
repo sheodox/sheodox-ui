@@ -1,7 +1,8 @@
 <style>
 	.swatch {
 		height: 5rem;
-		width: 5rem;
+		min-width: 5rem;
+		width: 100%;
 	}
 	td {
 		margin: 0;
@@ -34,10 +35,10 @@
 
 <script lang="ts">
 	import { colors } from '../_util';
-	const weights: number[] = [];
+	const weights: (number | string)[] = [];
 
 	for (let i = 900; i >= 100; i -= 100) {
 		weights.push(i);
 	}
-	weights.push(75, 50, 25);
+	weights.push(75, 50, 25, 'transparent', 'transparent-faint');
 </script>

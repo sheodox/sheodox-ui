@@ -1,3 +1,7 @@
+<div class="mb-2">
+	<Breadcrumbs links={breadcrumbLinks} />
+</div>
+
 <table>
 	<thead>
 		<tr>
@@ -67,7 +71,8 @@
 <br />
 
 <script lang="ts">
-	import { TextInput, Checkbox, ripple } from '$lib';
+	import { TextInput, Checkbox, ripple, Breadcrumbs } from '$lib';
 
 	let showAutoFocus = false;
+	const breadcrumbLinks = [{ text: 'Home', href: '/' }, { text: 'User', href: '/' }, { text: 'Me' }];
 </script>

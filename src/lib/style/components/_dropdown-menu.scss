@@ -24,14 +24,23 @@
 			button,
 			a {
 				background: none;
+				width: 100%;
 			}
 		}
 	}
 
 	ul,
 	li,
+	button,
+	.button,
 	a,
 	.a {
 		width: 100%;
+	}
+	button,
+	.button,
+	a,
+	.a {
+		margin: 0;
 	}
 }

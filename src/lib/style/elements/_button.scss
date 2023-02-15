@@ -14,11 +14,12 @@ input[type='submit'],
 	padding: 0.7rem;
 	margin: 0.2rem;
 	line-height: 1;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 0.9rem;
 	transition: color 0.15s, background 0.15s;
 	//buttons don't inherit the body's font stack
 	font-family: var(--sx-en-fonts);
+	letter-spacing: var(--sx-button-letter-spacing);
 
 	&:hover:not(:disabled),
 	&.hover {
@@ -40,13 +41,18 @@ input[type='submit'],
 
 button.primary,
 .button.primary {
-	color: var(--sx-blue-400);
-	background: var(--sx-gray-transparent);
+	background-color: var(--sx-blue-400);
+	color: var(--sx-blue-900);
+
+	&:hover:not(:disabled) {
+		background-color: var(--sx-blue-300);
+	}
 }
 button.secondary,
 .button.secondary {
 	background: var(--sx-gray-transparent);
 }
+
 button:disabled {
 	color: var(--sx-disabled-button-color);
 	background: none;

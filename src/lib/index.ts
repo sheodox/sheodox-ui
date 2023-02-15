@@ -11,6 +11,7 @@ import { focus, ripple } from './util';
 import Modal from './Modal.svelte';
 import Icon from './Icon.svelte';
 import Header from './Header.svelte';
+import Breadcrumbs from './Breadcrumbs.svelte';
 import Checkbox from './Checkbox.svelte';
 import Progress from './Progress.svelte';
 import Footer from './Footer.svelte';
@@ -34,6 +35,7 @@ export {
 	Modal,
 	Icon,
 	Header,
+	Breadcrumbs,
 	Checkbox,
 	Progress,
 	Footer,

@@ -7,16 +7,17 @@ $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 		border-radius: 3px;
 		padding: 2px var(--sx-spacing-1);
 		margin: var(--sx-spacing-1);
-		font-weight: bold;
+		font-weight: 600;
+		border-radius: 6px;
 	}
 }
 
 @each $color in $colors {
-	@include badge($color, '#{$color}-400', '#{$color}-transparent');
+	@include badge($color, '#{$color}-400', '#{$color}-transparent-faint');
 }
 
 @include badge('gray', 'gray-50', 'gray-transparent');
-@include badge('red', 'red-400', 'red-transparent');
-@include badge('purple', 'purple-200', 'purple-transparent');
-@include badge('pink', 'pink-300', 'pink-transparent');
-@include badge('peach', 'peach-300', 'peach-transparent');
+@include badge('red', 'red-400', 'red-transparent-faint');
+@include badge('purple', 'purple-200', 'purple-transparent-faint');
+@include badge('pink', 'pink-300', 'pink-transparent-faint');
+@include badge('peach', 'peach-300', 'peach-transparent-faint');

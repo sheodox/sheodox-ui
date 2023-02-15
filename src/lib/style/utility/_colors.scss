@@ -1,4 +1,6 @@
 $transparency: 30%;
+$transparency-faint: 10%;
+
 :root {
 	--sx-hue-gray: 210;
 	--sx-gray-900: hsl(var(--sx-hue-gray), 35%, 0%);
@@ -14,6 +16,7 @@ $transparency: 30%;
 	--sx-gray-50: hsl(var(--sx-hue-gray), 55%, 85%);
 	--sx-gray-25: hsl(var(--sx-hue-gray), 69%, 92%);
 	--sx-gray-transparent: hsla(var(--sx-hue-gray), 20%, 29%, #{$transparency});
+	--sx-gray-transparent-faint: hsla(var(--sx-hue-gray), 20%, 29%, #{$transparency-faint});
 	--sx-gray-transparent-light: hsla(var(--sx-hue-gray), 20%, 50%, #{$transparency});
 	--sx-gray-transparent-lighter: hsla(var(--sx-hue-gray), 40%, 70%, #{$transparency});
 	--sx-gray-transparent-dark: hsla(var(--sx-hue-gray), 26%, 0%, 45%);
@@ -24,11 +27,12 @@ $transparency: 30%;
 	--sx-red-700: hsl(0, 75%, 25%);
 	--sx-red-600: hsl(0, 75%, 40%);
 	--sx-red-500: hsl(0, 75%, 50%);
-	--sx-red-400: hsl(0, 75%, 60%);
-	--sx-red-300: hsl(0, 78%, 70%);
-	--sx-red-200: hsl(0, 80%, 85%);
-	--sx-red-100: hsl(0, 85%, 90%);
+	--sx-red-400: hsl(0, 90%, 60%);
+	--sx-red-300: hsl(0, 95%, 70%);
+	--sx-red-200: hsl(0, 100%, 85%);
+	--sx-red-100: hsl(0, 100%, 90%);
 	--sx-red-transparent: hsla(0, 75%, 50%, #{$transparency});
+	--sx-red-transparent-faint: hsla(0, 75%, 50%, #{$transparency-faint});
 
 	--sx-orange-900: hsl(20, 80%, 10%);
 	--sx-orange-800: hsl(25, 75%, 17%);
@@ -40,6 +44,7 @@ $transparency: 30%;
 	--sx-orange-200: hsl(25, 80%, 85%);
 	--sx-orange-100: hsl(20, 85%, 90%);
 	--sx-orange-transparent: hsla(25, 75%, 50%, #{$transparency});
+	--sx-orange-transparent-faint: hsla(25, 75%, 50%, #{$transparency-faint});
 
 	--sx-yellow-900: hsl(35, 100%, 10%);
 	--sx-yellow-800: hsl(42, 100%, 17%);
@@ -51,6 +56,7 @@ $transparency: 30%;
 	--sx-yellow-200: hsl(55, 85%, 85%);
 	--sx-yellow-100: hsl(52, 82%, 90%);
 	--sx-yellow-transparent: hsla(60, 100%, 50%, #{$transparency});
+	--sx-yellow-transparent-faint: hsla(60, 100%, 50%, #{$transparency-faint});
 
 	--sx-green-900: hsl(135, 99%, 7%);
 	--sx-green-800: hsl(135, 99%, 12%);
@@ -62,6 +68,7 @@ $transparency: 30%;
 	--sx-green-200: hsl(135, 99%, 88%);
 	--sx-green-100: hsl(135, 100%, 94%);
 	--sx-green-transparent: hsla(135, 99%, 50%, #{$transparency});
+	--sx-green-transparent-faint: hsla(135, 99%, 50%, #{$transparency-faint});
 
 	--sx-mint-900: hsl(166, 99%, 7%);
 	--sx-mint-800: hsl(166, 99%, 12%);
@@ -73,6 +80,7 @@ $transparency: 30%;
 	--sx-mint-200: hsl(166, 99%, 88%);
 	--sx-mint-100: hsl(166, 100%, 94%);
 	--sx-mint-transparent: hsla(166, 99%, 50%, #{$transparency});
+	--sx-mint-transparent-faint: hsla(166, 99%, 50%, #{$transparency-faint});
 
 	--sx-cyan-900: hsl(185, 85%, 7%);
 	--sx-cyan-800: hsl(185, 70%, 12%);
@@ -84,17 +92,19 @@ $transparency: 30%;
 	--sx-cyan-200: hsl(185, 75%, 75%);
 	--sx-cyan-100: hsl(185, 85%, 85%);
 	--sx-cyan-transparent: hsla(185, 70%, 50%, #{$transparency});
+	--sx-cyan-transparent-faint: hsla(185, 70%, 50%, #{$transparency-faint});
 
 	--sx-blue-900: hsl(215, 100%, 7%);
 	--sx-blue-800: hsl(215, 100%, 10%);
 	--sx-blue-700: hsl(215, 100%, 20%);
-	--sx-blue-600: hsl(212, 100%, 35%);
-	--sx-blue-500: hsl(207, 100%, 50%);
-	--sx-blue-400: hsl(205, 100%, 55%);
-	--sx-blue-300: hsl(202, 100%, 65%);
-	--sx-blue-200: hsl(200, 100%, 75%);
-	--sx-blue-100: hsl(198, 100%, 85%);
-	--sx-blue-transparent: hsla(200, 100%, 50%, #{$transparency});
+	--sx-blue-600: hsl(215, 100%, 44%);
+	--sx-blue-500: hsl(215, 100%, 50%);
+	--sx-blue-400: hsl(214, 100%, 57%);
+	--sx-blue-300: hsl(213, 100%, 65%);
+	--sx-blue-200: hsl(212, 100%, 75%);
+	--sx-blue-100: hsl(210, 100%, 85%);
+	--sx-blue-transparent: hsla(215, 100%, 50%, #{$transparency});
+	--sx-blue-transparent-faint: hsla(215, 100%, 50%, #{$transparency-faint});
 
 	--sx-purple-900: hsl(275, 100%, 10%);
 	--sx-purple-800: hsl(272, 92%, 17%);
@@ -106,6 +116,7 @@ $transparency: 30%;
 	--sx-purple-200: hsl(272, 92%, 85%);
 	--sx-purple-100: hsl(275, 100%, 90%);
 	--sx-purple-transparent: hsla(268, 90%, 50%, #{$transparency});
+	--sx-purple-transparent-faint: hsla(268, 90%, 50%, #{$transparency-faint});
 
 	--sx-pink-900: hsl(298, 77%, 10%);
 	--sx-pink-800: hsl(298, 77%, 17%);
@@ -117,15 +128,17 @@ $transparency: 30%;
 	--sx-pink-200: hsl(298, 77%, 85%);
 	--sx-pink-100: hsl(298, 77%, 90%);
 	--sx-pink-transparent: hsla(298, 77%, 51%, #{$transparency});
+	--sx-pink-transparent-faint: hsla(298, 77%, 51%, #{$transparency-faint});
 
-	--sx-peach-900: hsl(315, 77%, 10%);
-	--sx-peach-800: hsl(315, 77%, 17%);
-	--sx-peach-700: hsl(315, 77%, 25%);
-	--sx-peach-600: hsl(315, 77%, 40%);
-	--sx-peach-500: hsl(315, 77%, 51%);
-	--sx-peach-400: hsl(315, 77%, 61%);
-	--sx-peach-300: hsl(315, 77%, 72%);
-	--sx-peach-200: hsl(315, 77%, 85%);
-	--sx-peach-100: hsl(315, 77%, 90%);
-	--sx-peach-transparent: hsla(315, 77%, 51%, #{$transparency});
+	--sx-peach-900: hsl(330, 77%, 10%);
+	--sx-peach-800: hsl(330, 77%, 17%);
+	--sx-peach-700: hsl(330, 77%, 25%);
+	--sx-peach-600: hsl(330, 77%, 40%);
+	--sx-peach-500: hsl(330, 77%, 51%);
+	--sx-peach-400: hsl(330, 77%, 61%);
+	--sx-peach-300: hsl(330, 77%, 72%);
+	--sx-peach-200: hsl(330, 77%, 85%);
+	--sx-peach-100: hsl(330, 77%, 90%);
+	--sx-peach-transparent: hsla(330, 77%, 51%, #{$transparency});
+	--sx-peach-transparent-faint: hsla(330, 77%, 51%, #{$transparency-faint});
 }

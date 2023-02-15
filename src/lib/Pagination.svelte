@@ -2,7 +2,7 @@
 	button,
 	a {
 		margin: 0;
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	a[href=''] {

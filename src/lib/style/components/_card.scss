@@ -3,7 +3,7 @@
 	background-color: var(--sx-gray-transparent);
 	border: 1px solid transparent;
 	transition: border-color 0.1s, background-color 0.1s;
-	border-radius: 5px;
+	border-radius: 10px;
 
 	&.clickable:hover {
 		border-color: var(--sx-blue-500);
@@ -51,7 +51,7 @@
 			transition: transform 0.1s, filter 0.1s;
 		}
 
-		&:hover > img {
+		&:hover img {
 			transform: scale(102%);
 			filter: brightness(80%);
 		}

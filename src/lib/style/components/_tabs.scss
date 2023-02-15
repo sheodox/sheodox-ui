@@ -10,13 +10,14 @@
 	button {
 		margin: 0;
 		color: var(--sx-gray-75);
-		border-radius: 0;
+		$radius: 5px;
+		border-radius: #{$radius} #{$radius} 0 0;
 		border-bottom: 2px solid var(--sx-gray-400);
 		transition: border-bottom-color 0.2s;
 		font-size: var(--sx-font-size-4);
 
 		&:hover {
-			background: transparent;
+			background: var(--sx-gray-transparent);
 			border-bottom-color: var(--sx-blue-400);
 			color: var(--sx-text-color);
 		}
@@ -29,7 +30,8 @@
 
 		&.selected {
 			color: var(--sx-text-color);
-			border-bottom-color: var(--sx-blue-400);
+			border-bottom-color: var(--sx-blue-500);
+			background: var(--sx-gray-transparent);
 		}
 	}
 }

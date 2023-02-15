@@ -91,6 +91,7 @@
 				on:click|stopPropagation={() => (menuOpen = !menuOpen)}
 				aria-pressed={menuOpen}
 				class="sx-header-menu-trigger"
+				use:ripple
 			>
 				<Icon icon="bars" variant="icon-only" />
 				<span class="sr-only">{menuOpen ? 'Close' : 'Open'} menu</span>
@@ -118,6 +119,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import Icon from './Icon.svelte';
+	import { ripple } from './util';
 	const dispatch = createEventDispatcher<{ titleclick: void }>();
 
 	export let pageName = '';

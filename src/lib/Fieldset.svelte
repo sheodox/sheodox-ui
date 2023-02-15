@@ -1,4 +1,8 @@
 <style lang="scss">
+	fieldset {
+		--fieldset-legend-color: var(--sx-arg-fieldset-legend-color, var(--sx-gray-100));
+		--fieldset-border-radius: var(--sx-arg-fieldset-border-radius, var(--fieldset-default-border-radius));
+	}
 	fieldset.variant-bordered {
 		--sx-fieldset-bordered-legend-color: white;
 		--sx-fieldset-background-color: var(--sx-gray-transparent);
@@ -8,13 +12,13 @@
 		span {
 			background-color: var(--sx-fieldset-background-color);
 			border: 1px solid var(--sx-fieldset-bordered-border-color);
-			border-radius: 3px;
+			border-radius: var(--fieldset-border-radius);
 		}
 
 		legend {
 			color: var(--sx-fieldset-bordered-legend-color);
 			line-height: 1;
-			font-weight: bold;
+			font-weight: 600;
 
 			span {
 				padding-left: var(--sx-spacing-1);
@@ -33,11 +37,11 @@
 		overflow: hidden;
 		position: relative;
 		padding-top: var(--sx-fieldset-box-top);
-		border-radius: 3px;
+		border-radius: var(--fieldset-border-radius);
 
 		legend {
 			font-size: var(--sx-font-size-3);
-			color: var(--sx-text-color);
+			color: var(--fieldset-legend-color);
 			border-radius: 2px;
 			position: relative;
 			width: 100%;
@@ -48,7 +52,7 @@
 				-webkit-box-orient: vertical;
 				text-overflow: ellipsis;
 				overflow: hidden;
-				font-weight: bold;
+				font-weight: 600;
 				position: relative;
 				top: var(--sx-fieldset-box-top);
 				font-size: var(--sx-legend-font-size);
@@ -61,7 +65,7 @@
 		background-color: var(--sx-fieldset-background-color);
 		overflow: hidden;
 		position: relative;
-		border-radius: 5px;
+		border-radius: var(--fieldset-border-radius);
 
 		legend {
 			font-size: var(--sx-font-size-3);
@@ -78,7 +82,7 @@
 				max-width: calc(100% - var(--sx-spacing-3) * 2);
 				display: inline-block;
 				background: var(--sx-fieldset-background-color);
-				font-weight: bold;
+				font-weight: 600;
 			}
 
 			&::after,
@@ -104,7 +108,7 @@
 			legend {
 				font-size: var(--sx-font-size-1);
 				span {
-					font-weight: bold;
+					font-weight: 600;
 				}
 
 				&::after,
@@ -118,7 +122,7 @@
 			legend {
 				font-size: var(--sx-font-size-3);
 				span {
-					font-weight: bold;
+					font-weight: 600;
 				}
 
 				&::after,
@@ -132,7 +136,7 @@
 			legend {
 				font-size: var(--sx-font-size-5);
 				span {
-					font-weight: bold;
+					font-weight: 600;
 				}
 
 				&::after,
@@ -145,13 +149,16 @@
 
 	.size-small {
 		--sx-legend-font-size: var(--sx-font-size-1);
+		--fieldset-default-border-radius: 5px;
 	}
 
 	.size-normal {
 		--sx-legend-font-size: var(--sx-font-size-3);
+		--fieldset-default-border-radius: 10px;
 	}
 	.size-large {
 		--sx-legend-font-size: var(--sx-font-size-5);
+		--fieldset-default-border-radius: 10px;
 	}
 
 	.centeredLegend legend {

@@ -7,7 +7,13 @@
 	}
 </style>
 
-<button class="a" on:click|stopPropagation={() => (showMenu = !showMenu)} aria-pressed={showMenu} bind:this={button}>
+<button
+	class="a"
+	on:click|stopPropagation={() => (showMenu = !showMenu)}
+	aria-pressed={showMenu}
+	bind:this={button}
+	use:ripple
+>
 	<slot name="button" />
 	{#if showOpenIcon}
 		<span class="down-icon">
@@ -39,6 +45,7 @@
 	import Icon from './Icon.svelte';
 	import { createPopper } from '@popperjs/core';
 	import Portal from './Portal.svelte';
+	import { ripple } from './util';
 
 	let showMenu = false,
 		menu: HTMLElement,
