@@ -1,6 +1,6 @@
 <style lang="scss">
 	fieldset {
-		--fieldset-legend-color: var(--sx-arg-fieldset-legend-color, var(--sx-gray-100));
+		--fieldset-legend-color: var(--sx-arg-fieldset-legend-color, var(--sx-text-color));
 		--fieldset-border-radius: var(--sx-arg-fieldset-border-radius, var(--fieldset-default-border-radius));
 	}
 	fieldset.variant-bordered {
