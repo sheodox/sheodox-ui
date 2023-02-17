@@ -13,29 +13,45 @@
 
 <nav class="f-row justify-content-between gap-3">
 	{#if as === 'button'}
-		<button on:click={prev} disabled={atStart}><Icon icon="chevron-left" /> Previous</button>
+		<button on:click={prev} disabled={atStart}>
+			<Icon icon="chevron-left" variant="icon-only" />
+			<span class:sr-only={variant === 'minimal'}>Previous</span>
+		</button>
 	{:else}
-		<a class="button" href={atStart ? '' : makeHref(page - 1)}><Icon icon="chevron-left" /> Previous</a>
+		<a class="button" href={atStart ? '' : makeHref(page - 1)}
+			><Icon icon="chevron-left" variant="icon-only" />
+			<span class:sr-only={variant === 'minimal'}>Previous</span>
+		</a>
 	{/if}
-	<div class="f-row gap-2">
-		{#each pages as p}
-			{#if p === -1}
-				{#if as === 'button'}
-					<button on:click={promptPage}><span>...</span></button>
+
+	{#if variant === 'full'}
+		<div class="f-row gap-2">
+			{#each pages as p}
+				{#if p === -1}
+					{#if as === 'button'}
+						<button on:click={promptPage}><span>...</span></button>
+					{:else}
+						<a href={makeHref(p)} class="button"><span>...</span></a>
+					{/if}
+				{:else if as === 'button'}
+					<button aria-pressed={p === page} on:click={() => (page = p)}><span>{p}</span></button>
 				{:else}
-					<a href={makeHref(p)} class="button"><span>...</span></a>
+					<a aria-pressed={p === page} href={makeHref(p)} class="button"><span>{p}</span></a>
 				{/if}
-			{:else if as === 'button'}
-				<button aria-pressed={p === page} on:click={() => (page = p)}><span>{p}</span></button>
-			{:else}
-				<a aria-pressed={p === page} href={makeHref(p)} class="button"><span>{p}</span></a>
-			{/if}
-		{/each}
-	</div>
+			{/each}
+		</div>
+	{/if}
+
 	{#if as === 'button'}
-		<button on:click={next} disabled={atEnd}>Next <Icon icon="chevron-right" variant="append" /></button>
+		<button on:click={next} disabled={atEnd}>
+			<span class:sr-only={variant === 'minimal'}>Next</span>
+			<Icon icon="chevron-right" variant="icon-only" />
+		</button>
 	{:else}
-		<a class="button" href={atEnd ? '' : makeHref(page + 1)}>Next <Icon icon="chevron-right" variant="append" /></a>
+		<a class="button" href={atEnd ? '' : makeHref(page + 1)}>
+			<span class:sr-only={variant === 'minimal'}>Next</span>
+			<Icon icon="chevron-right" variant="icon-only" />
+		</a>
 	{/if}
 </nav>
 
@@ -63,6 +79,7 @@
 	export let page: number;
 	export let max: number;
 	export let as: 'button' | 'a' = 'button';
+	export let variant: 'minimal' | 'full' = 'full';
 	export let makeHref: (page: number) => string = () => '';
 
 	const dispatch = createEventDispatcher<{
