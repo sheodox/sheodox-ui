@@ -56,6 +56,11 @@
 	<Checkbox checked={true}>Checkbox</Checkbox>
 	<Checkbox checked={false}>Checkbox</Checkbox>
 
+	<div class="f-row">
+		<TextInput value="Click focus to focus this" name="adsf" bind:inputElement>Text Input</TextInput>
+		<button on:click={() => inputElement.focus()}>Focus</button>
+	</div>
+
 	<button on:click={() => (showAutoFocus = !showAutoFocus)} class="secondary"
 		>{showAutoFocus ? 'Hide' : 'Show'} auto focusing input</button
 	>
@@ -73,6 +78,9 @@
 <script lang="ts">
 	import { TextInput, Checkbox, ripple, Breadcrumbs } from '$lib';
 
-	let showAutoFocus = false;
+	let showAutoFocus = false,
+		showTable = true;
 	const breadcrumbLinks = [{ text: 'Home', href: '/' }, { text: 'User', href: '/' }, { text: 'Me' }];
+
+	let inputElement: HTMLInputElement;
 </script>

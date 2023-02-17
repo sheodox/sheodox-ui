@@ -46,6 +46,8 @@
 			id="text-input-{id}"
 			type="text"
 			bind:value
+			bind:this={inputElement}
+			{name}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -60,6 +62,8 @@
 			id="text-input-{id}"
 			type="number"
 			bind:value
+			bind:this={inputElement}
+			{name}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -74,6 +78,8 @@
 			id="text-input-{id}"
 			type="password"
 			bind:value
+			bind:this={inputElement}
+			{name}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -88,6 +94,8 @@
 			id="text-input-{id}"
 			type="email"
 			bind:value
+			bind:this={inputElement}
+			{name}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -110,10 +118,15 @@
 	export let value: string | number;
 	export let placeholder = '';
 	export let id = genId();
+	export let name = '';
 	export let autocomplete = 'off';
 	export let autofocus = false;
 	export let autoselect = false;
 	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
+	// kick the element back to the parent component, so they can
+	// programatically focus without having to getElementById, useful
+	// since the ID used isn't used as-is as the input ID
+	export let inputElement: HTMLInputElement | undefined = undefined;
 
 	let focused: boolean;
 
