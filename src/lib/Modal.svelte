@@ -41,7 +41,7 @@
 
 <Portal>
 	<div class="overlay" on:click={close} on:keydown={keydown}>
-		<div class="modal panel" on:click|stopPropagation on:keydown={keydown}>
+		<div class="modal panel" on:click|stopPropagation on:keydown={keydown} style="width: {width}; height: {height};">
 			<div class="modal-title header">
 				<h1>{title}</h1>
 				<button class="close" on:click={close}>
@@ -60,6 +60,9 @@
 
 	export let title = '';
 	export let visible = false;
+	export let width = '';
+	export let height = '';
+
 	const dispatch = createEventDispatcher<{ closed: void }>();
 
 	function close() {
