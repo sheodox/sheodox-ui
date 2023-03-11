@@ -60,6 +60,9 @@
 				font-size: var(--sx-legend-font-size);
 			}
 		}
+		.fieldset-contents {
+			padding-top: calc(0.5 * var(--fieldset-padding));
+		}
 	}
 	fieldset.variant-tab {
 		--sx-fieldset-background-color: var(--sx-gray-500);
@@ -180,13 +183,16 @@
 
 <fieldset class="size-{size} variant-{variant} {fieldsetClasses}" class:centeredLegend class:mutedLegend {disabled}>
 	<legend class={legendClasses} title={legend}><span>{legend}</span></legend>
-	<slot />
+	<div class="fieldset-contents {contentClasses}">
+		<slot />
+	</div>
 </fieldset>
 
 <script lang="ts">
 	export let legend: string;
 	export let fieldsetClasses = '';
 	export let legendClasses = '';
+	export let contentClasses = '';
 	// if the legend should be centered
 	export let centeredLegend = false;
 	// if the legend should use an unintrusive text color
