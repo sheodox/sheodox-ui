@@ -2,6 +2,7 @@
 	fieldset {
 		--fieldset-legend-color: var(--sx-arg-fieldset-legend-color, var(--sx-text-color));
 		--fieldset-border-radius: var(--sx-arg-fieldset-border-radius, var(--fieldset-default-border-radius));
+		--fieldset-padding: var(--sx-arg-fieldset-padding, var(--fieldset-default-padding));
 	}
 	fieldset.variant-bordered {
 		--sx-fieldset-bordered-legend-color: white;
@@ -31,11 +32,12 @@
 	}
 	fieldset.variant-box {
 		--sx-fieldset-background-color: var(--sx-gray-transparent);
-		--sx-fieldset-box-top: calc(var(--sx-legend-font-size) + var(--sx-spacing-1));
+		--sx-fieldset-box-top: calc(0.5 * var(--sx-legend-font-size) + var(--fieldset-padding));
 		border: none;
 		background-color: var(--sx-fieldset-background-color);
 		overflow: hidden;
 		position: relative;
+		padding: var(--fieldset-padding);
 		padding-top: var(--sx-fieldset-box-top);
 		border-radius: var(--fieldset-border-radius);
 
@@ -150,15 +152,18 @@
 	.size-small {
 		--sx-legend-font-size: var(--sx-font-size-1);
 		--fieldset-default-border-radius: 5px;
+		--fieldset-default-padding: var(--sx-spacing-1);
 	}
 
 	.size-normal {
 		--sx-legend-font-size: var(--sx-font-size-3);
 		--fieldset-default-border-radius: 10px;
+		--fieldset-default-padding: var(--sx-spacing-2);
 	}
 	.size-large {
 		--sx-legend-font-size: var(--sx-font-size-5);
 		--fieldset-default-border-radius: 10px;
+		--fieldset-default-padding: var(--sx-spacing-4);
 	}
 
 	.centeredLegend legend {

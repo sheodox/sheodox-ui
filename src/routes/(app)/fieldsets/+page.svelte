@@ -8,6 +8,9 @@
 		padding: var(--sx-spacing-1);
 		overflow: hidden;
 	}
+	p {
+		margin: 0;
+	}
 </style>
 
 <div class="f-row f-wrap gap-3 m-3 justify-content-center align-items-center">
