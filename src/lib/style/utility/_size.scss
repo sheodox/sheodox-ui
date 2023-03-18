@@ -1,0 +1,9 @@
+@mixin width-percent($w) {
+	.w-#{$w} {
+		width: #{$w + '%'};
+	}
+}
+
+@each $w in '25', '50', '75', '100' {
+	@include width-percent($w);
+}
