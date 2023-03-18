@@ -6,7 +6,10 @@
 
 <div class="p-3">
 	{#each colors as color}
-		<p><span class="sx-badge-{color}">.sx-badge-{color}</span></p>
+		<p>
+			<span class="sx-badge-{color}">.sx-badge-{color}</span>
+			<span class="sx-badge-{color} inverted">.sx-badge-{color}.inverted</span>
+		</p>
 	{/each}
 </div>
 

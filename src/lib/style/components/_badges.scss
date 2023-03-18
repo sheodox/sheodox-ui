@@ -1,6 +1,6 @@
 $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 
-@mixin badge($colorName, $color, $bg) {
+@mixin badge($colorName, $color, $bg, $inverted-color, $inverted-bg) {
 	.sx-badge-#{$colorName} {
 		color: var(--sx-#{$color});
 		background-color: var(--sx-#{$bg});
@@ -9,15 +9,20 @@ $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 		margin: var(--sx-spacing-1);
 		font-weight: 600;
 		border-radius: 6px;
+
+		&.inverted {
+			color: var(--sx-#{$inverted-color});
+			background-color: var(--sx-#{$inverted-bg});
+		}
 	}
 }
 
 @each $color in $colors {
-	@include badge($color, '#{$color}-400', '#{$color}-transparent-faint');
+	@include badge($color, '#{$color}-400', '#{$color}-transparent-faint', '#{$color}-900', '#{$color}-400');
 }
 
-@include badge('gray', 'gray-50', 'gray-transparent');
-@include badge('red', 'red-400', 'red-transparent-faint');
-@include badge('purple', 'purple-200', 'purple-transparent-faint');
-@include badge('pink', 'pink-300', 'pink-transparent-faint');
-@include badge('peach', 'peach-300', 'peach-transparent-faint');
+@include badge('gray', 'gray-50', 'gray-transparent', 'gray-900', 'gray-50');
+@include badge('red', 'red-400', 'red-transparent-faint', 'red-900', 'red-400');
+@include badge('purple', 'purple-200', 'purple-transparent-faint', 'purple-900', 'purple-200');
+@include badge('pink', 'pink-300', 'pink-transparent-faint', 'pink-900', 'pink-300');
+@include badge('peach', 'peach-300', 'peach-transparent-faint', 'peach-900', 'peach-300');
