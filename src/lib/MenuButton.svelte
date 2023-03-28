@@ -1,6 +1,7 @@
 <style>
 	.menubutton-menu {
-		z-index: 1000;
+		/* above the modal so it can be used on those */
+		z-index: 10001;
 	}
 </style>
 

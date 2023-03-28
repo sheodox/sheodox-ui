@@ -55,7 +55,7 @@ const animatingStyles = {
 	awaitAnimate = (element: HTMLElement, transitions: Keyframe[]) => {
 		return new Promise((resolve) => {
 			element
-				.animate(transitions, { duration: 200, easing: 'ease-in' })
+				.animate(transitions, { duration: 100, easing: 'ease-in-out' })
 				.addEventListener('finish', resolve, { once: true });
 		});
 	};

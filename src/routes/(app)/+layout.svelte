@@ -95,6 +95,7 @@
 
 	const links = [
 		{ href: '/', text: 'Home' },
+		{ href: '/accordions', text: 'Accordions' },
 		{ href: '/alerts', text: 'Alerts' },
 		{ href: '/badges', text: 'Badges' },
 		{ href: '/colors', text: 'Colors' },

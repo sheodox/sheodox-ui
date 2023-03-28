@@ -59,7 +59,7 @@
 	export let toast: ToastOptions;
 
 	function clear() {
-		if (toast.id) {
+		if (typeof toast.id === 'number') {
 			clearToast(toast.id);
 		}
 	}

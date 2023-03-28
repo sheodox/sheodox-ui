@@ -8,6 +8,7 @@ import { focus, ripple } from './util';
 // @ts-ignore - bundlers knows how to import this, but typescript doesn't
 // and the side effect of importing is all that matters
 
+import Accordion from './Accordion.svelte';
 import Alert from './Alert.svelte';
 import Modal from './Modal.svelte';
 import Icon from './Icon.svelte';
@@ -33,6 +34,7 @@ import Pagination from './Pagination.svelte';
 import Toasts from './Toasts.svelte';
 
 export {
+	Accordion,
 	Alert,
 	Modal,
 	Icon,
