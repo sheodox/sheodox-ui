@@ -5,7 +5,7 @@
 	}
 	.alert-info {
 		background: var(--sx-blue-transparent-faint);
-		color: var(--sx-blue-400);
+		color: var(--sx-blue-200);
 	}
 	.alert-warning {
 		background: var(--sx-yellow-transparent-faint);
@@ -13,7 +13,11 @@
 	}
 	.alert-error {
 		background: var(--sx-red-transparent-faint);
-		color: var(--sx-red-400);
+		color: var(--sx-red-300);
+	}
+	.alert-success {
+		background: var(--sx-green-transparent-faint);
+		color: var(--sx-green-400);
 	}
 	button :global(i) {
 		vertical-align: middle;
@@ -38,7 +42,7 @@
 	import Icon from './Icon.svelte';
 	import { createEventDispatcher } from 'svelte';
 
-	export let variant: 'info' | 'error' | 'warning' = 'error';
+	export let variant: 'info' | 'error' | 'warning' | 'success' = 'error';
 
 	const dispatch = createEventDispatcher<{
 		dismiss: void;

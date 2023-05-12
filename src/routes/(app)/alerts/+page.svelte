@@ -13,6 +13,11 @@
 		<Icon icon="info-circle" />
 		This is an error alert
 	</Alert>
+
+	<Alert variant="success">
+		<Icon icon="info-circle" />
+		This is a success alert
+	</Alert>
 </div>
 
 <script lang="ts">
