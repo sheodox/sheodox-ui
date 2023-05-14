@@ -48,8 +48,14 @@ button.primary,
 		background-color: var(--sx-blue-300);
 	}
 }
+
 button.secondary,
 .button.secondary {
+	color: var(--sx-blue-300);
+	background: var(--sx-gray-transparent);
+}
+button.tertiary,
+.button.tertiary {
 	background: var(--sx-gray-transparent);
 }
 
@@ -105,6 +111,10 @@ button.danger:not(:disabled) {
 button.small,
 .button.small {
 	padding: 0.3rem;
+}
+
+button.pill {
+	border-radius: 200px;
 }
 
 @keyframes sx-button-ripple {

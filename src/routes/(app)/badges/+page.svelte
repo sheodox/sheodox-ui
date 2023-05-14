@@ -9,6 +9,7 @@
 		<p>
 			<span class="sx-badge-{color}">.sx-badge-{color}</span>
 			<span class="sx-badge-{color} inverted">.sx-badge-{color}.inverted</span>
+			<span class="sx-badge-{color} inverted pill">.pill</span>
 		</p>
 	{/each}
 </div>

@@ -15,6 +15,10 @@
 			<td><button disabled>Regular button</button></td>
 		</tr>
 		<tr>
+			<td><button class="tertiary" use:ripple>Tertiary button</button></td>
+			<td><button class="tertiary" disabled>Tertiary button</button></td>
+		</tr>
+		<tr>
 			<td><button class="secondary" use:ripple>Secondary button</button></td>
 			<td><button class="secondary" disabled>Secondary button</button></td>
 		</tr>
@@ -33,6 +37,10 @@
 		<tr>
 			<td><button class="inverted" use:ripple>Inverted button</button></td>
 			<td><button class="inverted" disabled>Inverted button</button></td>
+		</tr>
+		<tr>
+			<td><button class="inverted pill" use:ripple>Pill button</button></td>
+			<td><button class="inverted pill" disabled>Pill button</button></td>
 		</tr>
 		<tr>
 			<td><button class="electric" use:ripple>Electric button</button></td>
@@ -80,7 +88,11 @@
 
 	let showAutoFocus = false,
 		showTable = true;
-	const breadcrumbLinks = [{ text: 'Home', href: '/' }, { text: 'User', href: '/' }, { text: 'Me' }];
+	const breadcrumbLinks = [
+		{ text: 'Home', href: '/' },
+		{ text: 'User', href: '/' },
+		{ text: 'Me', href: '/' },
+	];
 
 	let inputElement: HTMLInputElement;
 </script>
