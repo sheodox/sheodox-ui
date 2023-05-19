@@ -103,6 +103,7 @@
 		{ href: '/fieldsets', text: 'Fieldsets' },
 		{ href: '/modals', text: 'Modals' },
 		{ href: '/progress', text: 'Progress' },
+		{ href: '/rich-text', text: 'Rich Text' },
 		{ href: '/shadows', text: 'Shadows' },
 		{ href: '/tabs', text: 'Tabs' },
 		{ href: '/toggles', text: 'Toggles' },

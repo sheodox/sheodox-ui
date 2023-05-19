@@ -19,6 +19,8 @@ import Progress from './Progress.svelte';
 import Footer from './Footer.svelte';
 import DropdownMenu from './DropdownMenu.svelte';
 import NavDropdown from './NavDropdown.svelte';
+import ExternalLink from './ExternalLink.svelte';
+import RichText from './RichText.svelte';
 import MenuButton from './MenuButton.svelte';
 import Loading from './Loading.svelte';
 import Portal from './Portal.svelte';
@@ -44,6 +46,8 @@ export {
 	Progress,
 	Footer,
 	Fieldset,
+	ExternalLink,
+	RichText,
 	DropdownMenu,
 	NavDropdown,
 	MenuButton,

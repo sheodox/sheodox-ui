@@ -64,6 +64,9 @@
 			bind:value
 			bind:this={inputElement}
 			{name}
+			{min}
+			{max}
+			{step}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -123,6 +126,9 @@
 	export let autofocus = false;
 	export let autoselect = false;
 	export let type: 'text' | 'password' | 'email' | 'number' = 'text';
+	export let min = 0;
+	export let max = 100;
+	export let step = 1;
 	// kick the element back to the parent component, so they can
 	// programatically focus without having to getElementById, useful
 	// since the ID used isn't used as-is as the input ID
