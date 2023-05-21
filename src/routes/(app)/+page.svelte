@@ -63,6 +63,8 @@
 	<TextInput value="0" type="number">Number Input</TextInput>
 	<Checkbox checked={true}>Checkbox</Checkbox>
 	<Checkbox checked={false}>Checkbox</Checkbox>
+	<Search value="search text" />
+	<Search value="search text" size="large" />
 
 	<div class="f-row">
 		<TextInput value="Click focus to focus this" name="adsf" bind:inputElement>Text Input</TextInput>
@@ -84,7 +86,7 @@
 <br />
 
 <script lang="ts">
-	import { TextInput, Checkbox, ripple, Breadcrumbs } from '$lib';
+	import { TextInput, Checkbox, ripple, Breadcrumbs, Search } from '$lib';
 
 	let showAutoFocus = false,
 		showTable = true;
