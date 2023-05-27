@@ -30,6 +30,7 @@ import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
 import Sidebar from './Sidebar.svelte';
 import Search from './Search.svelte';
+import Tooltip from './Tooltip.svelte';
 import SheodoxUIStyles from './SheodoxUIStyles.svelte';
 import Fieldset from './Fieldset.svelte';
 import Pagination from './Pagination.svelte';
@@ -58,6 +59,7 @@ export {
 	SheodoxUIStyles,
 	Sidebar,
 	Search,
+	Tooltip,
 	Pagination,
 	TabList,
 	Tab,
