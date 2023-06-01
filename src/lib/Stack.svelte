@@ -22,6 +22,4 @@
 	$: alignItemsClass = align ? `align-items-${align}` : '';
 	$: justifyContentClass = justify ? `justify-content-${justify}` : '';
 	$: classes = [dirClass, gapClass, alignItemsClass, justifyContentClass, cl].filter((c) => !!c).join(' ');
-
-	$: console.log({ justify, justifyContentClass });
 </script>
