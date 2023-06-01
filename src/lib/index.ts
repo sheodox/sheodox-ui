@@ -17,6 +17,9 @@ import Breadcrumbs from './Breadcrumbs.svelte';
 import Checkbox from './Checkbox.svelte';
 import Progress from './Progress.svelte';
 import Footer from './Footer.svelte';
+import Layout from './Layout.svelte';
+import Grid from './Grid.svelte';
+import Stack from './Stack.svelte';
 import DropdownMenu from './DropdownMenu.svelte';
 import NavDropdown from './NavDropdown.svelte';
 import ExternalLink from './ExternalLink.svelte';
@@ -47,6 +50,9 @@ export {
 	Checkbox,
 	Progress,
 	Footer,
+	Layout,
+	Grid,
+	Stack,
 	Fieldset,
 	ExternalLink,
 	RichText,

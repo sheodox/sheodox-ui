@@ -73,8 +73,6 @@
 	export let placement: Placement = 'top';
 	export let delay = 200;
 
-	$: console.log('slots ', $$slots);
-
 	let showTooltip = false,
 		tooltipRoot: HTMLElement;
 

@@ -1,11 +1,3 @@
-<style lang="scss">
-	.main-content {
-		max-width: 95vw;
-		width: 80rem;
-		margin: 0 auto;
-	}
-</style>
-
 <svelte:head>
 	<title>sheodox-ui</title>
 </svelte:head>
@@ -62,7 +54,7 @@
 
 <Modals />
 
-<main class="f-row">
+<Stack dir="r">
 	{#if showSidebar}
 		<Sidebar bind:menuOpen docked={sidebarDocked}>
 			<h1 slot="header">sheodox-ui</h1>
@@ -74,15 +66,15 @@
 		</Sidebar>
 	{/if}
 	<div class="f-1 m-4">
-		<section class="main-content f-column">
+		<Layout size="medium" cl="f-column">
 			<slot />
-		</section>
+		</Layout>
 	</div>
-</main>
+</Stack>
 
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { Modals, Header, Toasts, Sidebar, NavDropdown, Icon, SheodoxUIStyles } from '$lib';
+	import { Modals, Stack, Layout, Header, Toasts, Sidebar, NavDropdown, Icon, SheodoxUIStyles } from '$lib';
 
 	let menuOpen = false,
 		showSidebar = true,
@@ -105,6 +97,7 @@
 		{ href: '/progress', text: 'Progress' },
 		{ href: '/rich-text', text: 'Rich Text' },
 		{ href: '/shadows', text: 'Shadows' },
+		{ href: '/stacks', text: 'Stacks' },
 		{ href: '/tooltips', text: 'Tooltips' },
 		{ href: '/tabs', text: 'Tabs' },
 		{ href: '/toggles', text: 'Toggles' },
