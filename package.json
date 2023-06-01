@@ -25,7 +25,7 @@
   "author": "sheodox",
   "license": "ISC",
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
+    "@popperjs/core": "^2.11.8",
     "@sveltejs/package": "^1.0.2",
     "normalize.css": "^8.0.1"
   },
