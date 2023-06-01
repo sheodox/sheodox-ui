@@ -66,6 +66,16 @@
 	<Search value="search text" />
 	<Search value="search text" size="large" />
 
+	<MenuButton>
+		<span slot="trigger">Options <Icon icon="chevron-down" /></span>
+		<ul slot="menu">
+			<li><button><Icon icon="edit" /> Edit</button></li>
+			<li><button><Icon icon="edit" /> Edit</button></li>
+			<li><a class="button" href="/"><Icon icon="edit" /> Edit</a></li>
+			<li><button><Icon icon="edit" /> Edit</button></li>
+		</ul>
+	</MenuButton>
+
 	<div class="f-row">
 		<TextInput value="Click focus to focus this" name="adsf" bind:inputElement>Text Input</TextInput>
 		<button on:click={() => inputElement.focus()}>Focus</button>
@@ -86,7 +96,7 @@
 <br />
 
 <script lang="ts">
-	import { TextInput, Checkbox, ripple, Breadcrumbs, Search } from '$lib';
+	import { MenuButton, Icon, TextInput, Checkbox, ripple, Breadcrumbs, Search } from '$lib';
 
 	let showAutoFocus = false,
 		showTable = true;

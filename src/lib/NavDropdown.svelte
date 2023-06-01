@@ -25,7 +25,7 @@
 {#if showMenu}
 	<Portal>
 		<div
-			class="nav-dropdown-menu"
+			class="nav-dropdown-menu sx-floating-ui"
 			bind:this={menu}
 			on:click={() => (showMenu = false)}
 			use:positionMenu
@@ -43,9 +43,9 @@
 <script lang="ts">
 	import DropdownMenu from './DropdownMenu.svelte';
 	import Icon from './Icon.svelte';
-	import { createPopper } from '@popperjs/core';
 	import Portal from './Portal.svelte';
 	import { ripple } from './util';
+	import { computePosition, autoUpdate } from '@floating-ui/dom';
 
 	let showMenu = false,
 		menu: HTMLElement,
@@ -59,9 +59,19 @@
 	}
 
 	function positionMenu(menu: HTMLElement) {
-		createPopper(button, menu, {
-			placement: 'bottom-start',
+		// When the floating element is open on the screen
+		const cleanup = autoUpdate(button, menu, () => {
+			computePosition(button, menu, { placement: 'bottom-end' }).then(({ x, y }) => {
+				Object.assign(menu.style, {
+					left: `${x}px`,
+					top: `${y}px`,
+				});
+			});
 		});
+
+		return {
+			destroy: cleanup,
+		};
 	}
 
 	function keydown(e: KeyboardEvent) {

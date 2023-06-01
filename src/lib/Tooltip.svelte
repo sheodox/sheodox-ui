@@ -1,19 +1,18 @@
 <style lang="scss">
-	.tooltip {
+	.sx-tooltip {
 		background: var(--sx-gray-600);
 		padding: var(--sx-spacing-2);
 		border-radius: 6px;
-		z-index: 1000000;
-		/* border: 1px solid var(--sx-gray-transparent-lighter); */
-		//filter: drop-shadow(0, 0, 5px var(--sx-gray-transparent-lighter));
 		filter: drop-shadow(0 0 2px var(--sx-gray-300));
 		font-size: var(--sx-font-size-2);
-		position: relative;
+	}
+	.sx-floating-ui {
+		z-index: 10000000000;
 	}
 	svg {
 		position: absolute;
 	}
-	.tooltip-root {
+	.sx-tooltip-root {
 		align-self: start;
 	}
 	.placement- {
@@ -45,29 +44,26 @@
 
 {#if showTooltip}
 	<Portal>
-		<div
-			class="tooltip placement-{placement} m-3"
-			use:position
-			in:fade={{ duration: 50, delay }}
-			out:fade={{ duration: 50 }}
-		>
-			<slot name="tooltip" />
-			{title}
-			<svg viewBox="0 0 10 10" height="10px" width="10px">
-				<polygon points="0,0 10,0 5,10" />
-			</svg>
+		<div class="sx-floating-ui" use:position in:fade={{ duration: 50, delay }} out:fade={{ duration: 50 }}>
+			<div class="sx-tooltip m-3 placement-{placement}">
+				<slot name="tooltip" />
+				{title}
+				<svg viewBox="0 0 10 10" height="10px" width="10px">
+					<polygon points="0,0 10,0 5,10" />
+				</svg>
+			</div>
 		</div>
 	</Portal>
 {/if}
-<div class="tooltip-root" use:applyTooltip bind:this={tooltipRoot}>
+<div class="sx-tooltip-root" use:applyTooltip bind:this={tooltipRoot}>
 	<slot />
 </div>
 
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { createPopper } from '@popperjs/core/lib/popper-lite';
 	import Portal from './Portal.svelte';
-	import type { Placement } from '@popperjs/core';
+	import { computePosition, autoUpdate } from '@floating-ui/dom';
+	import type { Placement } from '@floating-ui/dom';
 
 	export let title = '';
 	export let placement: Placement = 'top';
@@ -84,8 +80,17 @@
 	}
 
 	function position(el: HTMLElement) {
-		createPopper(tooltipRoot, el, {
-			placement,
+		// When the floating element is open on the screen
+		const cleanup = autoUpdate(tooltipRoot, el, async () => {
+			const { x, y } = await computePosition(tooltipRoot, el, { placement });
+			Object.assign(el.style, {
+				left: `${x}px`,
+				top: `${y}px`,
+			});
 		});
+
+		return {
+			destroy: cleanup,
+		};
 	}
 </script>

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 	import ButtonExample from './ButtonExample.svelte';
-	import type { Placement } from '@popperjs/core';
+	import type { Placement } from '@floating-ui/dom';
 
 	const placements: Placement[] = ['top', 'bottom', 'left', 'right'];
 </script>

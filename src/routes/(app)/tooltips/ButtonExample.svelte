@@ -9,7 +9,7 @@
 
 <script lang="ts">
 	import { Tooltip, Icon } from '$lib';
-	import type { Placement } from '@popperjs/core';
+	import type { Placement } from '@floating-ui/dom';
 
 	export let placement: Placement;
 	export let text: string;

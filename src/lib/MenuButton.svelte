@@ -15,7 +15,7 @@
 			on:keydown={keydown}
 			use:positionMenu
 			bind:this={menu}
-			class="menubutton-menu"
+			class="menubutton-menu sx-floating-ui"
 		>
 			<DropdownMenu>
 				<slot name="menu" />
@@ -28,12 +28,11 @@
 
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import { createPopper } from '@popperjs/core';
+	import { computePosition } from '@floating-ui/dom';
 	import DropdownMenu from './DropdownMenu.svelte';
 	import Portal from './Portal.svelte';
-	import type { Placement } from '@popperjs/core';
+	import type { Placement } from '@floating-ui/dom';
 
-	// popperjs placement option
 	export let placement: Placement = 'bottom-start';
 	// optional additional classes to apply to the button that opens the dropdown
 	export let triggerClasses = '';
@@ -69,15 +68,18 @@
 					height: 0,
 				} as DOMRect);
 
-			createPopper({ getBoundingClientRect: positionAtMouse }, menu, { placement });
+			computePosition({ getBoundingClientRect: positionAtMouse }, menu, { placement });
 		};
 		showDropdown = !showDropdown;
 	}
 
 	function buttonTrigger() {
 		placementFunction = (menu) => {
-			createPopper(button, menu, {
-				placement,
+			computePosition(button, menu, { placement }).then(({ x, y }) => {
+				Object.assign(menu.style, {
+					left: `${x}px`,
+					top: `${y}px`,
+				});
 			});
 		};
 		showDropdown = !showDropdown;
