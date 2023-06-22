@@ -9,6 +9,7 @@ input[type='time'],
 input[type='password'],
 input[type='email'],
 input[type='number'],
+input[type='datetime-local'],
 textarea,
 select {
 	color: white;
@@ -36,6 +37,7 @@ input[type='password'],
 input[type='time'],
 input[type='email'],
 input[type='number'],
+input[type='datetime-local'],
 select {
 	font-size: 1rem;
 }
