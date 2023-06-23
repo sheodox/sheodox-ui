@@ -23,8 +23,8 @@
 	export let iconVariant: 'solid' | 'brand' | 'regular' = 'solid';
 
 	$: iconVariantClass = {
-		solid: 'fas',
-		brand: 'fab',
-		regular: 'far',
+		solid: 'fa-solid',
+		brand: 'fa-brand',
+		regular: 'fa-regular',
 	}[iconVariant];
 </script>
