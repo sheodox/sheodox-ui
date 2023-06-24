@@ -20,6 +20,7 @@
 		<Icon icon="magnifying-glass" variant="icon-only" />
 	</span>
 	<input
+		{name}
 		bind:value
 		aria-label={label}
 		bind:this={input}
@@ -31,6 +32,7 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
 
+	export let name = '';
 	export let value = '';
 	export let label = 'Search';
 	export let size: 'normal' | 'large' = 'normal';
