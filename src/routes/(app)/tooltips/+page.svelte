@@ -1,9 +1,11 @@
 <p>There's a tooltip element!</p>
 <p>This pushes down the page!!</p>
 
-{#each placements as place}
-	<ButtonExample text={place} placement={place} />
-{/each}
+<div class="f-column align-items-start">
+	{#each placements as place}
+		<ButtonExample text={place} placement={place} />
+	{/each}
+</div>
 
 <script lang="ts">
 	import ButtonExample from './ButtonExample.svelte';

@@ -12,9 +12,6 @@
 	svg {
 		position: absolute;
 	}
-	.sx-tooltip-root {
-		align-self: start;
-	}
 	.placement- {
 		&top svg {
 			bottom: 0;
