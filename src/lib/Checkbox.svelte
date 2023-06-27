@@ -23,7 +23,7 @@
 </style>
 
 <div>
-	<input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change />
+	<input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change {name} />
 	<label for="checkbox-{id}" class:disabled>
 		<span class="checkbox-icon" class:checked>
 			<Icon
@@ -43,6 +43,7 @@
 	export let id = genId();
 	export let checked = false;
 	export let disabled = false;
+	export let name = '';
 
 	if (!id) {
 		throw new Error(`'id' not provided for checkbox.`);
