@@ -2,8 +2,8 @@ $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 
 @mixin badge($colorName, $color, $bg, $inverted-color, $inverted-bg) {
 	.sx-badge-#{$colorName} {
-		color: var(--sx-#{$color});
-		background-color: var(--sx-#{$bg});
+		color: var(--sx-#{$color}) !important;
+		background-color: var(--sx-#{$bg}) !important;
 		border-radius: 3px;
 		padding: 2px var(--sx-spacing-1);
 		margin: var(--sx-spacing-1);

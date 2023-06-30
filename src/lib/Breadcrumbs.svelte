@@ -18,7 +18,7 @@
 <div class="breadcrumbs f-row f-wrap gap-2 align-items-center">
 	{#each links as link, index}
 		{#if index > 0}<span class="sx-font-size-1 divider"><Icon icon="angle-right" variant="icon-only" /></span>{/if}
-		{#if link.href && index < links.length - 1}
+		{#if link.href && (index < links.length - 1 || linkifyLast)}
 			<a href={link.href}>{link.text}</a>
 		{:else}
 			<span class="last">{link.text}</span>
@@ -29,4 +29,5 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
 	export let links: { href?: string; text: string }[];
+	export let linkifyLast = false;
 </script>

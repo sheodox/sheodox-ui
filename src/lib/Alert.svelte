@@ -8,8 +8,8 @@
 		color: var(--sx-blue-200);
 	}
 	.alert-warning {
-		background: var(--sx-yellow-transparent-faint);
-		color: var(--sx-yellow-400);
+		background: var(--sx-orange-transparent-faint);
+		color: var(--sx-orange-400);
 	}
 	.alert-error {
 		background: var(--sx-red-transparent-faint);
