@@ -11,7 +11,6 @@
 		box-shadow: var(--sx-shadow-1);
 		background: var(--sx-gray-transparent);
 		backdrop-filter: blur(10px);
-		position: sticky;
 		z-index: 10;
 		top: 0;
 
@@ -83,6 +82,7 @@
 
 <header
 	class="row f-wrap breakpoint-{breakpoint} {$$slots.headerCenter || $$slots.headerEnd ? 'has-toolbar' : 'no-toolbar'}"
+	style:position
 	class:slim
 >
 	<div class="branding row px-3">
@@ -129,6 +129,7 @@
 	export let breakpoint = 'large';
 	export let showMenuTrigger = false;
 	export let menuOpen = false;
+	export let position = 'sticky';
 	//slim=true is a minimal header for use in app pages where screen real estate is more important
 	//slim=false is bigger with no background, used prominently on landing pages
 	export let slim = true;
