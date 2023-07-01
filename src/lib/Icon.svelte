@@ -10,7 +10,7 @@
 	}
 </style>
 
-<i class="{iconVariantClass} {variant} fa-{icon}" />
+<i class="{iconVariantClass} {variant} fa-{icon} {cl}" />
 
 <script lang="ts">
 	export let icon: string;
@@ -21,6 +21,7 @@
 	export let variant: 'prepend' | 'append' | 'icon-only' = 'prepend';
 	// the fontawesome icon set in use
 	export let iconVariant: 'solid' | 'brand' | 'regular' = 'solid';
+	export let cl = '';
 
 	$: iconVariantClass = {
 		solid: 'fa-solid',
