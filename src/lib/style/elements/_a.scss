@@ -8,6 +8,7 @@ a[href] {
 
 @mixin inline-link {
 	color: #00b7ff;
+	font-weight: bold;
 
 	&:hover {
 		text-decoration: underline;
