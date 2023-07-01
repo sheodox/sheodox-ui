@@ -10,10 +10,15 @@
 		background: var(--sx-gray-transparent);
 		border-radius: 5px;
 	}
+	.accordion-toggle-button {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 </style>
 
 <div class="f-column" class:open>
-	<button class="f-row justify-content-between align-items-center {buttonClasses}" on:click={toggle} type="button">
+	<button class="accordion-toggle-button {buttonClasses}" on:click={toggle} type="button">
 		<slot name="title" />
 		<div class="arrow" class:rotate={open}>
 			<Icon icon="chevron-left" variant="icon-only" />
