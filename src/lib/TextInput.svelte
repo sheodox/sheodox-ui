@@ -50,6 +50,7 @@
 			{name}
 			{placeholder}
 			{autocomplete}
+			{maxlength}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -85,6 +86,7 @@
 			{name}
 			{placeholder}
 			{autocomplete}
+			{maxlength}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -101,6 +103,7 @@
 			{name}
 			{placeholder}
 			{autocomplete}
+			{maxlength}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -129,6 +132,7 @@
 	export let min = 0;
 	export let max = 100;
 	export let step = 1;
+	export let maxlength: number | undefined = undefined;
 	// kick the element back to the parent component, so they can
 	// programatically focus without having to getElementById, useful
 	// since the ID used isn't used as-is as the input ID
