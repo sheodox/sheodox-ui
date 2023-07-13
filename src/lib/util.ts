@@ -74,7 +74,13 @@ export const animateHeight = (element: HTMLElement, show: boolean) => {
 		}
 		Object.assign(element.style, notAnimatingStyles);
 	};
-	update(show);
+
+	// don't animate the initial render
+	if (!show) {
+		element.style.display = 'none';
+	}
+	Object.assign(element.style, notAnimatingStyles);
+
 	return { update };
 };
 

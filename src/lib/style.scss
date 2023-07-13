@@ -63,6 +63,20 @@ body,
 	scrollbar-color: #444 #121212;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--sx-gray-900);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--sx-gray-700);
+	border-radius: 20px;
+	border: 2px solid var(--sx-gray-900);
+}
+
 .sr-only {
 	position: absolute;
 	left: -10000px;

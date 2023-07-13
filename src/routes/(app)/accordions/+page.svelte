@@ -22,6 +22,18 @@
 	</div>
 </Accordion>
 
+<Accordion open>
+	<span slot="title">Default open</span>
+	<div>
+		<p class="mt-0">this is some text!</p>
+		<p>this is some text!</p>
+		<p>this is some text!</p>
+		<p>this is some text!</p>
+		<p>this is some text!</p>
+		<p class="mb-0">this is some text!</p>
+	</div>
+</Accordion>
+
 <script lang="ts">
 	import { Accordion } from '$lib';
 </script>

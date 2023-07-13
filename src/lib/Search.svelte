@@ -21,6 +21,7 @@
 	</span>
 	<input
 		{name}
+		{placeholder}
 		bind:value
 		aria-label={label}
 		bind:this={input}
@@ -36,6 +37,7 @@
 	export let value = '';
 	export let label = 'Search';
 	export let size: 'normal' | 'large' = 'normal';
+	export let placeholder = '';
 
 	$: sizeLarge = size === 'large';
 
