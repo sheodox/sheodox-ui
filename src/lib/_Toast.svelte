@@ -31,7 +31,7 @@
 	<div class="f-row justify-content-between">
 		<p class="title">{toast.title}</p>
 		<button on:click={clear}>
-			<Icon icon="times" variant="icon-only" />
+			<Icon icon="times" />
 			<span class="sr-only">Clear Toast</span>
 		</button>
 	</div>

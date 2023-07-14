@@ -93,7 +93,7 @@
 				class="sx-header-menu-trigger"
 				use:ripple
 			>
-				<Icon icon="bars" variant="icon-only" />
+				<Icon icon="bars" />
 				<span class="sr-only">{menuOpen ? 'Close' : 'Open'} menu</span>
 			</button>
 		{/if}

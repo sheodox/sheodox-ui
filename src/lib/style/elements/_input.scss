@@ -2,6 +2,10 @@ textarea {
 	font-size: 0.7rem;
 }
 
+::placeholder {
+	color: var(--sx-gray-50);
+}
+
 input[type='text'],
 input:not([type]),
 input[type='date'],

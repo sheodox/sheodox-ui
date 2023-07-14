@@ -28,7 +28,7 @@
 			{@const radioId = 'radio-test-' + radio}
 			<input id={radioId} value={radio} type="radio" bind:group={chosenFontStyle} />
 			<label for={radioId}>
-				<Icon icon={radio} variant="icon-only" />
+				<Icon icon={radio} />
 			</label>
 		{/each}
 	</div>

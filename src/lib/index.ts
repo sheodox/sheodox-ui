@@ -29,6 +29,7 @@ import Loading from './Loading.svelte';
 import Portal from './Portal.svelte';
 import TextInput from './TextInput.svelte';
 import TabList from './TabList.svelte';
+import LinkTabList from './LinkTabList.svelte';
 import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
 import Sidebar from './Sidebar.svelte';
@@ -68,6 +69,7 @@ export {
 	Tooltip,
 	Pagination,
 	TabList,
+	LinkTabList,
 	Tab,
 	Toasts,
 	createAutoExpireToast,

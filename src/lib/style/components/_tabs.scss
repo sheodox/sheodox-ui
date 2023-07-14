@@ -7,7 +7,8 @@
 	li {
 		display: inline;
 	}
-	button {
+	button,
+	.button {
 		margin: 0;
 		color: var(--sx-gray-75);
 		$radius: 5px;

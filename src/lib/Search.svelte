@@ -17,7 +17,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="input-group f-row search-{size}" on:click={() => input?.focus()} class:focused>
 	<span class={sizeLarge ? 'm-3' : 'm-2'}>
-		<Icon icon="magnifying-glass" variant="icon-only" />
+		<Icon icon="magnifying-glass" />
 	</span>
 	<input
 		{name}

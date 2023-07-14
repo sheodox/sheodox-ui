@@ -32,7 +32,7 @@
 		</div>
 		{#if dismissable}
 			<button on:click={dismiss} class="small px-2" title="Dismiss">
-				<Icon icon="times" variant="icon-only" /> <span class="sr-only">Dismiss</span>
+				<Icon icon="times" /> <span class="sr-only">Dismiss</span>
 			</button>
 		{/if}
 	</div>

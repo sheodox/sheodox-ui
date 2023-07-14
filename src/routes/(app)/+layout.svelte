@@ -26,7 +26,7 @@
 			<li>
 				<NavDropdown showOpenIcon={false}>
 					<span slot="button">
-						<Icon icon="cog" variant="icon-only" />
+						<Icon icon="cog" />
 						<span class="sr-only">Menu</span>
 					</span>
 					<div slot="menu">
@@ -100,6 +100,7 @@
 		{ href: '/stacks', text: 'Stacks' },
 		{ href: '/tooltips', text: 'Tooltips' },
 		{ href: '/tabs', text: 'Tabs' },
+		{ href: '/link-tabs', text: 'Link Tabs' },
 		{ href: '/toggles', text: 'Toggles' },
 		{ href: '/toasts', text: 'Toasts' },
 		{ href: '/debug', text: 'Debug' },

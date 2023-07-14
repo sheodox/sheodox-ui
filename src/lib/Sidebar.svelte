@@ -64,7 +64,7 @@
 	{#if asOverlay}
 		<div class="py-1 px-3 f-row sx-font-size-7 sx-sidebar-header">
 			<button on:click={() => (menuOpen = !menuOpen)} aria-pressed class="sx-sidebar-close-button">
-				<Icon icon="bars" variant="icon-only" />
+				<Icon icon="bars" />
 				<span class="sr-only">{menuOpen ? 'Close' : 'Open'} menu</span>
 			</button>
 			<slot name="header" />

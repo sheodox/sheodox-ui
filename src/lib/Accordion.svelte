@@ -21,7 +21,7 @@
 	<button class="accordion-toggle-button {buttonClasses}" on:click={toggle} type="button">
 		<slot name="title" />
 		<div class="arrow" class:rotate={open}>
-			<Icon icon="chevron-left" variant="icon-only" />
+			<Icon icon="chevron-left" />
 		</div>
 	</button>
 

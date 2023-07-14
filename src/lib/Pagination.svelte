@@ -14,12 +14,12 @@
 <nav class="f-row justify-content-between gap-3">
 	{#if as === 'button'}
 		<button on:click={prev} disabled={atStart}>
-			<Icon icon="chevron-left" variant="icon-only" />
+			<Icon icon="chevron-left" />
 			<span class:sr-only={variant === 'minimal'}>Previous</span>
 		</button>
 	{:else}
 		<a class="button" href={atStart ? '' : makeHref(page - 1)}
-			><Icon icon="chevron-left" variant="icon-only" />
+			><Icon icon="chevron-left" />
 			<span class:sr-only={variant === 'minimal'}>Previous</span>
 		</a>
 	{/if}
@@ -45,12 +45,12 @@
 	{#if as === 'button'}
 		<button on:click={next} disabled={atEnd}>
 			<span class:sr-only={variant === 'minimal'}>Next</span>
-			<Icon icon="chevron-right" variant="icon-only" />
+			<Icon icon="chevron-right" />
 		</button>
 	{:else}
 		<a class="button" href={atEnd ? '' : makeHref(page + 1)}>
 			<span class:sr-only={variant === 'minimal'}>Next</span>
-			<Icon icon="chevron-right" variant="icon-only" />
+			<Icon icon="chevron-right" />
 		</a>
 	{/if}
 </nav>
