@@ -1,4 +1,5 @@
 blockquote {
-	border-left-color: var(--sx-gray-200);
+	border-left: 0.2rem solid var(--sx-gray-200);
+	padding-left: var(--sx-spacing-4);
 	margin-left: var(--sx-spacing-4);
 }
