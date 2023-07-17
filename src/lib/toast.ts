@@ -4,10 +4,9 @@ export interface ToastOptions {
 	id?: number;
 	ttl?: number;
 	initialTTL?: number;
-	title: string;
 	message: string;
 	technicalDetails?: string;
-	variant?: 'info' | 'error';
+	variant?: 'info' | 'error' | 'success' | 'warning';
 	href?: string;
 	progress?: boolean;
 	min?: number;
@@ -54,7 +53,6 @@ export function createAutoExpireToast(options: ToastOptionsCreatable) {
 		id,
 		ttl,
 		initialTTL: ttl,
-		title: options.title,
 		message: options.message || '',
 		technicalDetails: options.technicalDetails,
 		variant: options.variant || 'info',

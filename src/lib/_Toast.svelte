@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
 	.toast {
 		padding: 0.5rem;
 		margin: 0.5rem;
@@ -15,8 +15,22 @@
 		background: var(--sx-red-400);
 		color: white;
 	}
+	.warning {
+		background: var(--sx-orange-400);
+		color: black;
+		:global(button) {
+			color: black;
+		}
+	}
 	.info {
-		background: var(--sx-gray-500);
+		background: var(--sx-gray-900);
+	}
+	.success {
+		background: var(--sx-green-400);
+		color: black;
+		:global(button) {
+			color: black;
+		}
 	}
 	pre {
 		overflow: auto;
@@ -28,20 +42,19 @@
 </style>
 
 <div class="toast {toast.variant}">
-	<div class="f-row justify-content-between">
-		<p class="title">{toast.title}</p>
+	<Stack dir="r" align="center" justify="between" gap={2}>
+		<p class="message">
+			{#if toast.href}
+				<a href={toast.href}>{toast.message}</a>
+			{:else}
+				{toast.message}
+			{/if}
+		</p>
 		<button on:click={clear}>
 			<Icon icon="times" />
 			<span class="sr-only">Clear Toast</span>
 		</button>
-	</div>
-	<p class="message">
-		{#if toast.href}
-			<a href={toast.href}>{toast.message}</a>
-		{:else}
-			{toast.message}
-		{/if}
-	</p>
+	</Stack>
 	{#if toast.technicalDetails}
 		<pre>{toast.technicalDetails}</pre>
 	{/if}
@@ -55,6 +68,7 @@
 	import type { ToastOptions } from './toast';
 	import Progress from './Progress.svelte';
 	import Icon from './Icon.svelte';
+	import Stack from './Stack.svelte';
 
 	export let toast: ToastOptions;
 
