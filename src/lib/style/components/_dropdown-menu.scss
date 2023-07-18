@@ -1,8 +1,8 @@
 .dropdown-menu {
+	$radius: 5px;
 	box-shadow: var(--sx-shadow-3);
 	background: var(--sx-gray-800);
-	border-radius: 5px;
-	overflow: hidden;
+	border-radius: #{$radius};
 	border: 1px solid var(--sx-gray-transparent-lighter);
 
 	ul {
@@ -21,6 +21,14 @@
 			background: none;
 			line-height: 1;
 			width: 100%;
+		}
+		li:first-child {
+			border-top-right-radius: #{$radius};
+			border-top-left-radius: #{$radius};
+		}
+		li:last-child {
+			border-bottom-right-radius: #{$radius};
+			border-bottom-left-radius: #{$radius};
 		}
 		li:hover {
 			background: var(--sx-gray-transparent);
