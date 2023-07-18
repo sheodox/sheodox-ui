@@ -1,6 +1,9 @@
 .dropdown-menu {
 	box-shadow: var(--sx-shadow-3);
-	background: var(--sx-gray-500);
+	background: var(--sx-gray-800);
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid var(--sx-gray-transparent-lighter);
 
 	ul {
 		margin: 0;
@@ -20,11 +23,11 @@
 			width: 100%;
 		}
 		li:hover {
-			background: var(--sx-gray-400);
+			background: var(--sx-gray-transparent);
 
 			button,
 			a {
-				background: none;
+				background: none !important;
 				width: 100%;
 			}
 		}
