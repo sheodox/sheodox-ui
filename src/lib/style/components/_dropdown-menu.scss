@@ -5,6 +5,11 @@
 	border-radius: #{$radius};
 	border: 1px solid var(--sx-gray-transparent-lighter);
 
+	i {
+		width: 1.5rem;
+		text-align: center;
+	}
+
 	ul {
 		margin: 0;
 		list-style: none;
