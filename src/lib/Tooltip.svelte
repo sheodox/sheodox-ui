@@ -69,11 +69,9 @@
 	let showTooltip = false,
 		tooltipRoot: HTMLElement;
 
-	function applyTooltip(e: HTMLElement) {
-		[...e.children].forEach((el) => {
-			el.addEventListener('mouseenter', () => (showTooltip = true));
-			el.addEventListener('mouseleave', () => (showTooltip = false));
-		});
+	function applyTooltip(el: HTMLElement) {
+		el.addEventListener('mouseenter', () => (showTooltip = true));
+		el.addEventListener('mouseleave', () => (showTooltip = false));
 	}
 
 	function position(el: HTMLElement) {
