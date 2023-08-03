@@ -161,7 +161,6 @@
 
 	// fallback is for SSR so everything isn't invalid by default
 	$: valid = (value !== undefined && inputElement?.checkValidity()) ?? true;
-	console.log({ valid, value });
 
 	let focused: boolean;
 
