@@ -38,9 +38,19 @@
 	.emphasized-label input {
 		opacity: 0;
 	}
+	.invalid {
+		border-color: var(--sx-red-transparent);
+		background-color: var(--sx-red-transparent-faint);
+	}
 </style>
 
-<div class="input-group" class:focused class:muted-label={!emphasizedLabel} class:emphasized-label={emphasizedLabel}>
+<div
+	class="input-group"
+	class:focused
+	class:muted-label={!emphasizedLabel}
+	class:emphasized-label={emphasizedLabel}
+	class:invalid={!valid}
+>
 	{#if type === 'text'}
 		<input
 			id="text-input-{id}"
@@ -48,9 +58,12 @@
 			bind:value
 			bind:this={inputElement}
 			{name}
+			{pattern}
 			{placeholder}
 			{autocomplete}
 			{maxlength}
+			{minlength}
+			{required}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -68,6 +81,7 @@
 			{min}
 			{max}
 			{step}
+			{required}
 			{placeholder}
 			{autocomplete}
 			use:focus
@@ -86,7 +100,9 @@
 			{name}
 			{placeholder}
 			{autocomplete}
+			{required}
 			{maxlength}
+			{minlength}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -104,6 +120,8 @@
 			{placeholder}
 			{autocomplete}
 			{maxlength}
+			{minlength}
+			{required}
 			use:focus
 			on:focus={() => (focused = true)}
 			on:blur={() => (focused = false)}
@@ -125,6 +143,7 @@
 	export let placeholder = '';
 	export let id = genId();
 	export let name = '';
+	export let pattern: string | undefined = undefined;
 	export let autocomplete = 'off';
 	export let autofocus = false;
 	export let autoselect = false;
@@ -132,11 +151,15 @@
 	export let min = 0;
 	export let max = 100;
 	export let step = 1;
+	export let minlength: number | undefined = undefined;
 	export let maxlength: number | undefined = undefined;
+	export let required = false;
 	// kick the element back to the parent component, so they can
 	// programatically focus without having to getElementById, useful
 	// since the ID used isn't used as-is as the input ID
 	export let inputElement: HTMLInputElement | undefined = undefined;
+
+	$: valid = value !== undefined && inputElement?.checkValidity();
 
 	let focused: boolean;
 
