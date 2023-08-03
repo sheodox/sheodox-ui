@@ -159,7 +159,9 @@
 	// since the ID used isn't used as-is as the input ID
 	export let inputElement: HTMLInputElement | undefined = undefined;
 
-	$: valid = value !== undefined && inputElement?.checkValidity();
+	// fallback is for SSR so everything isn't invalid by default
+	$: valid = (value !== undefined && inputElement?.checkValidity()) ?? true;
+	console.log({ valid, value });
 
 	let focused: boolean;
 

@@ -8,7 +8,7 @@
 		border-radius: 3px;
 	}
 	.checkbox-icon {
-		margin-left: -1.2rem;
+		margin-left: -14px;
 		color: var(--sx-text-color);
 	}
 	.checkbox-icon :global(i) {
@@ -23,9 +23,10 @@
 </style>
 
 <div>
-	<input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change {name} />
-	<label for="checkbox-{id}" class:disabled>
-		<span class="checkbox-icon" class:checked>
+	<input type="checkbox" id="checkbox-{id}" bind:checked {disabled} on:change {name} /><label
+		for="checkbox-{id}"
+		class:disabled
+		><span class="checkbox-icon" class:checked>
 			<Icon icon={checked ? 'check-square' : 'square'} variant={checked ? 'solid' : 'regular'} />
 		</span>
 		<slot />

@@ -59,6 +59,7 @@
 
 <div style="width: 20rem;" class="f-column gap-3 p-3">
 	<TextInput value="something">Text Input</TextInput>
+	<TextInput value="something@example.com" type="email">EmailInput</TextInput>
 	<TextInput value="" maxlength={5}>Text with maxlength</TextInput>
 	<TextInput value="" type="password" maxlength={5}>Password with maxlength</TextInput>
 	<TextInput value="">Text Input</TextInput>
