@@ -1,91 +1,112 @@
 <style lang="scss">
 	.sx-tooltip {
-		background: var(--sx-gray-600);
+		background: var(--sx-gray-900);
 		padding: var(--sx-spacing-2);
 		border-radius: 6px;
-		filter: drop-shadow(0 0 2px var(--sx-gray-300));
 		font-size: var(--sx-font-size-2);
 	}
 	.sx-floating-ui {
 		z-index: 10000000000;
 	}
-	svg {
+	.sx-tooltip-arrow {
 		position: absolute;
-	}
-	.placement- {
-		&top svg {
-			bottom: 0;
-			left: 50%;
-			transform: translate(-50%, 75%);
-		}
-		&bottom svg {
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, -75%) rotate(180deg);
-		}
-		&left svg {
-			top: 50%;
-			left: 100%;
-			transform: translate(-25%, -50%) rotate(270deg);
-		}
-		&right svg {
-			top: 50%;
-			left: 0;
-			transform: translate(-75%, -50%) rotate(90deg);
-		}
-	}
-	polygon {
-		fill: var(--sx-gray-600);
+		transform: rotate(45deg);
+		width: 10px;
+		height: 10px;
+		background: var(--sx-gray-900);
+		z-index: -1;
+		pointer-events: none;
 	}
 </style>
 
 {#if showTooltip}
 	<Portal>
-		<div class="sx-floating-ui" use:position in:fade={{ duration: 50, delay }} out:fade={{ duration: 50 }}>
-			<div class="sx-tooltip m-3 placement-{placement}">
+		<div class="sx-floating-ui" bind:this={tooltipEl} in:fade={inFadeArgs} out:fade={outFadeArgs}>
+			<div class="sx-tooltip">
 				<slot name="tooltip" />
 				{title}
-				<svg viewBox="0 0 10 10" height="10px" width="10px">
-					<polygon points="0,0 10,0 5,10" />
-				</svg>
 			</div>
+			<div class="sx-tooltip-arrow" bind:this={arrowEl} />
 		</div>
 	</Portal>
 {/if}
-<div class="sx-tooltip-root" use:applyTooltip bind:this={tooltipRoot}>
+<div class="sx-tooltip-root {cl}" use:applyTooltip bind:this={tooltipRoot}>
 	<slot />
 </div>
 
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Portal from './Portal.svelte';
-	import { computePosition, autoUpdate } from '@floating-ui/dom';
-	import type { Placement } from '@floating-ui/dom';
+	import { computePosition, autoUpdate, autoPlacement, arrow, offset } from '@floating-ui/dom';
+	import { onDestroy } from 'svelte';
 
 	export let title = '';
-	export let placement: Placement = 'top';
 	export let delay = 200;
+	export let cl = '';
+
+	const inFadeArgs = { duration: 50, delay },
+		outFadeArgs = { duration: 50 };
 
 	let showTooltip = false,
+		tooltipEl: HTMLElement,
+		arrowEl: HTMLElement,
 		tooltipRoot: HTMLElement;
 
 	function applyTooltip(el: HTMLElement) {
 		el.addEventListener('mouseenter', () => (showTooltip = true));
-		el.addEventListener('mouseleave', () => (showTooltip = false));
+		el.addEventListener('mouseleave', () => {
+			if (tooltipCleanup) {
+				tooltipCleanup();
+
+				tooltipCleanup = null;
+			}
+			showTooltip = false;
+		});
 	}
 
-	function position(el: HTMLElement) {
+	$: tooltipEl && arrowEl && position(tooltipEl, arrowEl);
+
+	let tooltipCleanup: (() => void) | null = null;
+
+	function position(tooltipEl: HTMLElement, arrowEl: HTMLElement) {
+		if (tooltipCleanup) {
+			tooltipCleanup();
+		}
 		// When the floating element is open on the screen
-		const cleanup = autoUpdate(tooltipRoot, el, async () => {
-			const { x, y } = await computePosition(tooltipRoot, el, { placement });
-			Object.assign(el.style, {
+		tooltipCleanup = autoUpdate(tooltipRoot, tooltipEl, async () => {
+			const { x, y, middlewareData, placement } = await computePosition(tooltipRoot, tooltipEl, {
+				middleware: [offset(arrowEl.offsetWidth), autoPlacement(), arrow({ element: arrowEl })],
+			});
+			Object.assign(tooltipEl.style, {
 				left: `${x}px`,
 				top: `${y}px`,
 			});
-		});
 
-		return {
-			destroy: cleanup,
-		};
+			const side = placement.split('-')[0],
+				staticSide = {
+					top: 'bottom',
+					right: 'left',
+					bottom: 'top',
+					left: 'right',
+				}[side];
+
+			if (middlewareData.arrow) {
+				const { x, y } = middlewareData.arrow;
+
+				Object.assign(arrowEl.style, {
+					left: x !== null ? `${x}px` : '',
+					top: y !== null ? `${y}px` : '',
+					right: '',
+					bottom: '',
+					[staticSide as string]: `${-arrowEl.offsetWidth / 2}px`,
+				});
+			}
+		});
 	}
+
+	onDestroy(() => {
+		if (tooltipCleanup) {
+			tooltipCleanup();
+		}
+	});
 </script>

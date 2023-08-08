@@ -1,4 +1,4 @@
-<Tooltip {placement}>
+<Tooltip>
 	<button class="secondary">{text}</button>
 
 	<span slot="tooltip">
@@ -9,8 +9,6 @@
 
 <script lang="ts">
 	import { Tooltip, Icon } from '$lib';
-	import type { Placement } from '@floating-ui/dom';
 
-	export let placement: Placement;
 	export let text: string;
 </script>

@@ -28,12 +28,10 @@
 
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import { computePosition } from '@floating-ui/dom';
+	import { computePosition, autoPlacement, type Placement } from '@floating-ui/dom';
 	import DropdownMenu from './DropdownMenu.svelte';
 	import Portal from './Portal.svelte';
-	import type { Placement } from '@floating-ui/dom';
 
-	export let placement: Placement = 'bottom-start';
 	// optional additional classes to apply to the button that opens the dropdown
 	export let triggerClasses = '';
 	// optionally allow triggering by binding context menu to a DOM element
@@ -54,6 +52,9 @@
 		}
 	}
 
+	// only allow top/bottom placements, side looks strange
+	const allowedPlacements: Placement[] = ['top', 'top-end', 'top-start', 'bottom', 'bottom-end', 'bottom-start'];
+
 	function contextTrigger(e: MouseEvent) {
 		e.preventDefault();
 		placementFunction = (menu) => {
@@ -68,14 +69,16 @@
 					height: 0,
 				} as DOMRect);
 
-			computePosition({ getBoundingClientRect: positionAtMouse }, menu, { placement });
+			computePosition({ getBoundingClientRect: positionAtMouse }, menu, {
+				middleware: [autoPlacement({ allowedPlacements })],
+			});
 		};
 		showDropdown = !showDropdown;
 	}
 
 	function buttonTrigger() {
 		placementFunction = (menu) => {
-			computePosition(button, menu, { placement }).then(({ x, y }) => {
+			computePosition(button, menu, { middleware: [autoPlacement({ allowedPlacements })] }).then(({ x, y }) => {
 				Object.assign(menu.style, {
 					left: `${x}px`,
 					top: `${y}px`,

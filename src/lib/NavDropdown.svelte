@@ -45,7 +45,7 @@
 	import Icon from './Icon.svelte';
 	import Portal from './Portal.svelte';
 	import { ripple } from './util';
-	import { computePosition, autoUpdate } from '@floating-ui/dom';
+	import { computePosition, autoUpdate, autoPlacement } from '@floating-ui/dom';
 
 	let showMenu = false,
 		menu: HTMLElement,
@@ -61,7 +61,9 @@
 	function positionMenu(menu: HTMLElement) {
 		// When the floating element is open on the screen
 		const cleanup = autoUpdate(button, menu, () => {
-			computePosition(button, menu, { placement: 'bottom-end' }).then(({ x, y }) => {
+			computePosition(button, menu, {
+				middleware: [autoPlacement({ allowedPlacements: ['bottom', 'bottom-end', 'bottom-start'] })],
+			}).then(({ x, y }) => {
 				Object.assign(menu.style, {
 					left: `${x}px`,
 					top: `${y}px`,
