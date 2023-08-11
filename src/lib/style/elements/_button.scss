@@ -110,7 +110,8 @@ button.danger:not(:disabled) {
 
 button.small,
 .button.small {
-	padding: 0.3rem;
+	padding: var(--sx-spacing-1);
+	font-size: var(--sx-font-size-2);
 }
 
 button.pill {
