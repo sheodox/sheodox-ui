@@ -16,7 +16,7 @@ input[type='number'],
 input[type='datetime-local'],
 textarea,
 select {
-	color: white;
+	color: var(--sx-text-color);
 	transition: border 0.2s;
 	border-radius: 0.2rem;
 	background: var(--sx-input-bg);
@@ -25,7 +25,6 @@ select {
 	border: 1px solid transparent;
 
 	&:focus {
-		background: rgba(11, 15, 21, 0.8);
 		border-color: transparent;
 		outline: 2px solid var(--sx-input-focus-color);
 	}

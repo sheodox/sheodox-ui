@@ -1,4 +1,5 @@
-import { tick } from 'svelte';
+import { getContext, tick } from 'svelte';
+import type { Writable } from 'svelte/store';
 
 let idBase = 0;
 
@@ -160,3 +161,9 @@ export const glitch = (element: HTMLElement) => {
 		showGlitch();
 	});
 };
+
+export type SxTheme = 'light' | 'dark' | null;
+
+export function getSxColorSchemeContext() {
+	return getContext<Writable<SxTheme>>('sx-color-scheme');
+}

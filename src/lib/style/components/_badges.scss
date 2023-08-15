@@ -1,7 +1,7 @@
-$colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
-
-@mixin badge($colorName, $color, $bg, $inverted-color, $inverted-bg) {
+@mixin badge($colorName, $color, $bg, $inverted-color, $inverted-bg, $color-light) {
 	.sx-badge-#{$colorName} {
+		color: var(--sx-#{$color}) !important;
+		background-color: var(--sx-#{$bg}) !important;
 		color: var(--sx-#{$color}) !important;
 		background-color: var(--sx-#{$bg}) !important;
 		border-radius: 3px;
@@ -19,14 +19,29 @@ $colors: 'orange', 'yellow', 'green', 'mint', 'cyan', 'blue';
 			border-radius: 200px;
 		}
 	}
+	.sx-theme-light .sx-badge-#{$colorName} {
+		color: var(--sx-#{$color-light}) !important;
+	}
 }
+
+$colors: 'orange', 'cyan', 'blue';
 
 @each $color in $colors {
-	@include badge($color, '#{$color}-400', '#{$color}-transparent-faint', '#{$color}-900', '#{$color}-400');
+	@include badge(
+		$color,
+		'#{$color}-400',
+		'#{$color}-transparent-faint',
+		'#{$color}-900',
+		'#{$color}-400',
+		'#{$color}-600'
+	);
 }
 
-@include badge('gray', 'gray-50', 'gray-transparent', 'gray-900', 'gray-50');
-@include badge('red', 'red-400', 'red-transparent-faint', 'red-900', 'red-400');
-@include badge('purple', 'purple-200', 'purple-transparent-faint', 'purple-900', 'purple-200');
-@include badge('pink', 'pink-300', 'pink-transparent-faint', 'pink-900', 'pink-300');
-@include badge('peach', 'peach-300', 'peach-transparent-faint', 'peach-900', 'peach-300');
+@include badge('gray', 'gray-50', 'gray-transparent', 'gray-900', 'gray-50', 'gray-50');
+@include badge('red', 'red-400', 'red-transparent-faint', 'red-900', 'red-400', 'red-400');
+@include badge('yellow', 'yellow-400', 'yellow-transparent-faint', 'yellow-900', 'yellow-400', 'yellow-800');
+@include badge('green', 'green-400', 'green-transparent-faint', 'green-900', 'green-400', 'green-800');
+@include badge('mint', 'mint-400', 'mint-transparent-faint', 'mint-900', 'mint-400', 'mint-800');
+@include badge('purple', 'purple-200', 'purple-transparent-faint', 'purple-900', 'purple-200', 'purple-800');
+@include badge('pink', 'pink-300', 'pink-transparent-faint', 'pink-900', 'pink-300', 'pink-600');
+@include badge('peach', 'peach-300', 'peach-transparent-faint', 'peach-900', 'peach-300', 'peach-600');

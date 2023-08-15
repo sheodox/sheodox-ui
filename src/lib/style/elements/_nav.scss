@@ -19,7 +19,7 @@ nav {
 
 			&:hover:not(:disabled) {
 				border-bottom-color: var(--sx-nav-highlight);
-				color: white;
+				color: var(--sx-gray-25);
 			}
 		}
 	}

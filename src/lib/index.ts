@@ -2,7 +2,7 @@
 /// <reference types="sass" />
 import { createAutoExpireToast, createPersistentToast, createProgressToast, updateToast, clearToast } from './toast';
 import { showAlertModal, showPromptModal, showConfirmModal } from './modals';
-import { focus, ripple } from './util';
+import { focus, ripple, getSxColorSchemeContext } from './util';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore - bundlers knows how to import this, but typescript doesn't
@@ -83,4 +83,5 @@ export {
 	showAlertModal,
 	focus,
 	ripple,
+	getSxColorSchemeContext,
 };

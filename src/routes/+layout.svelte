@@ -3,8 +3,9 @@
 	@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 </style>
 
-<SheodoxUIStyles />
-<slot />
+<SheodoxUIStyles>
+	<slot />
+</SheodoxUIStyles>
 
 <script lang="ts">
 	import { SheodoxUIStyles } from '$lib';

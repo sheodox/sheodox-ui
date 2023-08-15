@@ -23,10 +23,10 @@ input[type='submit'],
 
 	&:hover:not(:disabled),
 	&.hover {
-		background: var(--sx-gray-transparent-light);
+		background: var(--sx-gray-transparent-light) !important;
 	}
 	&[aria-pressed='true'] {
-		color: white;
+		color: var(--sx-text-color);
 		background: var(--sx-gray-transparent);
 		> * {
 			filter: drop-shadow(0 0 0.5rem);
@@ -54,15 +54,37 @@ button.secondary,
 	color: var(--sx-blue-300);
 	background: var(--sx-gray-transparent);
 }
+.sx-theme-light {
+	button.secondary,
+	.button.secondary {
+		color: var(--sx-blue-600);
+		background: var(--sx-gray-transparent);
+	}
+}
+
 button.tertiary,
 .button.tertiary {
 	background: var(--sx-gray-transparent);
 }
 
 button:disabled {
-	color: var(--sx-disabled-button-color);
-	background: none;
-	cursor: auto;
+	color: var(--sx-disabled-button-color) !important;
+	background: none !important;
+	cursor: auto !important;
+}
+
+.sx-theme-light {
+	button.inverted,
+	.button.inverted {
+		&:not(:disabled) {
+			color: var(--sx-blue-700);
+			background: var(--sx-gray-900);
+		}
+
+		&:hover:not(:disabled) {
+			background: var(--sx-gray-800);
+		}
+	}
 }
 
 button.inverted,

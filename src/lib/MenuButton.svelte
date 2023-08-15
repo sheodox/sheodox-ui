@@ -27,7 +27,7 @@
 <svelte:body on:click={maybeClose} />
 
 <script lang="ts">
-	import { onDestroy } from 'svelte';
+	import { createEventDispatcher, onDestroy } from 'svelte';
 	import { computePosition, autoPlacement, type Placement } from '@floating-ui/dom';
 	import DropdownMenu from './DropdownMenu.svelte';
 	import Portal from './Portal.svelte';
@@ -36,6 +36,10 @@
 	export let triggerClasses = '';
 	// optionally allow triggering by binding context menu to a DOM element
 	export let contextTriggerElement: HTMLElement | null = null;
+
+	const dispatch = createEventDispatcher<{
+		open: void;
+	}>();
 
 	let showDropdown = false,
 		button: HTMLButtonElement,
@@ -86,6 +90,10 @@
 			});
 		};
 		showDropdown = !showDropdown;
+
+		if (showDropdown) {
+			dispatch('open');
+		}
 	}
 
 	$: {

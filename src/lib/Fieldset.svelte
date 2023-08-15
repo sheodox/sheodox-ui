@@ -5,7 +5,7 @@
 		--fieldset-padding: var(--sx-arg-fieldset-padding, var(--fieldset-default-padding));
 	}
 	fieldset.variant-bordered {
-		--sx-fieldset-bordered-legend-color: white;
+		--sx-fieldset-bordered-legend-color: var(--sx-text-color);
 		--sx-fieldset-background-color: var(--sx-gray-transparent);
 		--sx-fieldset-bordered-border-color: var(--sx-gray-400);
 

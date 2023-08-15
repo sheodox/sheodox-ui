@@ -6,11 +6,11 @@
 		color: var(--sx-gray-75);
 		font-weight: 500;
 		&:hover {
-			color: white;
+			color: var(--sx-gray-25);
 		}
 	}
 	.last {
-		color: white;
+		color: var(--sx-gray-25);
 		font-weight: 600;
 	}
 </style>

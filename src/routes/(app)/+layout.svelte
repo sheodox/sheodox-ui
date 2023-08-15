@@ -42,6 +42,15 @@
 							<li>
 								<button disabled>Disabled button</button>
 							</li>
+							<li>
+								<button on:click={() => ($theme = null)}>Theme: System Default</button>
+							</li>
+							<li>
+								<button on:click={() => ($theme = 'light')}>Theme: Light</button>
+							</li>
+							<li>
+								<button on:click={() => ($theme = 'dark')}>Theme: Dark</button>
+							</li>
 						</ul>
 					</div>
 				</NavDropdown>
@@ -74,7 +83,18 @@
 
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { Modals, Stack, Layout, Header, Toasts, Sidebar, NavDropdown, Icon, SheodoxUIStyles } from '$lib';
+	import {
+		Modals,
+		Stack,
+		Layout,
+		Header,
+		Toasts,
+		Sidebar,
+		NavDropdown,
+		Icon,
+		SheodoxUIStyles,
+		getSxColorSchemeContext,
+	} from '$lib';
 
 	let menuOpen = false,
 		showSidebar = true,
@@ -84,6 +104,8 @@
 	afterNavigate(({ to }) => {
 		currentPathname = to?.url.pathname || '';
 	});
+
+	const theme = getSxColorSchemeContext();
 
 	const links = [
 		{ href: '/', text: 'Home' },

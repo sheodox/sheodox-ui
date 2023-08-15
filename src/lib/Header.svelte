@@ -42,7 +42,7 @@
 		:global(svg) {
 			height: 4rem;
 			width: 4rem;
-			margin: 0 1rem;
+			margin: 0 var(--sx-spacing-2);
 		}
 	}
 	header.slim .branding {

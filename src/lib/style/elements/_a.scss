@@ -6,8 +6,8 @@ a[href] {
 	text-decoration: none;
 }
 
-@mixin inline-link {
-	color: #00b7ff;
+@mixin inline-link($lightness) {
+	color: hsl(var(--sxo-hue-link, 197), 100%, #{$lightness});
 	font-weight: bold;
 
 	&:hover {
@@ -15,12 +15,29 @@ a[href] {
 	}
 }
 
-a[href].inline-link {
-	@include inline-link();
-}
+.sx-theme-light {
+	$lightness: 30%;
 
-.has-inline-links {
-	a {
-		@include inline-link();
+	a[href].inline-link {
+		@include inline-link($lightness);
+	}
+
+	.has-inline-links {
+		a {
+			@include inline-link($lightness);
+		}
+	}
+}
+.sx-theme-dark {
+	$lightness: 50%;
+
+	a[href].inline-link {
+		@include inline-link($lightness);
+	}
+
+	.has-inline-links {
+		a {
+			@include inline-link($lightness);
+		}
 	}
 }

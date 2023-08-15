@@ -1,6 +1,13 @@
 code {
-	background: var(--sx-gray-transparent-light);
-	color: var(--sx-green-400);
 	border-radius: 3px;
 	padding: 0 0.2rem;
+}
+.sx-theme-dark code {
+	background: var(--sx-gray-transparent-light);
+	color: var(--sx-green-400);
+}
+
+.sx-theme-light code {
+	background: var(--sx-gray-100);
+	color: var(--sx-green-600);
 }
