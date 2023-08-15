@@ -23,7 +23,7 @@ input[type='submit'],
 
 	&:hover:not(:disabled),
 	&.hover {
-		background: var(--sx-gray-transparent-light) !important;
+		background: var(--sx-gray-transparent-light);
 	}
 	&[aria-pressed='true'] {
 		color: var(--sx-text-color);
@@ -58,7 +58,7 @@ button.secondary,
 	button.secondary,
 	.button.secondary {
 		color: var(--sx-blue-600);
-		background: var(--sx-gray-transparent);
+		text-shadow: 0 0 10px white;
 	}
 }
 
