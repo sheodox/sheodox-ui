@@ -122,11 +122,14 @@ button.electric,
 	}
 }
 
-button.danger:not(:disabled) {
-	background: var(--sx-red-400);
-	color: black;
-	&:hover {
-		background: var(--sx-red-300);
+button,
+.button {
+	&.danger:not(:disabled) {
+		background: var(--sx-red-400);
+		color: black;
+		&:hover {
+			background: var(--sx-red-300);
+		}
 	}
 }
 
