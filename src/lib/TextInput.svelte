@@ -70,6 +70,7 @@
 			on:keyup
 			on:keydown
 			on:keypress
+			on:change
 		/>
 	{:else if type === 'number'}
 		<input
@@ -90,6 +91,7 @@
 			on:keyup
 			on:keydown
 			on:keypress
+			on:change
 		/>
 	{:else if type === 'password'}
 		<input
@@ -109,6 +111,7 @@
 			on:keyup
 			on:keydown
 			on:keypress
+			on:change
 		/>
 	{:else if type === 'email'}
 		<input
@@ -128,6 +131,7 @@
 			on:keyup
 			on:keydown
 			on:keypress
+			on:change
 		/>
 	{/if}
 	<label for="text-input-{id}">

@@ -27,6 +27,7 @@
 		bind:this={input}
 		on:focus={() => (focused = true)}
 		on:blur={() => (focused = false)}
+		on:change
 	/>
 </div>
 
