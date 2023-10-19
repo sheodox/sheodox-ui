@@ -21,7 +21,7 @@
 		h1 {
 			margin: 0.3rem 0;
 			font-weight: normal;
-			font-size: var(--sx-font-size-7);
+			font-size: var(--sx-font-size-5);
 		}
 	}
 
