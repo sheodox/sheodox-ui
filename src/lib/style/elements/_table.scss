@@ -13,6 +13,9 @@ td,
 th {
 	padding: 0.2rem 0.5rem;
 }
+tr:not(:last-of-type) td {
+	border-bottom: 1px solid var(--sx-gray-transparent-light);
+}
 
 table {
 	border: 2px solid var(--sx-gray-transparent);

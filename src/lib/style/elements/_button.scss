@@ -17,8 +17,6 @@ input[type='submit'],
 	font-weight: 600;
 	font-size: 0.9rem;
 	transition: color 0.15s, background 0.15s;
-	//buttons don't inherit the body's font stack
-	font-family: var(--sx-en-fonts);
 	letter-spacing: var(--sx-button-letter-spacing);
 
 	&:hover:not(:disabled),

@@ -2,6 +2,7 @@
 	.alert {
 		border-radius: 10px;
 		font-weight: bold;
+		border: 1px solid currentColor;
 	}
 	.alert-info {
 		background: var(--sx-blue-transparent-faint);

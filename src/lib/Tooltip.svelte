@@ -1,9 +1,10 @@
 <style lang="scss">
 	.sx-tooltip {
-		background: var(--sx-gray-900);
+		background: var(--sx-gray-25);
 		padding: var(--sx-spacing-2);
 		border-radius: 6px;
 		font-size: var(--sx-font-size-2);
+		color: var(--sx-gray-900);
 	}
 	.sx-floating-ui {
 		z-index: 10000000000;
@@ -13,7 +14,7 @@
 		transform: rotate(45deg);
 		width: 10px;
 		height: 10px;
-		background: var(--sx-gray-900);
+		background: var(--sx-gray-25);
 		z-index: -1;
 		pointer-events: none;
 	}

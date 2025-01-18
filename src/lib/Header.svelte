@@ -8,16 +8,11 @@
 	}
 	header.slim {
 		justify-content: space-between;
-		backdrop-filter: blur(10px);
 		z-index: 10;
 		top: 0;
+		background: var(--sx-gray-875);
+		border-bottom: 1px solid var(--sx-gray-transparent-light);
 
-		:global(.sx-theme-light) & {
-			background: rgba(255, 255, 255, 0.2);
-		}
-		:global(.sx-theme-dark) & {
-			background: rgba(0, 0, 0, 0.2);
-		}
 		h1 {
 			margin: 0.3rem 0;
 			font-weight: normal;

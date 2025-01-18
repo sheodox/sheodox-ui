@@ -34,6 +34,7 @@
 		transform: scale(1);
 		margin-top: 0.5rem;
 		color: var(--sx-gray-50);
+		padding-left: var(--sx-spacing-1);
 	}
 	.emphasized-label input {
 		opacity: 0;

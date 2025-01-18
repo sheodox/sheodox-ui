@@ -59,12 +59,6 @@
 	}
 
 	onMount(() => {
-		// prompts
-		if (promptInput) {
-			promptInput.select();
-			promptInput.focus();
-			return;
-		}
 		// confirms
 		if (noButton) {
 			noButton.focus();

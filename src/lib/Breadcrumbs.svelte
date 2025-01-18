@@ -7,6 +7,7 @@
 		font-weight: 500;
 		&:hover {
 			color: var(--sx-gray-25);
+			text-decoration: underline;
 		}
 	}
 	.last {

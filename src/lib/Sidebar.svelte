@@ -6,7 +6,8 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		background-color: var(--sx-gray-800);
+		background-color: var(--sx-gray-850);
+		border-right: 1px solid var(--sx-gray-transparent-light);
 		/* below modal overlay and menu buttons */
 		z-index: 999;
 		transition: transform #{$animationSpeed};
@@ -19,7 +20,7 @@
 		&.docked {
 			/* 48px is the height of the header, give it the full remaining height
 				without extending below the bottom of the viewport */
-			$headerHeight: '48px';
+			$headerHeight: '49px';
 			height: calc(100vh - #{$headerHeight});
 			top: #{$headerHeight};
 

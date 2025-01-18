@@ -20,7 +20,7 @@
 		}
 	}
 	.sx-progress-bar {
-		background: var(--sx-pink-500);
+		background: var(--sx-input-focus-color);
 		height: 100%;
 		transition: width 0.1s ease-in-out;
 	}

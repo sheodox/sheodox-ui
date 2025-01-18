@@ -16,8 +16,8 @@
 		opacity: 0;
 	}
 	input:checked + label {
-		color: var(--sx-gray-25);
-		background-color: var(--sx-gray-transparent-light);
+		color: var(--sx-gray-900);
+		background-color: var(--sx-blue-500);
 	}
 	input:focus + label {
 		outline: 2px solid var(--sx-input-focus-color);
