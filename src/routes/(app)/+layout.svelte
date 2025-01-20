@@ -123,6 +123,7 @@
 		{ href: '/tooltips', text: 'Tooltips' },
 		{ href: '/tabs', text: 'Tabs' },
 		{ href: '/link-tabs', text: 'Link Tabs' },
+		{ href: '/lists', text: 'Lists' },
 		{ href: '/toggles', text: 'Toggles' },
 		{ href: '/toasts', text: 'Toasts' },
 		{ href: '/debug', text: 'Debug' },
