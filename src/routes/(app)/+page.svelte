@@ -98,6 +98,8 @@
 			<option value="one">One</option>
 			<option value="two">Two</option>
 			<option value="three">Three</option>
+			<option value="long">Four Four Four Four Four Four Four Four Four Four Four</option>
+			<option value="long-continuous">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</option>
 		</Select>
 	</div>
 </div>

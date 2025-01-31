@@ -15,6 +15,7 @@
 		padding: 0.7rem 0 0;
 		width: 100%;
 		appearance: none;
+		padding-right: 1.4rem;
 	}
 	label {
 		transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -48,7 +49,8 @@
 		height: 38px;
 	}
 	.select-icon {
-		display: inline;
+		position: absolute;
+		right: 0;
 
 		:global(i) {
 			vertical-align: middle;
@@ -63,7 +65,7 @@
 	class:emphasized-label={emphasizedLabel}
 	class:invalid={!valid}
 >
-	<div class="f-column f-1 align-items-center">
+	<div class="f-column f-1 align-items-center select-input-column">
 		<select
 			id="sx-select-input-{id}"
 			bind:value
@@ -87,7 +89,7 @@
 		<slot name="append" />
 	</div>
 
-	<div class="m-1 muted select-icon">
+	<div class="m-1 muted select-icon" inert>
 		<Icon icon="sort" />
 	</div>
 </div>
