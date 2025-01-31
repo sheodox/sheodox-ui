@@ -5,7 +5,7 @@
 	.rotate {
 		transform: rotate(-90deg);
 	}
-	.open {
+	.sx-accordion.open {
 		transition: background 0.2s;
 		background: var(--sx-gray-transparent);
 		border-radius: 5px;
@@ -17,7 +17,7 @@
 	}
 </style>
 
-<div class="f-column" class:open>
+<div class="sx-accordion f-column" class:open>
 	<button class="accordion-toggle-button {buttonClasses}" on:click={toggle} type="button">
 		<slot name="title" />
 		<div class="arrow" class:rotate={open}>
