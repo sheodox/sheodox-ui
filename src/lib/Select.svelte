@@ -4,6 +4,9 @@
 		position: relative;
 		flex-direction: row;
 	}
+	.sx-select :global(option) {
+		color: initial;
+	}
 	.focused {
 		outline: 2px solid var(--sx-input-focus-color);
 	}
