@@ -32,6 +32,7 @@ import TabList from './TabList.svelte';
 import LinkTabList from './LinkTabList.svelte';
 import Tab from './Tab.svelte';
 import Modals from './Modals.svelte';
+import Select from './Select.svelte';
 import Sidebar from './Sidebar.svelte';
 import Search from './Search.svelte';
 import Tooltip from './Tooltip.svelte';
@@ -64,6 +65,7 @@ export {
 	Portal,
 	TextInput,
 	SheodoxUIStyles,
+	Select,
 	Sidebar,
 	Search,
 	Tooltip,

@@ -43,10 +43,13 @@
 		border-color: var(--sx-red-transparent);
 		background-color: var(--sx-red-transparent-faint);
 	}
+	.sx-text-input {
+		height: 38px;
+	}
 </style>
 
 <div
-	class="input-group"
+	class="sx-text-input input-group"
 	class:focused
 	class:muted-label={!emphasizedLabel}
 	class:emphasized-label={emphasizedLabel}

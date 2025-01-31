@@ -57,39 +57,49 @@
 	</tbody>
 </table>
 
-<div style="width: 20rem;" class="f-column gap-3 p-3">
-	<TextInput value="something">Text Input</TextInput>
-	<TextInput value="something@example.com" type="email">EmailInput</TextInput>
-	<TextInput value="" maxlength={5}>Text with maxlength</TextInput>
-	<TextInput value="" type="password" maxlength={5}>Password with maxlength</TextInput>
-	<TextInput value="">Text Input</TextInput>
-	<TextInput value="0" type="number">Number Input</TextInput>
-	<Checkbox checked={true}>Checkbox</Checkbox>
-	<Checkbox checked={false}>Checkbox</Checkbox>
-	<Search value="search text" />
-	<Search value="search text" size="large" />
+<div class="f-row">
+	<div style="width: 20rem;" class="f-column gap-3 p-3">
+		<TextInput value="something">Text Input</TextInput>
+		<TextInput value="something@example.com" type="email">EmailInput</TextInput>
+		<TextInput value="" maxlength={5}>Text with maxlength</TextInput>
+		<TextInput value="" type="password" maxlength={5}>Password with maxlength</TextInput>
+		<TextInput value="">Text Input</TextInput>
+		<TextInput value="0" type="number">Number Input</TextInput>
+		<Checkbox checked={true}>Checkbox</Checkbox>
+		<Checkbox checked={false}>Checkbox</Checkbox>
+		<Search value="search text" />
+		<Search value="search text" size="large" />
 
-	<MenuButton>
-		<span slot="trigger">Options <Icon icon="chevron-down" /></span>
-		<ul slot="menu">
-			<li><button><Icon icon="edit" /> Edit</button></li>
-			<li><button><Icon icon="edit" /> Edit</button></li>
-			<li><a class="button" href="/"><Icon icon="edit" /> Edit</a></li>
-			<li><button><Icon icon="edit" /> Edit</button></li>
-		</ul>
-	</MenuButton>
+		<MenuButton>
+			<span slot="trigger">Options <Icon icon="chevron-down" /></span>
+			<ul slot="menu">
+				<li><button><Icon icon="edit" /> Edit</button></li>
+				<li><button><Icon icon="edit" /> Edit</button></li>
+				<li><a class="button" href="/"><Icon icon="edit" /> Edit</a></li>
+				<li><button><Icon icon="edit" /> Edit</button></li>
+			</ul>
+		</MenuButton>
 
-	<div class="f-row">
-		<TextInput value="Click focus to focus this" name="adsf" bind:inputElement>Text Input</TextInput>
-		<button on:click={() => inputElement.focus()}>Focus</button>
+		<div class="f-row">
+			<TextInput value="Click focus to focus this" name="adsf" bind:inputElement>Text Input</TextInput>
+			<button on:click={() => inputElement.focus()}>Focus</button>
+		</div>
+
+		<button on:click={() => (showAutoFocus = !showAutoFocus)} class="secondary"
+			>{showAutoFocus ? 'Hide' : 'Show'} auto focusing input</button
+		>
+		{#if showAutoFocus}
+			<TextInput autofocus value="">Text Input</TextInput>
+		{/if}
 	</div>
-
-	<button on:click={() => (showAutoFocus = !showAutoFocus)} class="secondary"
-		>{showAutoFocus ? 'Hide' : 'Show'} auto focusing input</button
-	>
-	{#if showAutoFocus}
-		<TextInput autofocus value="">Text Input</TextInput>
-	{/if}
+	<div style="width: 20rem;" class="f-column gap-3 p-3">
+		<Select label="Some Select">
+			<option value="" />
+			<option value="one">One</option>
+			<option value="two">Two</option>
+			<option value="three">Three</option>
+		</Select>
+	</div>
 </div>
 
 <p>
@@ -99,7 +109,7 @@
 <br />
 
 <script lang="ts">
-	import { MenuButton, Icon, TextInput, Checkbox, ripple, Breadcrumbs, Search } from '$lib';
+	import { MenuButton, Icon, TextInput, Checkbox, ripple, Breadcrumbs, Search, Select } from '$lib';
 
 	let showAutoFocus = false,
 		showTable = true;

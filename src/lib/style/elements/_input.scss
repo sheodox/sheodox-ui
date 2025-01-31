@@ -53,7 +53,8 @@ textarea {
 	display: flex;
 	border: 1px solid var(--sx-gray-transparent-lighter);
 
-	input {
+	input,
+	select {
 		border-color: transparent;
 	}
 	button {
