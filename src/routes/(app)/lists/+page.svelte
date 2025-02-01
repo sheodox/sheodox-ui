@@ -32,6 +32,24 @@
 		<li class="sx-list-item">A third thing</li>
 		<li class="sx-list-item">Wow four even</li>
 	</ul>
+
+	<ul class="sx-list m-4">
+		<li class="sx-list-item action">
+			<button>
+				<Icon icon="copy" /> Copy
+			</button>
+		</li>
+		<li class="sx-list-item action">
+			<button>
+				<Icon icon="user-circle" /> Profile
+			</button>
+		</li>
+		<li class="sx-list-item action">
+			<a href="/" class="button text-align-center">
+				<Icon icon="cog" /> Settings
+			</a>
+		</li>
+	</ul>
 </div>
 
 <div class="list-demo">

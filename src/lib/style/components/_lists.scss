@@ -14,6 +14,16 @@
 		&:nth-of-type(odd) {
 			background: var(--sx-gray-transparent-dark);
 		}
+
+		&.action {
+			padding: 0.3rem;
+
+			button,
+			.button {
+				margin: 0;
+				width: 100%;
+			}
+		}
 	}
 
 	.sx-list-item.two-columns {
