@@ -1,0 +1,26 @@
+$displayTypes: (
+	'block',
+	'inline',
+	'inline-block',
+	'flex',
+	'inline-flex',
+	'grid',
+	'inline-grid',
+	'flow-root',
+	'none',
+	'contents',
+	'table',
+	'table-row',
+	'list-item',
+	'inherit',
+	'initial',
+	'revert',
+	'revert-layer',
+	'unset'
+);
+
+@each $d in $displayTypes {
+	.d-#{$d} {
+		display: #{$d} !important;
+	}
+}
